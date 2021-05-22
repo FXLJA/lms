@@ -48,7 +48,7 @@ public class menu extends javax.swing.JFrame {
         signUpPage_btnBack = new javax.swing.JButton();
         pageAdminDashboard = new javax.swing.JPanel();
         pageAdmin_panelHeader = new javax.swing.JPanel();
-        pageAdmin_tbtnUsername = new javax.swing.JToggleButton();
+        panelAdmin_lblDropDownToggle = new javax.swing.JLabel();
         pageAdmin_panelMenu = new javax.swing.JPanel();
         pageAdmin_panelDropDownUsername = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -75,11 +75,11 @@ public class menu extends javax.swing.JFrame {
         signInPage_lblId.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         signInPage_lblId.setText("ID");
 
-        signInPage_tfId.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        signInPage_tfId.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         signInPage_tfId.setToolTipText("Username");
-        signInPage_tfId.setMaximumSize(new java.awt.Dimension(280, 48));
-        signInPage_tfId.setMinimumSize(new java.awt.Dimension(280, 48));
-        signInPage_tfId.setPreferredSize(new java.awt.Dimension(280, 48));
+        signInPage_tfId.setMaximumSize(new java.awt.Dimension(280, 36));
+        signInPage_tfId.setMinimumSize(new java.awt.Dimension(280, 36));
+        signInPage_tfId.setPreferredSize(new java.awt.Dimension(280, 36));
         signInPage_tfId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signInPage_tfIdActionPerformed(evt);
@@ -91,9 +91,9 @@ public class menu extends javax.swing.JFrame {
 
         signInPage_pfPassword.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         signInPage_pfPassword.setToolTipText("Password");
-        signInPage_pfPassword.setMaximumSize(new java.awt.Dimension(280, 48));
-        signInPage_pfPassword.setMinimumSize(new java.awt.Dimension(280, 48));
-        signInPage_pfPassword.setPreferredSize(new java.awt.Dimension(280, 48));
+        signInPage_pfPassword.setMaximumSize(new java.awt.Dimension(280, 36));
+        signInPage_pfPassword.setMinimumSize(new java.awt.Dimension(280, 36));
+        signInPage_pfPassword.setPreferredSize(new java.awt.Dimension(280, 36));
 
         signInPage_btnSignIn.setBackground(new java.awt.Color(255, 255, 255));
         signInPage_btnSignIn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -179,11 +179,11 @@ public class menu extends javax.swing.JFrame {
         signUpPage_lblId.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         signUpPage_lblId.setText("ID");
 
-        signUpPage_tfId.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        signUpPage_tfId.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         signUpPage_tfId.setToolTipText("Username");
-        signUpPage_tfId.setMaximumSize(new java.awt.Dimension(280, 48));
-        signUpPage_tfId.setMinimumSize(new java.awt.Dimension(280, 48));
-        signUpPage_tfId.setPreferredSize(new java.awt.Dimension(280, 48));
+        signUpPage_tfId.setMaximumSize(new java.awt.Dimension(280, 36));
+        signUpPage_tfId.setMinimumSize(new java.awt.Dimension(280, 36));
+        signUpPage_tfId.setPreferredSize(new java.awt.Dimension(280, 36));
         signUpPage_tfId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signUpPage_tfIdActionPerformed(evt);
@@ -193,11 +193,11 @@ public class menu extends javax.swing.JFrame {
         signUpPage_lblPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         signUpPage_lblPassword.setText("Password");
 
-        signUpPage_pfPassword.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        signUpPage_pfPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         signUpPage_pfPassword.setToolTipText("Password");
-        signUpPage_pfPassword.setMaximumSize(new java.awt.Dimension(280, 48));
-        signUpPage_pfPassword.setMinimumSize(new java.awt.Dimension(280, 48));
-        signUpPage_pfPassword.setPreferredSize(new java.awt.Dimension(280, 48));
+        signUpPage_pfPassword.setMaximumSize(new java.awt.Dimension(280, 36));
+        signUpPage_pfPassword.setMinimumSize(new java.awt.Dimension(280, 36));
+        signUpPage_pfPassword.setPreferredSize(new java.awt.Dimension(280, 36));
 
         signUpPage_btnSignUp.setBackground(new java.awt.Color(34, 125, 194));
         signUpPage_btnSignUp.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -275,11 +275,13 @@ public class menu extends javax.swing.JFrame {
         pageAdmin_panelHeader.setPreferredSize(new java.awt.Dimension(1100, 60));
         pageAdmin_panelHeader.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pageAdmin_tbtnUsername.setBackground(new java.awt.Color(255, 255, 255));
-        pageAdmin_tbtnUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        pageAdmin_tbtnUsername.setText("Username");
-        pageAdmin_tbtnUsername.setPreferredSize(new java.awt.Dimension(150, 30));
-        pageAdmin_panelHeader.add(pageAdmin_tbtnUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 20, -1, -1));
+        panelAdmin_lblDropDownToggle.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        panelAdmin_lblDropDownToggle.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        panelAdmin_lblDropDownToggle.setText("Username");
+        panelAdmin_lblDropDownToggle.setMaximumSize(new java.awt.Dimension(150, 30));
+        panelAdmin_lblDropDownToggle.setMinimumSize(new java.awt.Dimension(150, 30));
+        panelAdmin_lblDropDownToggle.setPreferredSize(new java.awt.Dimension(150, 30));
+        pageAdmin_panelHeader.add(panelAdmin_lblDropDownToggle, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 20, -1, -1));
 
         pageAdminDashboard.add(pageAdmin_panelHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 1100, -1));
 
@@ -399,9 +401,9 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JPanel pageAdmin_panelDropDownUsername;
     private javax.swing.JPanel pageAdmin_panelHeader;
     private javax.swing.JPanel pageAdmin_panelMenu;
-    private javax.swing.JToggleButton pageAdmin_tbtnUsername;
     private javax.swing.JPanel pageSignIn;
     private javax.swing.JPanel pageSignUp;
+    private javax.swing.JLabel panelAdmin_lblDropDownToggle;
     private javax.swing.JButton signInPage_btnSignIn;
     private javax.swing.JButton signInPage_btnSignUp;
     private javax.swing.JLabel signInPage_lblId;
