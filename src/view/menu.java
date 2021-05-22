@@ -48,7 +48,11 @@ public class menu extends javax.swing.JFrame {
         signUpPage_btnBack = new javax.swing.JButton();
         pageAdminDashboard = new javax.swing.JPanel();
         pageAdmin_panelHeader = new javax.swing.JPanel();
+        pageAdmin_tbtnUsername = new javax.swing.JToggleButton();
         pageAdmin_panelMenu = new javax.swing.JPanel();
+        pageAdmin_panelDropDownUsername = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -269,17 +273,13 @@ public class menu extends javax.swing.JFrame {
         pageAdmin_panelHeader.setMaximumSize(new java.awt.Dimension(1100, 60));
         pageAdmin_panelHeader.setMinimumSize(new java.awt.Dimension(1100, 60));
         pageAdmin_panelHeader.setPreferredSize(new java.awt.Dimension(1100, 60));
+        pageAdmin_panelHeader.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout pageAdmin_panelHeaderLayout = new javax.swing.GroupLayout(pageAdmin_panelHeader);
-        pageAdmin_panelHeader.setLayout(pageAdmin_panelHeaderLayout);
-        pageAdmin_panelHeaderLayout.setHorizontalGroup(
-            pageAdmin_panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1100, Short.MAX_VALUE)
-        );
-        pageAdmin_panelHeaderLayout.setVerticalGroup(
-            pageAdmin_panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
-        );
+        pageAdmin_tbtnUsername.setBackground(new java.awt.Color(255, 255, 255));
+        pageAdmin_tbtnUsername.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        pageAdmin_tbtnUsername.setText("Username");
+        pageAdmin_tbtnUsername.setPreferredSize(new java.awt.Dimension(150, 30));
+        pageAdmin_panelHeader.add(pageAdmin_tbtnUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 20, -1, -1));
 
         pageAdminDashboard.add(pageAdmin_panelHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 1100, -1));
 
@@ -300,6 +300,20 @@ public class menu extends javax.swing.JFrame {
         );
 
         pageAdminDashboard.add(pageAdmin_panelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 960));
+
+        pageAdmin_panelDropDownUsername.setBackground(new java.awt.Color(255, 255, 255));
+        pageAdmin_panelDropDownUsername.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pageAdmin_panelDropDownUsername.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setText("Sign Out");
+        pageAdmin_panelDropDownUsername.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setText("Profile");
+        pageAdmin_panelDropDownUsername.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+
+        pageAdminDashboard.add(pageAdmin_panelDropDownUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 150, 80));
 
         getContentPane().add(pageAdminDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
@@ -379,9 +393,13 @@ public class menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel pageAdminDashboard;
+    private javax.swing.JPanel pageAdmin_panelDropDownUsername;
     private javax.swing.JPanel pageAdmin_panelHeader;
     private javax.swing.JPanel pageAdmin_panelMenu;
+    private javax.swing.JToggleButton pageAdmin_tbtnUsername;
     private javax.swing.JPanel pageSignIn;
     private javax.swing.JPanel pageSignUp;
     private javax.swing.JButton signInPage_btnSignIn;
