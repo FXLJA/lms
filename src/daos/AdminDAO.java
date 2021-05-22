@@ -16,7 +16,7 @@ public class AdminDAO implements AdminInterface {
             statement.setString(1, admin.getAdmin_id());
             statement.setString(2, admin.getAdmin_name());
             statement.setString(3, admin.getAdmin_contact());
-            statement.setText(4, admin.getAdmin_password());
+            statement.setString(4, admin.getAdmin_password());
             
             int row = statement.executeUpdate();
             statement.close();
@@ -37,7 +37,7 @@ public class AdminDAO implements AdminInterface {
             PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql);
             statement.setString(1, admin.getAdmin_name());
             statement.setString(2, admin.getAdmin_contact());
-            statement.setText(3, admin.getAdmin_password());
+            statement.setString(3, admin.getAdmin_password());
             statement.setString(4, admin.getAdmin_id());
 
             int row = statement.executeUpdate();
@@ -80,7 +80,7 @@ public class AdminDAO implements AdminInterface {
             ResultSet rs = statement.executeQuery();
 
             while (rs.next()) {
-                Admin admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3), rs.getText(4));
+                Admin admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
                 adminList.add(admin);
             }
             statement.close();
@@ -100,7 +100,7 @@ public class AdminDAO implements AdminInterface {
             ResultSet rs = statement.executeQuery();
 
             if (rs.next()) {
-                admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3), rs.getText(4));
+                admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
             }
         } catch (Exception e) {
             Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, e);
