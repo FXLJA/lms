@@ -12,10 +12,13 @@ package view;
 public class menu extends javax.swing.JFrame {
 
     /**
-     * Creates new form tst
+     * Creates new form menu
      */
     public menu() {
         initComponents();
+        
+        pageSignUp.setVisible(false);
+        pageAdminDashboard.setVisible(false);
     }
 
     /**
@@ -27,21 +30,315 @@ public class menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        pageSignIn = new javax.swing.JPanel();
+        signInPage_lblId = new javax.swing.JLabel();
+        signInPage_tfId = new javax.swing.JTextField();
+        signInPage_lblPassword = new javax.swing.JLabel();
+        signInPage_pfPassword = new javax.swing.JPasswordField();
+        signInPage_btnSignIn = new javax.swing.JButton();
+        signInPage_btnSignUp = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        pageSignUp = new javax.swing.JPanel();
+        signUpPage_lblId = new javax.swing.JLabel();
+        signUpPage_tfId = new javax.swing.JTextField();
+        signUpPage_lblPassword = new javax.swing.JLabel();
+        signUpPage_pfPassword = new javax.swing.JPasswordField();
+        signUpPage_btnSignUp = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        signUpPage_btnBack = new javax.swing.JButton();
+        pageAdminDashboard = new javax.swing.JPanel();
+        pageAdmin_panelHeader = new javax.swing.JPanel();
+        pageAdmin_panelMenu = new javax.swing.JPanel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setMinimumSize(new java.awt.Dimension(1280, 720));
+        setName("main frame"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(1280, 720));
+        setResizable(false);
+        setSize(new java.awt.Dimension(1280, 720));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pageSignIn.setBackground(new java.awt.Color(255, 255, 255));
+        pageSignIn.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        pageSignIn.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        pageSignIn.setMinimumSize(new java.awt.Dimension(1280, 720));
+        pageSignIn.setName("login page"); // NOI18N
+        pageSignIn.setPreferredSize(new java.awt.Dimension(1280, 720));
+
+        signInPage_lblId.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        signInPage_lblId.setText("ID");
+
+        signInPage_tfId.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        signInPage_tfId.setToolTipText("Username");
+        signInPage_tfId.setMaximumSize(new java.awt.Dimension(280, 48));
+        signInPage_tfId.setMinimumSize(new java.awt.Dimension(280, 48));
+        signInPage_tfId.setPreferredSize(new java.awt.Dimension(280, 48));
+        signInPage_tfId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signInPage_tfIdActionPerformed(evt);
+            }
+        });
+
+        signInPage_lblPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        signInPage_lblPassword.setText("Password");
+
+        signInPage_pfPassword.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        signInPage_pfPassword.setToolTipText("Password");
+        signInPage_pfPassword.setMaximumSize(new java.awt.Dimension(280, 48));
+        signInPage_pfPassword.setMinimumSize(new java.awt.Dimension(280, 48));
+        signInPage_pfPassword.setPreferredSize(new java.awt.Dimension(280, 48));
+
+        signInPage_btnSignIn.setBackground(new java.awt.Color(255, 255, 255));
+        signInPage_btnSignIn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        signInPage_btnSignIn.setText("Sign In");
+        signInPage_btnSignIn.setToolTipText("");
+        signInPage_btnSignIn.setMaximumSize(new java.awt.Dimension(127, 36));
+        signInPage_btnSignIn.setMinimumSize(new java.awt.Dimension(127, 36));
+        signInPage_btnSignIn.setPreferredSize(new java.awt.Dimension(127, 36));
+        signInPage_btnSignIn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signInPage_btnSignInMouseClicked(evt);
+            }
+        });
+
+        signInPage_btnSignUp.setBackground(new java.awt.Color(34, 125, 194));
+        signInPage_btnSignUp.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        signInPage_btnSignUp.setForeground(new java.awt.Color(255, 255, 255));
+        signInPage_btnSignUp.setText("Sign Up");
+        signInPage_btnSignUp.setToolTipText("");
+        signInPage_btnSignUp.setMaximumSize(new java.awt.Dimension(127, 36));
+        signInPage_btnSignUp.setMinimumSize(new java.awt.Dimension(127, 36));
+        signInPage_btnSignUp.setPreferredSize(new java.awt.Dimension(127, 36));
+        signInPage_btnSignUp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signInPage_btnSignUpMouseClicked(evt);
+            }
+        });
+        signInPage_btnSignUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signInPage_btnSignUpActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/student.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
+        javax.swing.GroupLayout pageSignInLayout = new javax.swing.GroupLayout(pageSignIn);
+        pageSignIn.setLayout(pageSignInLayout);
+        pageSignInLayout.setHorizontalGroup(
+            pageSignInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pageSignInLayout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
+                .addGroup(pageSignInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(signInPage_tfId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(signInPage_lblId)
+                    .addComponent(signInPage_lblPassword)
+                    .addGroup(pageSignInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(pageSignInLayout.createSequentialGroup()
+                            .addComponent(signInPage_btnSignIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(signInPage_btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(signInPage_pfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(252, 252, 252))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        pageSignInLayout.setVerticalGroup(
+            pageSignInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pageSignInLayout.createSequentialGroup()
+                .addGap(246, 246, 246)
+                .addComponent(signInPage_lblId)
+                .addGap(6, 6, 6)
+                .addComponent(signInPage_tfId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(signInPage_lblPassword)
+                .addGap(6, 6, 6)
+                .addComponent(signInPage_pfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addGroup(pageSignInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(signInPage_btnSignIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(signInPage_btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
+
+        getContentPane().add(pageSignIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
+
+        pageSignUp.setBackground(new java.awt.Color(255, 255, 255));
+        pageSignUp.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        pageSignUp.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        pageSignUp.setMinimumSize(new java.awt.Dimension(1280, 720));
+        pageSignUp.setName("login page"); // NOI18N
+
+        signUpPage_lblId.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        signUpPage_lblId.setText("ID");
+
+        signUpPage_tfId.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        signUpPage_tfId.setToolTipText("Username");
+        signUpPage_tfId.setMaximumSize(new java.awt.Dimension(280, 48));
+        signUpPage_tfId.setMinimumSize(new java.awt.Dimension(280, 48));
+        signUpPage_tfId.setPreferredSize(new java.awt.Dimension(280, 48));
+        signUpPage_tfId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signUpPage_tfIdActionPerformed(evt);
+            }
+        });
+
+        signUpPage_lblPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        signUpPage_lblPassword.setText("Password");
+
+        signUpPage_pfPassword.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        signUpPage_pfPassword.setToolTipText("Password");
+        signUpPage_pfPassword.setMaximumSize(new java.awt.Dimension(280, 48));
+        signUpPage_pfPassword.setMinimumSize(new java.awt.Dimension(280, 48));
+        signUpPage_pfPassword.setPreferredSize(new java.awt.Dimension(280, 48));
+
+        signUpPage_btnSignUp.setBackground(new java.awt.Color(34, 125, 194));
+        signUpPage_btnSignUp.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        signUpPage_btnSignUp.setForeground(new java.awt.Color(255, 255, 255));
+        signUpPage_btnSignUp.setText("Sign Up");
+        signUpPage_btnSignUp.setToolTipText("");
+        signUpPage_btnSignUp.setMaximumSize(new java.awt.Dimension(280, 36));
+        signUpPage_btnSignUp.setMinimumSize(new java.awt.Dimension(280, 36));
+        signUpPage_btnSignUp.setPreferredSize(new java.awt.Dimension(280, 36));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/student2.jpg"))); // NOI18N
+        jLabel2.setText("jLabel1");
+
+        signUpPage_btnBack.setBackground(new java.awt.Color(255, 255, 255));
+        signUpPage_btnBack.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        signUpPage_btnBack.setText("Back");
+        signUpPage_btnBack.setToolTipText("");
+        signUpPage_btnBack.setMaximumSize(new java.awt.Dimension(280, 36));
+        signUpPage_btnBack.setMinimumSize(new java.awt.Dimension(280, 36));
+        signUpPage_btnBack.setPreferredSize(new java.awt.Dimension(280, 36));
+        signUpPage_btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUpPage_btnBackMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pageSignUpLayout = new javax.swing.GroupLayout(pageSignUp);
+        pageSignUp.setLayout(pageSignUpLayout);
+        pageSignUpLayout.setHorizontalGroup(
+            pageSignUpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pageSignUpLayout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
+                .addGroup(pageSignUpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(signUpPage_btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(signUpPage_pfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(signUpPage_tfId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(signUpPage_lblId)
+                    .addComponent(signUpPage_lblPassword)
+                    .addComponent(signUpPage_btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(252, 252, 252))
+        );
+        pageSignUpLayout.setVerticalGroup(
+            pageSignUpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pageSignUpLayout.createSequentialGroup()
+                .addGap(230, 230, 230)
+                .addComponent(signUpPage_lblId)
+                .addGap(6, 6, 6)
+                .addComponent(signUpPage_tfId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(signUpPage_lblPassword)
+                .addGap(6, 6, 6)
+                .addComponent(signUpPage_pfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(signUpPage_btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(signUpPage_btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pageSignUpLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2))
+        );
+
+        getContentPane().add(pageSignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
+
+        pageAdminDashboard.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        pageAdminDashboard.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        pageAdminDashboard.setMinimumSize(new java.awt.Dimension(1280, 720));
+        pageAdminDashboard.setName("login page"); // NOI18N
+        pageAdminDashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pageAdmin_panelHeader.setBackground(new java.awt.Color(255, 255, 255));
+        pageAdmin_panelHeader.setMaximumSize(new java.awt.Dimension(1100, 60));
+        pageAdmin_panelHeader.setMinimumSize(new java.awt.Dimension(1100, 60));
+        pageAdmin_panelHeader.setPreferredSize(new java.awt.Dimension(1100, 60));
+
+        javax.swing.GroupLayout pageAdmin_panelHeaderLayout = new javax.swing.GroupLayout(pageAdmin_panelHeader);
+        pageAdmin_panelHeader.setLayout(pageAdmin_panelHeaderLayout);
+        pageAdmin_panelHeaderLayout.setHorizontalGroup(
+            pageAdmin_panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1100, Short.MAX_VALUE)
+        );
+        pageAdmin_panelHeaderLayout.setVerticalGroup(
+            pageAdmin_panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        pageAdminDashboard.add(pageAdmin_panelHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 1100, -1));
+
+        pageAdmin_panelMenu.setBackground(new java.awt.Color(34, 125, 194));
+        pageAdmin_panelMenu.setMaximumSize(new java.awt.Dimension(180, 640));
+        pageAdmin_panelMenu.setMinimumSize(new java.awt.Dimension(180, 640));
+        pageAdmin_panelMenu.setPreferredSize(new java.awt.Dimension(180, 640));
+
+        javax.swing.GroupLayout pageAdmin_panelMenuLayout = new javax.swing.GroupLayout(pageAdmin_panelMenu);
+        pageAdmin_panelMenu.setLayout(pageAdmin_panelMenuLayout);
+        pageAdmin_panelMenuLayout.setHorizontalGroup(
+            pageAdmin_panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 180, Short.MAX_VALUE)
+        );
+        pageAdmin_panelMenuLayout.setVerticalGroup(
+            pageAdmin_panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 960, Short.MAX_VALUE)
+        );
+
+        pageAdminDashboard.add(pageAdmin_panelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 960));
+
+        getContentPane().add(pageAdminDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void signInPage_tfIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signInPage_tfIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_signInPage_tfIdActionPerformed
+
+    private void signUpPage_tfIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpPage_tfIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_signUpPage_tfIdActionPerformed
+
+    private void signInPage_btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signInPage_btnSignUpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_signInPage_btnSignUpActionPerformed
+
+    private void signInPage_btnSignUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInPage_btnSignUpMouseClicked
+        // TODO add your handling code here:
+        pageSignIn.setVisible(false);
+        pageSignUp.setVisible(true);
+        pageAdminDashboard.setVisible(false);
+    }//GEN-LAST:event_signInPage_btnSignUpMouseClicked
+
+    private void signUpPage_btnBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpPage_btnBackMouseClicked
+        // TODO add your handling code here:
+        pageSignIn.setVisible(true);
+        pageSignUp.setVisible(false);
+        pageAdminDashboard.setVisible(false);
+    }//GEN-LAST:event_signUpPage_btnBackMouseClicked
+
+    private void signInPage_btnSignInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInPage_btnSignInMouseClicked
+        // TODO add your handling code here:
+        pageSignIn.setVisible(false);
+        pageSignUp.setVisible(false);
+        pageAdminDashboard.setVisible(true);
+    }//GEN-LAST:event_signInPage_btnSignInMouseClicked
 
     /**
      * @param args the command line arguments
@@ -80,5 +377,24 @@ public class menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel pageAdminDashboard;
+    private javax.swing.JPanel pageAdmin_panelHeader;
+    private javax.swing.JPanel pageAdmin_panelMenu;
+    private javax.swing.JPanel pageSignIn;
+    private javax.swing.JPanel pageSignUp;
+    private javax.swing.JButton signInPage_btnSignIn;
+    private javax.swing.JButton signInPage_btnSignUp;
+    private javax.swing.JLabel signInPage_lblId;
+    private javax.swing.JLabel signInPage_lblPassword;
+    private javax.swing.JPasswordField signInPage_pfPassword;
+    private javax.swing.JTextField signInPage_tfId;
+    private javax.swing.JButton signUpPage_btnBack;
+    private javax.swing.JButton signUpPage_btnSignUp;
+    private javax.swing.JLabel signUpPage_lblId;
+    private javax.swing.JLabel signUpPage_lblPassword;
+    private javax.swing.JPasswordField signUpPage_pfPassword;
+    private javax.swing.JTextField signUpPage_tfId;
     // End of variables declaration//GEN-END:variables
 }
