@@ -1648,15 +1648,15 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="PanelAddAdmin_LabelPassword1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelAddAdmin_PasswordField1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelAddAdmin_Contact1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelAddAdmin_LabelContact1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelAddAdmin_TextFieldID1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelAddAdmin_LabelID1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelAddAdmin_LabelName1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelAddAdmin_Name1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="ButtonAddNewAdmin1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelAddTeacher_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelAddTeacher_PasswordField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelAddTeacher_Class" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelAddTeacher_LabelClass" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelAddTeacher_TextFieldID" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelAddTeacher_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelAddTeacher_LabelName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelAddTeacher_Name" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelAddTeacher_ButtonAddNewTeacher" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="380" max="32767" attributes="0"/>
                   </Group>
@@ -1666,30 +1666,30 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                      <Component id="PanelAddAdmin_LabelID1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelAddTeacher_LabelID" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Component id="PanelAddAdmin_TextFieldID1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelAddTeacher_TextFieldID" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="PanelAddAdmin_LabelName1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelAddTeacher_LabelName" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="PanelAddAdmin_Name1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelAddTeacher_Name" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="PanelAddAdmin_LabelContact1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelAddTeacher_LabelClass" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="PanelAddAdmin_Contact1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelAddTeacher_Class" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="PanelAddAdmin_LabelPassword1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelAddTeacher_LabelPassword" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Component id="PanelAddAdmin_PasswordField1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelAddTeacher_PasswordField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="ButtonAddNewAdmin1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelAddTeacher_ButtonAddNewTeacher" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="130" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="ButtonAddNewAdmin1">
+            <Component class="javax.swing.JButton" name="PanelAddTeacher_ButtonAddNewTeacher">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c2" green="7d" red="22" type="rgb"/>
@@ -1700,7 +1700,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Add New"/>
+                <Property name="text" type="java.lang.String" value="Update"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[127, 36]"/>
@@ -1713,10 +1713,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ButtonAddNewAdmin1MouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelAddTeacher_ButtonAddNewTeacherMouseClicked"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="PanelAddAdmin_LabelID1">
+            <Component class="javax.swing.JLabel" name="PanelAddTeacher_LabelID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="12" style="0"/>
@@ -1724,7 +1724,7 @@
                 <Property name="text" type="java.lang.String" value="ID"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="PanelAddAdmin_TextFieldID1">
+            <Component class="javax.swing.JTextField" name="PanelAddTeacher_TextFieldID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -1741,10 +1741,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelAddAdmin_TextFieldID1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelAddTeacher_TextFieldIDActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="PanelAddAdmin_LabelPassword1">
+            <Component class="javax.swing.JLabel" name="PanelAddTeacher_LabelPassword">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="12" style="0"/>
@@ -1752,7 +1752,7 @@
                 <Property name="text" type="java.lang.String" value="Password"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="PanelAddAdmin_PasswordField1">
+            <Component class="javax.swing.JPasswordField" name="PanelAddTeacher_PasswordField">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -1769,7 +1769,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="PanelAddAdmin_LabelName1">
+            <Component class="javax.swing.JLabel" name="PanelAddTeacher_LabelName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="12" style="0"/>
@@ -1777,15 +1777,15 @@
                 <Property name="text" type="java.lang.String" value="Name"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="PanelAddAdmin_LabelContact1">
+            <Component class="javax.swing.JLabel" name="PanelAddTeacher_LabelClass">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="12" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Contact"/>
+                <Property name="text" type="java.lang.String" value="Class"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="PanelAddAdmin_Name1">
+            <Component class="javax.swing.JTextField" name="PanelAddTeacher_Name">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -1802,10 +1802,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelAddAdmin_Name1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelAddTeacher_NameActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="PanelAddAdmin_Contact1">
+            <Component class="javax.swing.JTextField" name="PanelAddTeacher_Class">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -1822,7 +1822,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelAddAdmin_Contact1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelAddTeacher_ClassActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -1851,15 +1851,15 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="PanelUpdateAdmin_LabelPassword1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_PasswordField1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_Contact1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_LabelContact1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_TextFieldID1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_LabelID1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_LabelName1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_Name1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_ButtonUpdate1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelUpdateTeacher_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelUpdateTeacher_PasswordField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelUpdateTeacher_Class" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelUpdateTeacher_LabelClass" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelUpdateTeacher_TextFieldID" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelUpdateTeacher_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelUpdateTeacher_LabelName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelUpdateTeacher_Name" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelUpdateTeacher_ButtonUpdate" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="380" max="32767" attributes="0"/>
                   </Group>
@@ -1869,30 +1869,30 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                      <Component id="PanelUpdateAdmin_LabelID1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelUpdateTeacher_LabelID" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Component id="PanelUpdateAdmin_TextFieldID1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelUpdateTeacher_TextFieldID" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="PanelUpdateAdmin_LabelName1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelUpdateTeacher_LabelName" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="PanelUpdateAdmin_Name1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelUpdateTeacher_Name" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="PanelUpdateAdmin_LabelContact1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelUpdateTeacher_LabelClass" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="PanelUpdateAdmin_Contact1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelUpdateTeacher_Class" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="PanelUpdateAdmin_LabelPassword1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelUpdateTeacher_LabelPassword" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Component id="PanelUpdateAdmin_PasswordField1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelUpdateTeacher_PasswordField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="PanelUpdateAdmin_ButtonUpdate1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PanelUpdateTeacher_ButtonUpdate" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="130" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="PanelUpdateAdmin_ButtonUpdate1">
+            <Component class="javax.swing.JButton" name="PanelUpdateTeacher_ButtonUpdate">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c2" green="7d" red="22" type="rgb"/>
@@ -1916,10 +1916,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelUpdateAdmin_ButtonUpdate1MouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelUpdateTeacher_ButtonUpdateMouseClicked"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="PanelUpdateAdmin_LabelID1">
+            <Component class="javax.swing.JLabel" name="PanelUpdateTeacher_LabelID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="12" style="0"/>
@@ -1927,7 +1927,7 @@
                 <Property name="text" type="java.lang.String" value="ID"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="PanelUpdateAdmin_TextFieldID1">
+            <Component class="javax.swing.JTextField" name="PanelUpdateTeacher_TextFieldID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -1945,10 +1945,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelUpdateAdmin_TextFieldID1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelUpdateTeacher_TextFieldIDActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="PanelUpdateAdmin_LabelPassword1">
+            <Component class="javax.swing.JLabel" name="PanelUpdateTeacher_LabelPassword">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="12" style="0"/>
@@ -1956,7 +1956,7 @@
                 <Property name="text" type="java.lang.String" value="Password"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="PanelUpdateAdmin_PasswordField1">
+            <Component class="javax.swing.JPasswordField" name="PanelUpdateTeacher_PasswordField">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -1973,7 +1973,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="PanelUpdateAdmin_LabelName1">
+            <Component class="javax.swing.JLabel" name="PanelUpdateTeacher_LabelName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="12" style="0"/>
@@ -1981,15 +1981,15 @@
                 <Property name="text" type="java.lang.String" value="Name"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="PanelUpdateAdmin_LabelContact1">
+            <Component class="javax.swing.JLabel" name="PanelUpdateTeacher_LabelClass">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="12" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Contact"/>
+                <Property name="text" type="java.lang.String" value="Class"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="PanelUpdateAdmin_Name1">
+            <Component class="javax.swing.JTextField" name="PanelUpdateTeacher_Name">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -2006,10 +2006,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelUpdateAdmin_Name1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelUpdateTeacher_NameActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="PanelUpdateAdmin_Contact1">
+            <Component class="javax.swing.JTextField" name="PanelUpdateTeacher_Class">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -2026,7 +2026,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelUpdateAdmin_Contact1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelUpdateTeacher_ClassActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
