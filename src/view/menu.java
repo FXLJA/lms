@@ -20,10 +20,16 @@ public class menu extends javax.swing.JFrame {
         PanelSignUp.setVisible(false);
         
         //Admin Panel
-        PanelAdminDashboard.setVisible(false);
         AdminDropDownUsername.setVisible(false);
+        
+        PanelAdminDashboard.setVisible(false);
+        PanelAddAdmin.setVisible(false);
+        PanelUpdateAdmin.setVisible(false);
+        
         PanelViewTeacher.setVisible(false);
+        
         PanelViewStudent.setVisible(false);
+        
         PanelAdminProfile.setVisible(false);
     }
 
@@ -69,9 +75,29 @@ public class menu extends javax.swing.JFrame {
         LabelSignOutAdmin = new javax.swing.JLabel();
         LabelProfileAdmin = new javax.swing.JLabel();
         PanelViewAdmin = new javax.swing.JPanel();
-        ButtonAddAdmin = new javax.swing.JButton();
+        PanelViewAdmin_ButtonAddAdmin = new javax.swing.JButton();
         ScrollPaneAdmin = new javax.swing.JScrollPane();
         TableAdmin = new javax.swing.JTable();
+        PanelAddAdmin = new javax.swing.JPanel();
+        ButtonAddNewAdmin = new javax.swing.JButton();
+        PanelAddAdmin_LabelID = new javax.swing.JLabel();
+        PanelAddAdmin_TextFieldID = new javax.swing.JTextField();
+        PanelAddAdmin_LabelPassword = new javax.swing.JLabel();
+        PanelAddAdmin_PasswordField = new javax.swing.JPasswordField();
+        PanelAddAdmin_LabelName = new javax.swing.JLabel();
+        PanelAddAdmin_LabelContact = new javax.swing.JLabel();
+        PanelAddAdmin_Name = new javax.swing.JTextField();
+        PanelAddAdmin_Contact = new javax.swing.JTextField();
+        PanelUpdateAdmin = new javax.swing.JPanel();
+        PanelUpdateAdmin_ButtonUpdate = new javax.swing.JButton();
+        PanelUpdateAdmin_LabelID = new javax.swing.JLabel();
+        PanelUpdateAdmin_TextFieldID = new javax.swing.JTextField();
+        PanelUpdateAdmin_LabelPassword = new javax.swing.JLabel();
+        PanelUpdateAdmin_PasswordField = new javax.swing.JPasswordField();
+        PanelUpdateAdmin_LabelName = new javax.swing.JLabel();
+        PanelUpdateAdmin_LabelContact = new javax.swing.JLabel();
+        PanelUpdateAdmin_Name = new javax.swing.JTextField();
+        PanelUpdateAdmin_Contact = new javax.swing.JTextField();
         PanelViewTeacher = new javax.swing.JPanel();
         ButtonAddTeacher = new javax.swing.JButton();
         ScrollPaneTeacher = new javax.swing.JScrollPane();
@@ -506,17 +532,17 @@ public class menu extends javax.swing.JFrame {
         PanelViewAdmin.setMinimumSize(new java.awt.Dimension(1040, 600));
         PanelViewAdmin.setPreferredSize(new java.awt.Dimension(1040, 600));
 
-        ButtonAddAdmin.setBackground(new java.awt.Color(34, 125, 194));
-        ButtonAddAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        ButtonAddAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        ButtonAddAdmin.setText("Add New");
-        ButtonAddAdmin.setToolTipText("");
-        ButtonAddAdmin.setMaximumSize(new java.awt.Dimension(127, 36));
-        ButtonAddAdmin.setMinimumSize(new java.awt.Dimension(127, 36));
-        ButtonAddAdmin.setPreferredSize(new java.awt.Dimension(127, 36));
-        ButtonAddAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+        PanelViewAdmin_ButtonAddAdmin.setBackground(new java.awt.Color(34, 125, 194));
+        PanelViewAdmin_ButtonAddAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        PanelViewAdmin_ButtonAddAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        PanelViewAdmin_ButtonAddAdmin.setText("Add New");
+        PanelViewAdmin_ButtonAddAdmin.setToolTipText("");
+        PanelViewAdmin_ButtonAddAdmin.setMaximumSize(new java.awt.Dimension(127, 36));
+        PanelViewAdmin_ButtonAddAdmin.setMinimumSize(new java.awt.Dimension(127, 36));
+        PanelViewAdmin_ButtonAddAdmin.setPreferredSize(new java.awt.Dimension(127, 36));
+        PanelViewAdmin_ButtonAddAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ButtonAddAdminMouseClicked(evt);
+                PanelViewAdmin_ButtonAddAdminMouseClicked(evt);
             }
         });
 
@@ -568,7 +594,7 @@ public class menu extends javax.swing.JFrame {
             .addGroup(PanelViewAdminLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(PanelViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ButtonAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelViewAdmin_ButtonAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ScrollPaneAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 992, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -576,13 +602,240 @@ public class menu extends javax.swing.JFrame {
             PanelViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelViewAdminLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(ButtonAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelViewAdmin_ButtonAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
                 .addComponent(ScrollPaneAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         PanelAdminDashboard.add(PanelViewAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        PanelAddAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        PanelAddAdmin.setMaximumSize(new java.awt.Dimension(1040, 600));
+        PanelAddAdmin.setMinimumSize(new java.awt.Dimension(1040, 600));
+
+        ButtonAddNewAdmin.setBackground(new java.awt.Color(34, 125, 194));
+        ButtonAddNewAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ButtonAddNewAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonAddNewAdmin.setText("Add New");
+        ButtonAddNewAdmin.setToolTipText("");
+        ButtonAddNewAdmin.setMaximumSize(new java.awt.Dimension(127, 36));
+        ButtonAddNewAdmin.setMinimumSize(new java.awt.Dimension(127, 36));
+        ButtonAddNewAdmin.setPreferredSize(new java.awt.Dimension(127, 36));
+        ButtonAddNewAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonAddNewAdminMouseClicked(evt);
+            }
+        });
+
+        PanelAddAdmin_LabelID.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelAddAdmin_LabelID.setText("ID");
+
+        PanelAddAdmin_TextFieldID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelAddAdmin_TextFieldID.setToolTipText("Username");
+        PanelAddAdmin_TextFieldID.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_TextFieldID.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_TextFieldID.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_TextFieldID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelAddAdmin_TextFieldIDActionPerformed(evt);
+            }
+        });
+
+        PanelAddAdmin_LabelPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelAddAdmin_LabelPassword.setText("Password");
+
+        PanelAddAdmin_PasswordField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        PanelAddAdmin_PasswordField.setToolTipText("Password");
+        PanelAddAdmin_PasswordField.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_PasswordField.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_PasswordField.setPreferredSize(new java.awt.Dimension(280, 36));
+
+        PanelAddAdmin_LabelName.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelAddAdmin_LabelName.setText("Name");
+
+        PanelAddAdmin_LabelContact.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelAddAdmin_LabelContact.setText("Contact");
+
+        PanelAddAdmin_Name.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelAddAdmin_Name.setToolTipText("Username");
+        PanelAddAdmin_Name.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_Name.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_Name.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_Name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelAddAdmin_NameActionPerformed(evt);
+            }
+        });
+
+        PanelAddAdmin_Contact.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelAddAdmin_Contact.setToolTipText("Username");
+        PanelAddAdmin_Contact.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_Contact.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_Contact.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelAddAdmin_Contact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelAddAdmin_ContactActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelAddAdminLayout = new javax.swing.GroupLayout(PanelAddAdmin);
+        PanelAddAdmin.setLayout(PanelAddAdminLayout);
+        PanelAddAdminLayout.setHorizontalGroup(
+            PanelAddAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelAddAdminLayout.createSequentialGroup()
+                .addGap(380, 380, 380)
+                .addGroup(PanelAddAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PanelAddAdmin_LabelPassword)
+                    .addComponent(PanelAddAdmin_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelAddAdmin_Contact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelAddAdmin_LabelContact)
+                    .addComponent(PanelAddAdmin_TextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelAddAdmin_LabelID)
+                    .addComponent(PanelAddAdmin_LabelName)
+                    .addComponent(PanelAddAdmin_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ButtonAddNewAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(380, Short.MAX_VALUE))
+        );
+        PanelAddAdminLayout.setVerticalGroup(
+            PanelAddAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelAddAdminLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(PanelAddAdmin_LabelID)
+                .addGap(6, 6, 6)
+                .addComponent(PanelAddAdmin_TextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelAddAdmin_LabelName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelAddAdmin_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelAddAdmin_LabelContact)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelAddAdmin_Contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelAddAdmin_LabelPassword)
+                .addGap(6, 6, 6)
+                .addComponent(PanelAddAdmin_PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(ButtonAddNewAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        PanelAdminDashboard.add(PanelAddAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        PanelUpdateAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        PanelUpdateAdmin.setMaximumSize(new java.awt.Dimension(1040, 600));
+        PanelUpdateAdmin.setMinimumSize(new java.awt.Dimension(1040, 600));
+
+        PanelUpdateAdmin_ButtonUpdate.setBackground(new java.awt.Color(34, 125, 194));
+        PanelUpdateAdmin_ButtonUpdate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        PanelUpdateAdmin_ButtonUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        PanelUpdateAdmin_ButtonUpdate.setText("Add New");
+        PanelUpdateAdmin_ButtonUpdate.setToolTipText("");
+        PanelUpdateAdmin_ButtonUpdate.setMaximumSize(new java.awt.Dimension(127, 36));
+        PanelUpdateAdmin_ButtonUpdate.setMinimumSize(new java.awt.Dimension(127, 36));
+        PanelUpdateAdmin_ButtonUpdate.setPreferredSize(new java.awt.Dimension(127, 36));
+        PanelUpdateAdmin_ButtonUpdate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PanelUpdateAdmin_ButtonUpdateMouseClicked(evt);
+            }
+        });
+
+        PanelUpdateAdmin_LabelID.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelUpdateAdmin_LabelID.setText("ID");
+
+        PanelUpdateAdmin_TextFieldID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelUpdateAdmin_TextFieldID.setToolTipText("Username");
+        PanelUpdateAdmin_TextFieldID.setEnabled(false);
+        PanelUpdateAdmin_TextFieldID.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_TextFieldID.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_TextFieldID.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_TextFieldID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelUpdateAdmin_TextFieldIDActionPerformed(evt);
+            }
+        });
+
+        PanelUpdateAdmin_LabelPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelUpdateAdmin_LabelPassword.setText("Password");
+
+        PanelUpdateAdmin_PasswordField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        PanelUpdateAdmin_PasswordField.setToolTipText("Password");
+        PanelUpdateAdmin_PasswordField.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_PasswordField.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_PasswordField.setPreferredSize(new java.awt.Dimension(280, 36));
+
+        PanelUpdateAdmin_LabelName.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelUpdateAdmin_LabelName.setText("Name");
+
+        PanelUpdateAdmin_LabelContact.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelUpdateAdmin_LabelContact.setText("Contact");
+
+        PanelUpdateAdmin_Name.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelUpdateAdmin_Name.setToolTipText("Username");
+        PanelUpdateAdmin_Name.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_Name.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_Name.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_Name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelUpdateAdmin_NameActionPerformed(evt);
+            }
+        });
+
+        PanelUpdateAdmin_Contact.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelUpdateAdmin_Contact.setToolTipText("Username");
+        PanelUpdateAdmin_Contact.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_Contact.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_Contact.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelUpdateAdmin_Contact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelUpdateAdmin_ContactActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelUpdateAdminLayout = new javax.swing.GroupLayout(PanelUpdateAdmin);
+        PanelUpdateAdmin.setLayout(PanelUpdateAdminLayout);
+        PanelUpdateAdminLayout.setHorizontalGroup(
+            PanelUpdateAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelUpdateAdminLayout.createSequentialGroup()
+                .addGap(380, 380, 380)
+                .addGroup(PanelUpdateAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PanelUpdateAdmin_LabelPassword)
+                    .addComponent(PanelUpdateAdmin_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelUpdateAdmin_Contact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelUpdateAdmin_LabelContact)
+                    .addComponent(PanelUpdateAdmin_TextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelUpdateAdmin_LabelID)
+                    .addComponent(PanelUpdateAdmin_LabelName)
+                    .addComponent(PanelUpdateAdmin_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelUpdateAdmin_ButtonUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(380, Short.MAX_VALUE))
+        );
+        PanelUpdateAdminLayout.setVerticalGroup(
+            PanelUpdateAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelUpdateAdminLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(PanelUpdateAdmin_LabelID)
+                .addGap(6, 6, 6)
+                .addComponent(PanelUpdateAdmin_TextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelUpdateAdmin_LabelName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelUpdateAdmin_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelUpdateAdmin_LabelContact)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelUpdateAdmin_Contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelUpdateAdmin_LabelPassword)
+                .addGap(6, 6, 6)
+                .addComponent(PanelUpdateAdmin_PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(PanelUpdateAdmin_ButtonUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+
+        PanelAdminDashboard.add(PanelUpdateAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
 
         PanelViewTeacher.setBackground(new java.awt.Color(255, 255, 255));
         PanelViewTeacher.setMaximumSize(new java.awt.Dimension(1040, 600));
@@ -796,9 +1049,9 @@ public class menu extends javax.swing.JFrame {
 
     private void PanelSignUp_ButtonBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSignUp_ButtonBackMouseClicked
         // TODO add your handling code here:
-        PanelSignIn.setVisible(true);
         PanelSignUp.setVisible(false);
         PanelAdminDashboard.setVisible(false);
+        PanelSignIn.setVisible(true);
     }//GEN-LAST:event_PanelSignUp_ButtonBackMouseClicked
 
     private void PanelSignIn_ButtonSignInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSignIn_ButtonSignInMouseClicked
@@ -808,9 +1061,16 @@ public class menu extends javax.swing.JFrame {
         PanelAdminDashboard.setVisible(true);
     }//GEN-LAST:event_PanelSignIn_ButtonSignInMouseClicked
 
-    private void ButtonAddAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAddAdminMouseClicked
+    private void PanelViewAdmin_ButtonAddAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewAdmin_ButtonAddAdminMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonAddAdminMouseClicked
+        AdminDropDownUsername.setVisible(false);
+        PanelViewAdmin.setVisible(false);
+        PanelUpdateAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAdminProfile.setVisible(false);
+        PanelAddAdmin.setVisible(true);
+    }//GEN-LAST:event_PanelViewAdmin_ButtonAddAdminMouseClicked
 
     private void LabelDropDownToggleAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDropDownToggleAdminMouseClicked
         // TODO add your handling code here:
@@ -835,6 +1095,8 @@ public class menu extends javax.swing.JFrame {
     private void AdminMenu_ViewAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminMouseClicked
         // TODO add your handling code here:
         AdminDropDownUsername.setVisible(false);
+        PanelAddAdmin.setVisible(false);
+        PanelUpdateAdmin.setVisible(false);
         PanelViewTeacher.setVisible(false);
         PanelViewStudent.setVisible(false);
         PanelAdminProfile.setVisible(false);
@@ -845,6 +1107,8 @@ public class menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         AdminDropDownUsername.setVisible(false);
         PanelViewAdmin.setVisible(false);
+        PanelAddAdmin.setVisible(false);
+        PanelUpdateAdmin.setVisible(false);
         PanelViewStudent.setVisible(false);
         PanelAdminProfile.setVisible(false);
         PanelViewTeacher.setVisible(true);
@@ -872,6 +1136,8 @@ public class menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         AdminDropDownUsername.setVisible(false);
         PanelViewAdmin.setVisible(false);
+        PanelAddAdmin.setVisible(false);
+        PanelUpdateAdmin.setVisible(false);
         PanelViewTeacher.setVisible(false);
         PanelViewStudent.setVisible(false);
         PanelAdminProfile.setVisible(true);
@@ -883,12 +1149,47 @@ public class menu extends javax.swing.JFrame {
         
         //Panel Admin
         AdminDropDownUsername.setVisible(false);
+        PanelAdminDashboard.setVisible(false);
         PanelViewAdmin.setVisible(false);
+        PanelAddAdmin.setVisible(false);
+        PanelUpdateAdmin.setVisible(false);
         PanelViewTeacher.setVisible(false);
         PanelViewStudent.setVisible(false);
         PanelAdminProfile.setVisible(false);
         PanelSignIn.setVisible(true);
     }//GEN-LAST:event_LabelSignOutAdminMouseClicked
+
+    private void ButtonAddNewAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAddNewAdminMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonAddNewAdminMouseClicked
+
+    private void PanelAddAdmin_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddAdmin_TextFieldIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelAddAdmin_TextFieldIDActionPerformed
+
+    private void PanelAddAdmin_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddAdmin_NameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelAddAdmin_NameActionPerformed
+
+    private void PanelAddAdmin_ContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddAdmin_ContactActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelAddAdmin_ContactActionPerformed
+
+    private void PanelUpdateAdmin_ButtonUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelUpdateAdmin_ButtonUpdateMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelUpdateAdmin_ButtonUpdateMouseClicked
+
+    private void PanelUpdateAdmin_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelUpdateAdmin_TextFieldIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelUpdateAdmin_TextFieldIDActionPerformed
+
+    private void PanelUpdateAdmin_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelUpdateAdmin_NameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelUpdateAdmin_NameActionPerformed
+
+    private void PanelUpdateAdmin_ContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelUpdateAdmin_ContactActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelUpdateAdmin_ContactActionPerformed
 
     /**
      * @param args the command line arguments
@@ -934,7 +1235,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JPanel AdminMenu_ViewTeacher;
     private javax.swing.JPanel AdminlHeader;
     private javax.swing.JPanel AdminlMenu;
-    private javax.swing.JButton ButtonAddAdmin;
+    private javax.swing.JButton ButtonAddNewAdmin;
     private javax.swing.JButton ButtonAddStudent;
     private javax.swing.JButton ButtonAddTeacher;
     private javax.swing.JLabel LabelDropDownToggleAdmin;
@@ -944,6 +1245,15 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel LabelViewAdminProfile;
     private javax.swing.JLabel LabelViewStudent;
     private javax.swing.JLabel LabelViewTeacher;
+    private javax.swing.JPanel PanelAddAdmin;
+    private javax.swing.JTextField PanelAddAdmin_Contact;
+    private javax.swing.JLabel PanelAddAdmin_LabelContact;
+    private javax.swing.JLabel PanelAddAdmin_LabelID;
+    private javax.swing.JLabel PanelAddAdmin_LabelName;
+    private javax.swing.JLabel PanelAddAdmin_LabelPassword;
+    private javax.swing.JTextField PanelAddAdmin_Name;
+    private javax.swing.JPasswordField PanelAddAdmin_PasswordField;
+    private javax.swing.JTextField PanelAddAdmin_TextFieldID;
     private javax.swing.JPanel PanelAdminDashboard;
     private javax.swing.JPanel PanelAdminProfile;
     private javax.swing.JPanel PanelSignIn;
@@ -962,7 +1272,18 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel PanelSignUp_LabelPicture;
     private javax.swing.JPasswordField PanelSignUp_PasswordField;
     private javax.swing.JTextField PanelSignUp_TextFieldID;
+    private javax.swing.JPanel PanelUpdateAdmin;
+    private javax.swing.JButton PanelUpdateAdmin_ButtonUpdate;
+    private javax.swing.JTextField PanelUpdateAdmin_Contact;
+    private javax.swing.JLabel PanelUpdateAdmin_LabelContact;
+    private javax.swing.JLabel PanelUpdateAdmin_LabelID;
+    private javax.swing.JLabel PanelUpdateAdmin_LabelName;
+    private javax.swing.JLabel PanelUpdateAdmin_LabelPassword;
+    private javax.swing.JTextField PanelUpdateAdmin_Name;
+    private javax.swing.JPasswordField PanelUpdateAdmin_PasswordField;
+    private javax.swing.JTextField PanelUpdateAdmin_TextFieldID;
     private javax.swing.JPanel PanelViewAdmin;
+    private javax.swing.JButton PanelViewAdmin_ButtonAddAdmin;
     private javax.swing.JPanel PanelViewStudent;
     private javax.swing.JPanel PanelViewTeacher;
     private javax.swing.JScrollPane ScrollPaneAdmin;
