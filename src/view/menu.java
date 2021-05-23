@@ -483,10 +483,20 @@ public class menu extends javax.swing.JFrame {
 
         LabelSignOutAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         LabelSignOutAdmin.setText("Sign Out");
+        LabelSignOutAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelSignOutAdminMouseClicked(evt);
+            }
+        });
         AdminDropDownUsername.add(LabelSignOutAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
         LabelProfileAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         LabelProfileAdmin.setText("Profile");
+        LabelProfileAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelProfileAdminMouseClicked(evt);
+            }
+        });
         AdminDropDownUsername.add(LabelProfileAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         PanelAdminDashboard.add(AdminDropDownUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 150, 80));
@@ -605,7 +615,7 @@ public class menu extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "ID", "Name", "Contact", ""
+                "ID", "Name", "Class", ""
             }
         ) {
             Class[] types = new Class [] {
@@ -681,21 +691,21 @@ public class menu extends javax.swing.JFrame {
         TableStudent.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         TableStudent.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID", "Name", "Contact", ""
+                "ID", "Name", "Class", "Major", ""
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -715,6 +725,7 @@ public class menu extends javax.swing.JFrame {
             TableStudent.getColumnModel().getColumn(1).setResizable(false);
             TableStudent.getColumnModel().getColumn(2).setResizable(false);
             TableStudent.getColumnModel().getColumn(3).setResizable(false);
+            TableStudent.getColumnModel().getColumn(4).setResizable(false);
         }
 
         javax.swing.GroupLayout PanelViewStudentLayout = new javax.swing.GroupLayout(PanelViewStudent);
@@ -823,35 +834,61 @@ public class menu extends javax.swing.JFrame {
 
     private void AdminMenu_ViewAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminMouseClicked
         // TODO add your handling code here:
-        PanelViewAdmin.setVisible(true);
+        AdminDropDownUsername.setVisible(false);
         PanelViewTeacher.setVisible(false);
         PanelViewStudent.setVisible(false);
         PanelAdminProfile.setVisible(false);
+        PanelViewAdmin.setVisible(true);
     }//GEN-LAST:event_AdminMenu_ViewAdminMouseClicked
 
     private void AdminMenu_ViewTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewTeacherMouseClicked
         // TODO add your handling code here:
+        AdminDropDownUsername.setVisible(false);
         PanelViewAdmin.setVisible(false);
-        PanelViewTeacher.setVisible(true);
         PanelViewStudent.setVisible(false);
         PanelAdminProfile.setVisible(false);
+        PanelViewTeacher.setVisible(true);
     }//GEN-LAST:event_AdminMenu_ViewTeacherMouseClicked
 
     private void AdminMenu_ViewStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewStudentMouseClicked
         // TODO add your handling code here:
+        AdminDropDownUsername.setVisible(false);
         PanelViewAdmin.setVisible(false);
         PanelViewTeacher.setVisible(false);
-        PanelViewStudent.setVisible(true);
         PanelAdminProfile.setVisible(false);
+        PanelViewStudent.setVisible(true);
     }//GEN-LAST:event_AdminMenu_ViewStudentMouseClicked
 
     private void AdminMenu_ViewAdminProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminProfileMouseClicked
         // TODO add your handling code here:
+        AdminDropDownUsername.setVisible(false);
         PanelViewAdmin.setVisible(false);
         PanelViewTeacher.setVisible(false);
         PanelViewStudent.setVisible(false);
         PanelAdminProfile.setVisible(true);
     }//GEN-LAST:event_AdminMenu_ViewAdminProfileMouseClicked
+
+    private void LabelProfileAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileAdminMouseClicked
+        // TODO add your handling code here:
+        AdminDropDownUsername.setVisible(false);
+        PanelViewAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAdminProfile.setVisible(true);
+    }//GEN-LAST:event_LabelProfileAdminMouseClicked
+
+    private void LabelSignOutAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutAdminMouseClicked
+        // TODO add your handling code here:
+        
+        
+        //Panel Admin
+        AdminDropDownUsername.setVisible(false);
+        PanelViewAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAdminProfile.setVisible(false);
+        PanelSignIn.setVisible(true);
+    }//GEN-LAST:event_LabelSignOutAdminMouseClicked
 
     /**
      * @param args the command line arguments
