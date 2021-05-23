@@ -215,7 +215,6 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelSignIn_ButtonSignUpMouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelSignIn_ButtonSignUpActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="PanelSignIn_LabelPicture">
@@ -850,14 +849,16 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="ScrollPaneAdmin" min="-2" pref="992" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                               <Component id="PanelViewAdmin_ButtonAddAdmin" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="PanelViewAdmin_ButtonUpdateAdmin" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="PanelViewAdmin_ButtonDeleteAdmin" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="ScrollPaneAdmin" min="-2" pref="992" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -871,6 +872,7 @@
                           <Component id="PanelViewAdmin_ButtonAddAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="PanelViewAdmin_ButtonUpdateAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="PanelViewAdmin_ButtonDeleteAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="ScrollPaneAdmin" min="-2" pref="500" max="-2" attributes="0"/>
@@ -1017,6 +1019,14 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelViewAdmin_ButtonDeleteAdminMouseClicked"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Admin"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="PanelAddAdmin">
@@ -1040,18 +1050,26 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="PanelAddAdmin_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelAddAdmin_PasswordField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelAddAdmin_Contact" max="32767" attributes="0"/>
-                          <Component id="PanelAddAdmin_LabelContact" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelAddAdmin_TextFieldID" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelAddAdmin_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelAddAdmin_LabelName" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelAddAdmin_Name" max="32767" attributes="0"/>
-                          <Component id="ButtonAddNewAdmin" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="PanelAddAdmin_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelAddAdmin_PasswordField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PanelAddAdmin_Contact" max="32767" attributes="0"/>
+                                  <Component id="PanelAddAdmin_LabelContact" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelAddAdmin_TextFieldID" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PanelAddAdmin_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelAddAdmin_LabelName" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelAddAdmin_Name" max="32767" attributes="0"/>
+                                  <Component id="ButtonAddNewAdmin" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="472" max="-2" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace pref="380" max="32767" attributes="0"/>
                   </Group>
@@ -1060,7 +1078,9 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="PanelAddAdmin_LabelID" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="PanelAddAdmin_TextFieldID" min="-2" max="-2" attributes="0"/>
@@ -1220,6 +1240,14 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelAddAdmin_ContactActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Add Admin"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="PanelUpdateAdmin">
@@ -1243,18 +1271,26 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="PanelUpdateAdmin_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_PasswordField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_Contact" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_LabelContact" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_TextFieldID" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_LabelName" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_Name" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateAdmin_ButtonUpdate" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="PanelUpdateAdmin_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelUpdateAdmin_PasswordField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PanelUpdateAdmin_Contact" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PanelUpdateAdmin_LabelContact" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelUpdateAdmin_TextFieldID" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PanelUpdateAdmin_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelUpdateAdmin_LabelName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelUpdateAdmin_Name" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PanelUpdateAdmin_ButtonUpdate" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="459" max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace pref="380" max="32767" attributes="0"/>
                   </Group>
@@ -1263,7 +1299,9 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" pref="35" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="PanelUpdateAdmin_LabelID" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="PanelUpdateAdmin_TextFieldID" min="-2" max="-2" attributes="0"/>
@@ -1424,6 +1462,14 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelUpdateAdmin_ContactActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Update Admin"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="PanelViewTeacher">
@@ -1454,6 +1500,8 @@
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                               <Component id="ButtonAddTeacher" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="PanelViewTeacher_ButtonUpdateTeacher" min="-2" max="-2" attributes="0"/>
@@ -1469,13 +1517,14 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="ButtonAddTeacher" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="3" groupAlignment="3" attributes="0">
                               <Component id="PanelViewTeacher_ButtonUpdateTeacher" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="PanelViewTeacher_ButtonDeleteTeacher" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="jLabel5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="ScrollPaneTeacher" min="-2" pref="500" max="-2" attributes="0"/>
@@ -1511,6 +1560,14 @@
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ButtonAddTeacherMouseClicked"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Teacher"/>
+              </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="ScrollPaneTeacher">
               <Properties>
@@ -1660,6 +1717,13 @@
                       </Group>
                       <EmptySpace pref="380" max="32767" attributes="0"/>
                   </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="472" max="-2" attributes="0"/>
+                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="460" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -1685,10 +1749,25 @@
                       <Component id="PanelAddTeacher_ButtonAddNewTeacher" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="130" max="32767" attributes="0"/>
                   </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="jLabel7" min="-2" pref="37" max="-2" attributes="0"/>
+                          <EmptySpace pref="523" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel7">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Add Teacher"/>
+              </Properties>
+            </Component>
             <Component class="javax.swing.JButton" name="PanelAddTeacher_ButtonAddNewTeacher">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1848,18 +1927,26 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="PanelUpdateTeacher_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateTeacher_PasswordField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateTeacher_Class" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateTeacher_LabelClass" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateTeacher_TextFieldID" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateTeacher_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateTeacher_LabelName" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelUpdateTeacher_Name" alignment="0" max="32767" attributes="0"/>
-                          <Component id="PanelUpdateTeacher_ButtonUpdate" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="PanelUpdateTeacher_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelUpdateTeacher_PasswordField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PanelUpdateTeacher_Class" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PanelUpdateTeacher_LabelClass" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelUpdateTeacher_TextFieldID" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PanelUpdateTeacher_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelUpdateTeacher_LabelName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PanelUpdateTeacher_Name" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PanelUpdateTeacher_ButtonUpdate" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="449" max="-2" attributes="0"/>
+                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace pref="380" max="32767" attributes="0"/>
                   </Group>
@@ -1868,7 +1955,9 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="jLabel8" min="-2" pref="34" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="PanelUpdateTeacher_LabelID" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="PanelUpdateTeacher_TextFieldID" min="-2" max="-2" attributes="0"/>
@@ -1892,6 +1981,14 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel8">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Update Teacher"/>
+              </Properties>
+            </Component>
             <Component class="javax.swing.JButton" name="PanelUpdateTeacher_ButtonUpdate">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -2059,6 +2156,8 @@
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                               <Component id="PanelViewStudent_ButtonAddStudent" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="PanelViewStudent_ButtonUpdateStudent" min="-2" max="-2" attributes="0"/>
@@ -2077,10 +2176,9 @@
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="PanelViewStudent_ButtonAddStudent" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="3" groupAlignment="3" attributes="0">
-                              <Component id="PanelViewStudent_ButtonUpdateStudent" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="PanelViewStudent_ButtonDeleteStudent" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="PanelViewStudent_ButtonUpdateStudent" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelViewStudent_ButtonDeleteStudent" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" alignment="0" pref="36" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="ScrollPaneStudent" min="-2" pref="500" max="-2" attributes="0"/>
@@ -2090,6 +2188,14 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Student"/>
+              </Properties>
+            </Component>
             <Component class="javax.swing.JButton" name="PanelViewStudent_ButtonAddStudent">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -2278,6 +2384,13 @@
                       </Group>
                       <EmptySpace pref="380" max="32767" attributes="0"/>
                   </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="452" max="-2" attributes="0"/>
+                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="481" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -2307,10 +2420,25 @@
                       <Component id="PanelAddStudent_ButtonAddNewStudent" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jLabel9" min="-2" pref="37" max="-2" attributes="0"/>
+                          <EmptySpace pref="528" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel9">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Add Student"/>
+              </Properties>
+            </Component>
             <Component class="javax.swing.JButton" name="PanelAddStudent_ButtonAddNewStudent">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -2502,23 +2630,31 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="PanelUpdateStudent_Major" alignment="0" max="32767" attributes="0"/>
-                              <Component id="PanelUpdateStudent_LabelMajor" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="PanelUpdateStudent_Major" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="PanelUpdateStudent_LabelMajor" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="PanelUpdateStudent_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="PanelUpdateStudent_PasswordField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="PanelUpdateStudent_Class" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="PanelUpdateStudent_LabelClass" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="PanelUpdateStudent_TextFieldID" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="PanelUpdateStudent_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="PanelUpdateStudent_LabelName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="PanelUpdateStudent_Name" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="PanelUpdateStudent_ButtonUpdate" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="PanelUpdateStudent_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="PanelUpdateStudent_PasswordField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="PanelUpdateStudent_Class" alignment="0" max="32767" attributes="0"/>
-                              <Component id="PanelUpdateStudent_LabelClass" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="PanelUpdateStudent_TextFieldID" alignment="0" max="32767" attributes="0"/>
-                              <Component id="PanelUpdateStudent_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="PanelUpdateStudent_LabelName" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="PanelUpdateStudent_Name" alignment="0" max="32767" attributes="0"/>
-                              <Component id="PanelUpdateStudent_ButtonUpdate" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="453" max="-2" attributes="0"/>
+                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="380" max="32767" attributes="0"/>
@@ -2528,7 +2664,9 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="PanelUpdateStudent_LabelID" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="PanelUpdateStudent_TextFieldID" min="-2" max="-2" attributes="0"/>
@@ -2550,12 +2688,20 @@
                       <Component id="PanelUpdateStudent_PasswordField" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="PanelUpdateStudent_ButtonUpdate" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace pref="70" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel10">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Update Student"/>
+              </Properties>
+            </Component>
             <Component class="javax.swing.JButton" name="PanelUpdateStudent_ButtonUpdate">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
