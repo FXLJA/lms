@@ -50,12 +50,21 @@ public class menu extends javax.swing.JFrame {
         PanelSignUp_ButtonBack = new javax.swing.JButton();
         PanelSignUp_LabelPicture = new javax.swing.JLabel();
         PanelAdminDashboard = new javax.swing.JPanel();
-        AdminDropDownUsername = new javax.swing.JPanel();
-        LabelSignOutAdmin = new javax.swing.JLabel();
-        LabelProfileAdmin = new javax.swing.JLabel();
         AdminlHeader = new javax.swing.JPanel();
         LabelDropDownToggleAdmin = new javax.swing.JLabel();
         AdminlMenu = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        AdminMenu_ViewAdmin = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        AdminMenu_ViewTeacher = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        AdminMenu_ViewStudent = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        AdminMenu_ViewAdminProfile = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        AdminDropDownUsername = new javax.swing.JPanel();
+        LabelSignOutAdmin = new javax.swing.JLabel();
+        LabelProfileAdmin = new javax.swing.JLabel();
         pageViewAdmin = new javax.swing.JPanel();
         ButtonAddAdmin = new javax.swing.JButton();
         ScrollPaneAdmin = new javax.swing.JScrollPane();
@@ -276,20 +285,6 @@ public class menu extends javax.swing.JFrame {
         PanelAdminDashboard.setPreferredSize(new java.awt.Dimension(1280, 720));
         PanelAdminDashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        AdminDropDownUsername.setBackground(new java.awt.Color(255, 255, 255));
-        AdminDropDownUsername.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        AdminDropDownUsername.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        LabelSignOutAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        LabelSignOutAdmin.setText("Sign Out");
-        AdminDropDownUsername.add(LabelSignOutAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
-
-        LabelProfileAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        LabelProfileAdmin.setText("Profile");
-        AdminDropDownUsername.add(LabelProfileAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
-
-        PanelAdminDashboard.add(AdminDropDownUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 150, 80));
-
         AdminlHeader.setBackground(new java.awt.Color(255, 255, 255));
         AdminlHeader.setMaximumSize(new java.awt.Dimension(1100, 60));
         AdminlHeader.setMinimumSize(new java.awt.Dimension(1100, 60));
@@ -315,19 +310,150 @@ public class menu extends javax.swing.JFrame {
         AdminlMenu.setMaximumSize(new java.awt.Dimension(180, 720));
         AdminlMenu.setMinimumSize(new java.awt.Dimension(180, 720));
         AdminlMenu.setPreferredSize(new java.awt.Dimension(180, 720));
+        AdminlMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout AdminlMenuLayout = new javax.swing.GroupLayout(AdminlMenu);
-        AdminlMenu.setLayout(AdminlMenuLayout);
-        AdminlMenuLayout.setHorizontalGroup(
-            AdminlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo UBM.png"))); // NOI18N
+        AdminlMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 16, -1, -1));
+
+        AdminMenu_ViewAdmin.setBackground(new java.awt.Color(34, 125, 194));
+        AdminMenu_ViewAdmin.setMaximumSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewAdmin.setMinimumSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewAdmin.setPreferredSize(new java.awt.Dimension(180, 90));
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo Admin.png"))); // NOI18N
+
+        javax.swing.GroupLayout AdminMenu_ViewAdminLayout = new javax.swing.GroupLayout(AdminMenu_ViewAdmin);
+        AdminMenu_ViewAdmin.setLayout(AdminMenu_ViewAdminLayout);
+        AdminMenu_ViewAdminLayout.setHorizontalGroup(
+            AdminMenu_ViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 180, Short.MAX_VALUE)
+            .addGroup(AdminMenu_ViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(AdminMenu_ViewAdminLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel2)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
-        AdminlMenuLayout.setVerticalGroup(
-            AdminlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
+        AdminMenu_ViewAdminLayout.setVerticalGroup(
+            AdminMenu_ViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(AdminMenu_ViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(AdminMenu_ViewAdminLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel2)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
+
+        AdminlMenu.add(AdminMenu_ViewAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 82, -1, -1));
+
+        AdminMenu_ViewTeacher.setBackground(new java.awt.Color(34, 125, 194));
+        AdminMenu_ViewTeacher.setMaximumSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewTeacher.setMinimumSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewTeacher.setPreferredSize(new java.awt.Dimension(180, 90));
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo Teacher.png"))); // NOI18N
+
+        javax.swing.GroupLayout AdminMenu_ViewTeacherLayout = new javax.swing.GroupLayout(AdminMenu_ViewTeacher);
+        AdminMenu_ViewTeacher.setLayout(AdminMenu_ViewTeacherLayout);
+        AdminMenu_ViewTeacherLayout.setHorizontalGroup(
+            AdminMenu_ViewTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 180, Short.MAX_VALUE)
+            .addGroup(AdminMenu_ViewTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminMenu_ViewTeacherLayout.createSequentialGroup()
+                    .addContainerGap(40, Short.MAX_VALUE)
+                    .addComponent(jLabel4)
+                    .addContainerGap(40, Short.MAX_VALUE)))
+        );
+        AdminMenu_ViewTeacherLayout.setVerticalGroup(
+            AdminMenu_ViewTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(AdminMenu_ViewTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(AdminMenu_ViewTeacherLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+
+        AdminlMenu.add(AdminMenu_ViewTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
+
+        AdminMenu_ViewStudent.setBackground(new java.awt.Color(34, 125, 194));
+        AdminMenu_ViewStudent.setMaximumSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewStudent.setMinimumSize(new java.awt.Dimension(180, 90));
+
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo Student.png"))); // NOI18N
+
+        javax.swing.GroupLayout AdminMenu_ViewStudentLayout = new javax.swing.GroupLayout(AdminMenu_ViewStudent);
+        AdminMenu_ViewStudent.setLayout(AdminMenu_ViewStudentLayout);
+        AdminMenu_ViewStudentLayout.setHorizontalGroup(
+            AdminMenu_ViewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 180, Short.MAX_VALUE)
+            .addGroup(AdminMenu_ViewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminMenu_ViewStudentLayout.createSequentialGroup()
+                    .addContainerGap(64, Short.MAX_VALUE)
+                    .addComponent(jLabel6)
+                    .addContainerGap(64, Short.MAX_VALUE)))
+        );
+        AdminMenu_ViewStudentLayout.setVerticalGroup(
+            AdminMenu_ViewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(AdminMenu_ViewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(AdminMenu_ViewStudentLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(13, Short.MAX_VALUE)))
+        );
+
+        AdminlMenu.add(AdminMenu_ViewStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, -1, -1));
+
+        AdminMenu_ViewAdminProfile.setBackground(new java.awt.Color(34, 125, 194));
+        AdminMenu_ViewAdminProfile.setMaximumSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewAdminProfile.setMinimumSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewAdminProfile.setPreferredSize(new java.awt.Dimension(180, 90));
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/settingmurid.png"))); // NOI18N
+
+        javax.swing.GroupLayout AdminMenu_ViewAdminProfileLayout = new javax.swing.GroupLayout(AdminMenu_ViewAdminProfile);
+        AdminMenu_ViewAdminProfile.setLayout(AdminMenu_ViewAdminProfileLayout);
+        AdminMenu_ViewAdminProfileLayout.setHorizontalGroup(
+            AdminMenu_ViewAdminProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 180, Short.MAX_VALUE)
+            .addGroup(AdminMenu_ViewAdminProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminMenu_ViewAdminProfileLayout.createSequentialGroup()
+                    .addContainerGap(58, Short.MAX_VALUE)
+                    .addComponent(jLabel5)
+                    .addContainerGap(58, Short.MAX_VALUE)))
+        );
+        AdminMenu_ViewAdminProfileLayout.setVerticalGroup(
+            AdminMenu_ViewAdminProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(AdminMenu_ViewAdminProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(AdminMenu_ViewAdminProfileLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(13, Short.MAX_VALUE)))
+        );
+
+        AdminlMenu.add(AdminMenu_ViewAdminProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, -1, -1));
 
         PanelAdminDashboard.add(AdminlMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        AdminDropDownUsername.setBackground(new java.awt.Color(255, 255, 255));
+        AdminDropDownUsername.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        AdminDropDownUsername.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LabelSignOutAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        LabelSignOutAdmin.setText("Sign Out");
+        AdminDropDownUsername.add(LabelSignOutAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+
+        LabelProfileAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        LabelProfileAdmin.setText("Profile");
+        AdminDropDownUsername.add(LabelProfileAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+
+        PanelAdminDashboard.add(AdminDropDownUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 150, 80));
 
         pageViewAdmin.setBackground(new java.awt.Color(255, 255, 255));
         pageViewAdmin.setMaximumSize(new java.awt.Dimension(1040, 600));
@@ -505,6 +631,10 @@ public class menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AdminDropDownUsername;
+    private javax.swing.JPanel AdminMenu_ViewAdmin;
+    private javax.swing.JPanel AdminMenu_ViewAdminProfile;
+    private javax.swing.JPanel AdminMenu_ViewStudent;
+    private javax.swing.JPanel AdminMenu_ViewTeacher;
     private javax.swing.JPanel AdminlHeader;
     private javax.swing.JPanel AdminlMenu;
     private javax.swing.JButton ButtonAddAdmin;
@@ -530,6 +660,11 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JTextField PanelSignUp_TextFieldID;
     private javax.swing.JScrollPane ScrollPaneAdmin;
     private javax.swing.JTable TableAdmin;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel pageViewAdmin;
     // End of variables declaration//GEN-END:variables
 }
