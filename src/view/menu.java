@@ -22,6 +22,9 @@ public class menu extends javax.swing.JFrame {
         //Admin Panel
         PanelAdminDashboard.setVisible(false);
         AdminDropDownUsername.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAdminProfile.setVisible(false);
     }
 
     /**
@@ -55,20 +58,29 @@ public class menu extends javax.swing.JFrame {
         AdminlMenu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         AdminMenu_ViewAdmin = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        LabelViewAdmin = new javax.swing.JLabel();
         AdminMenu_ViewTeacher = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        LabelViewTeacher = new javax.swing.JLabel();
         AdminMenu_ViewStudent = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        LabelViewStudent = new javax.swing.JLabel();
         AdminMenu_ViewAdminProfile = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        LabelViewAdminProfile = new javax.swing.JLabel();
         AdminDropDownUsername = new javax.swing.JPanel();
         LabelSignOutAdmin = new javax.swing.JLabel();
         LabelProfileAdmin = new javax.swing.JLabel();
-        pageViewAdmin = new javax.swing.JPanel();
+        PanelViewAdmin = new javax.swing.JPanel();
         ButtonAddAdmin = new javax.swing.JButton();
         ScrollPaneAdmin = new javax.swing.JScrollPane();
         TableAdmin = new javax.swing.JTable();
+        PanelViewTeacher = new javax.swing.JPanel();
+        ButtonAddTeacher = new javax.swing.JButton();
+        ScrollPaneTeacher = new javax.swing.JScrollPane();
+        TableTeacher = new javax.swing.JTable();
+        PanelViewStudent = new javax.swing.JPanel();
+        ButtonAddStudent = new javax.swing.JButton();
+        ScrollPaneStudent = new javax.swing.JScrollPane();
+        TableStudent = new javax.swing.JTable();
+        PanelAdminProfile = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -317,12 +329,18 @@ public class menu extends javax.swing.JFrame {
         AdminlMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 16, -1, -1));
 
         AdminMenu_ViewAdmin.setBackground(new java.awt.Color(34, 125, 194));
+        AdminMenu_ViewAdmin.setToolTipText("Admin View");
         AdminMenu_ViewAdmin.setMaximumSize(new java.awt.Dimension(180, 90));
         AdminMenu_ViewAdmin.setMinimumSize(new java.awt.Dimension(180, 90));
         AdminMenu_ViewAdmin.setPreferredSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewAdminMouseClicked(evt);
+            }
+        });
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo Admin.png"))); // NOI18N
+        LabelViewAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelViewAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo Admin.png"))); // NOI18N
 
         javax.swing.GroupLayout AdminMenu_ViewAdminLayout = new javax.swing.GroupLayout(AdminMenu_ViewAdmin);
         AdminMenu_ViewAdmin.setLayout(AdminMenu_ViewAdminLayout);
@@ -332,7 +350,7 @@ public class menu extends javax.swing.JFrame {
             .addGroup(AdminMenu_ViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(AdminMenu_ViewAdminLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
+                    .addComponent(LabelViewAdmin)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         AdminMenu_ViewAdminLayout.setVerticalGroup(
@@ -341,19 +359,25 @@ public class menu extends javax.swing.JFrame {
             .addGroup(AdminMenu_ViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(AdminMenu_ViewAdminLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
+                    .addComponent(LabelViewAdmin)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         AdminlMenu.add(AdminMenu_ViewAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 82, -1, -1));
 
         AdminMenu_ViewTeacher.setBackground(new java.awt.Color(34, 125, 194));
+        AdminMenu_ViewTeacher.setToolTipText("Teacher View");
         AdminMenu_ViewTeacher.setMaximumSize(new java.awt.Dimension(180, 90));
         AdminMenu_ViewTeacher.setMinimumSize(new java.awt.Dimension(180, 90));
         AdminMenu_ViewTeacher.setPreferredSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewTeacher.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewTeacherMouseClicked(evt);
+            }
+        });
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo Teacher.png"))); // NOI18N
+        LabelViewTeacher.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelViewTeacher.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo Teacher.png"))); // NOI18N
 
         javax.swing.GroupLayout AdminMenu_ViewTeacherLayout = new javax.swing.GroupLayout(AdminMenu_ViewTeacher);
         AdminMenu_ViewTeacher.setLayout(AdminMenu_ViewTeacherLayout);
@@ -363,7 +387,7 @@ public class menu extends javax.swing.JFrame {
             .addGroup(AdminMenu_ViewTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminMenu_ViewTeacherLayout.createSequentialGroup()
                     .addContainerGap(40, Short.MAX_VALUE)
-                    .addComponent(jLabel4)
+                    .addComponent(LabelViewTeacher)
                     .addContainerGap(40, Short.MAX_VALUE)))
         );
         AdminMenu_ViewTeacherLayout.setVerticalGroup(
@@ -372,18 +396,24 @@ public class menu extends javax.swing.JFrame {
             .addGroup(AdminMenu_ViewTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(AdminMenu_ViewTeacherLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, Short.MAX_VALUE)
+                    .addComponent(LabelViewTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 78, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
         AdminlMenu.add(AdminMenu_ViewTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
 
         AdminMenu_ViewStudent.setBackground(new java.awt.Color(34, 125, 194));
+        AdminMenu_ViewStudent.setToolTipText("Student View");
         AdminMenu_ViewStudent.setMaximumSize(new java.awt.Dimension(180, 90));
         AdminMenu_ViewStudent.setMinimumSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewStudent.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewStudentMouseClicked(evt);
+            }
+        });
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo Student.png"))); // NOI18N
+        LabelViewStudent.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelViewStudent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo Student.png"))); // NOI18N
 
         javax.swing.GroupLayout AdminMenu_ViewStudentLayout = new javax.swing.GroupLayout(AdminMenu_ViewStudent);
         AdminMenu_ViewStudent.setLayout(AdminMenu_ViewStudentLayout);
@@ -393,7 +423,7 @@ public class menu extends javax.swing.JFrame {
             .addGroup(AdminMenu_ViewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminMenu_ViewStudentLayout.createSequentialGroup()
                     .addContainerGap(64, Short.MAX_VALUE)
-                    .addComponent(jLabel6)
+                    .addComponent(LabelViewStudent)
                     .addContainerGap(64, Short.MAX_VALUE)))
         );
         AdminMenu_ViewStudentLayout.setVerticalGroup(
@@ -402,19 +432,25 @@ public class menu extends javax.swing.JFrame {
             .addGroup(AdminMenu_ViewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(AdminMenu_ViewStudentLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelViewStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(13, Short.MAX_VALUE)))
         );
 
         AdminlMenu.add(AdminMenu_ViewStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, -1, -1));
 
         AdminMenu_ViewAdminProfile.setBackground(new java.awt.Color(34, 125, 194));
+        AdminMenu_ViewAdminProfile.setToolTipText("Profile");
         AdminMenu_ViewAdminProfile.setMaximumSize(new java.awt.Dimension(180, 90));
         AdminMenu_ViewAdminProfile.setMinimumSize(new java.awt.Dimension(180, 90));
         AdminMenu_ViewAdminProfile.setPreferredSize(new java.awt.Dimension(180, 90));
+        AdminMenu_ViewAdminProfile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewAdminProfileMouseClicked(evt);
+            }
+        });
 
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/settingmurid.png"))); // NOI18N
+        LabelViewAdminProfile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelViewAdminProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/settingmurid.png"))); // NOI18N
 
         javax.swing.GroupLayout AdminMenu_ViewAdminProfileLayout = new javax.swing.GroupLayout(AdminMenu_ViewAdminProfile);
         AdminMenu_ViewAdminProfile.setLayout(AdminMenu_ViewAdminProfileLayout);
@@ -424,7 +460,7 @@ public class menu extends javax.swing.JFrame {
             .addGroup(AdminMenu_ViewAdminProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminMenu_ViewAdminProfileLayout.createSequentialGroup()
                     .addContainerGap(58, Short.MAX_VALUE)
-                    .addComponent(jLabel5)
+                    .addComponent(LabelViewAdminProfile)
                     .addContainerGap(58, Short.MAX_VALUE)))
         );
         AdminMenu_ViewAdminProfileLayout.setVerticalGroup(
@@ -433,7 +469,7 @@ public class menu extends javax.swing.JFrame {
             .addGroup(AdminMenu_ViewAdminProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(AdminMenu_ViewAdminProfileLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelViewAdminProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(13, Short.MAX_VALUE)))
         );
 
@@ -455,10 +491,10 @@ public class menu extends javax.swing.JFrame {
 
         PanelAdminDashboard.add(AdminDropDownUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 150, 80));
 
-        pageViewAdmin.setBackground(new java.awt.Color(255, 255, 255));
-        pageViewAdmin.setMaximumSize(new java.awt.Dimension(1040, 600));
-        pageViewAdmin.setMinimumSize(new java.awt.Dimension(1040, 600));
-        pageViewAdmin.setPreferredSize(new java.awt.Dimension(1040, 600));
+        PanelViewAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        PanelViewAdmin.setMaximumSize(new java.awt.Dimension(1040, 600));
+        PanelViewAdmin.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelViewAdmin.setPreferredSize(new java.awt.Dimension(1040, 600));
 
         ButtonAddAdmin.setBackground(new java.awt.Color(34, 125, 194));
         ButtonAddAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -515,20 +551,20 @@ public class menu extends javax.swing.JFrame {
             TableAdmin.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        javax.swing.GroupLayout pageViewAdminLayout = new javax.swing.GroupLayout(pageViewAdmin);
-        pageViewAdmin.setLayout(pageViewAdminLayout);
-        pageViewAdminLayout.setHorizontalGroup(
-            pageViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pageViewAdminLayout.createSequentialGroup()
+        javax.swing.GroupLayout PanelViewAdminLayout = new javax.swing.GroupLayout(PanelViewAdmin);
+        PanelViewAdmin.setLayout(PanelViewAdminLayout);
+        PanelViewAdminLayout.setHorizontalGroup(
+            PanelViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelViewAdminLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(pageViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ButtonAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ScrollPaneAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 992, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
-        pageViewAdminLayout.setVerticalGroup(
-            pageViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pageViewAdminLayout.createSequentialGroup()
+        PanelViewAdminLayout.setVerticalGroup(
+            PanelViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelViewAdminLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(ButtonAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
@@ -536,7 +572,191 @@ public class menu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        PanelAdminDashboard.add(pageViewAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+        PanelAdminDashboard.add(PanelViewAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        PanelViewTeacher.setBackground(new java.awt.Color(255, 255, 255));
+        PanelViewTeacher.setMaximumSize(new java.awt.Dimension(1040, 600));
+        PanelViewTeacher.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelViewTeacher.setPreferredSize(new java.awt.Dimension(1040, 600));
+
+        ButtonAddTeacher.setBackground(new java.awt.Color(34, 125, 194));
+        ButtonAddTeacher.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ButtonAddTeacher.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonAddTeacher.setText("Add New");
+        ButtonAddTeacher.setToolTipText("");
+        ButtonAddTeacher.setMaximumSize(new java.awt.Dimension(127, 36));
+        ButtonAddTeacher.setMinimumSize(new java.awt.Dimension(127, 36));
+        ButtonAddTeacher.setPreferredSize(new java.awt.Dimension(127, 36));
+        ButtonAddTeacher.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonAddTeacherMouseClicked(evt);
+            }
+        });
+
+        ScrollPaneTeacher.setPreferredSize(new java.awt.Dimension(992, 500));
+
+        TableTeacher.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        TableTeacher.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Name", "Contact", ""
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TableTeacher.setMaximumSize(new java.awt.Dimension(992, 500));
+        TableTeacher.setMinimumSize(new java.awt.Dimension(992, 500));
+        TableTeacher.setPreferredSize(new java.awt.Dimension(992, 500));
+        ScrollPaneTeacher.setViewportView(TableTeacher);
+        if (TableTeacher.getColumnModel().getColumnCount() > 0) {
+            TableTeacher.getColumnModel().getColumn(0).setResizable(false);
+            TableTeacher.getColumnModel().getColumn(1).setResizable(false);
+            TableTeacher.getColumnModel().getColumn(2).setResizable(false);
+            TableTeacher.getColumnModel().getColumn(3).setResizable(false);
+        }
+
+        javax.swing.GroupLayout PanelViewTeacherLayout = new javax.swing.GroupLayout(PanelViewTeacher);
+        PanelViewTeacher.setLayout(PanelViewTeacherLayout);
+        PanelViewTeacherLayout.setHorizontalGroup(
+            PanelViewTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelViewTeacherLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(PanelViewTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ButtonAddTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScrollPaneTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 992, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+        PanelViewTeacherLayout.setVerticalGroup(
+            PanelViewTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelViewTeacherLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(ButtonAddTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(ScrollPaneTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        PanelAdminDashboard.add(PanelViewTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        PanelViewStudent.setBackground(new java.awt.Color(255, 255, 255));
+        PanelViewStudent.setMaximumSize(new java.awt.Dimension(1040, 600));
+        PanelViewStudent.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelViewStudent.setPreferredSize(new java.awt.Dimension(1040, 600));
+
+        ButtonAddStudent.setBackground(new java.awt.Color(34, 125, 194));
+        ButtonAddStudent.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ButtonAddStudent.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonAddStudent.setText("Add New");
+        ButtonAddStudent.setToolTipText("");
+        ButtonAddStudent.setMaximumSize(new java.awt.Dimension(127, 36));
+        ButtonAddStudent.setMinimumSize(new java.awt.Dimension(127, 36));
+        ButtonAddStudent.setPreferredSize(new java.awt.Dimension(127, 36));
+        ButtonAddStudent.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonAddStudentMouseClicked(evt);
+            }
+        });
+
+        ScrollPaneStudent.setPreferredSize(new java.awt.Dimension(992, 500));
+
+        TableStudent.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        TableStudent.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Name", "Contact", ""
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TableStudent.setMaximumSize(new java.awt.Dimension(992, 500));
+        TableStudent.setMinimumSize(new java.awt.Dimension(992, 500));
+        TableStudent.setPreferredSize(new java.awt.Dimension(992, 500));
+        ScrollPaneStudent.setViewportView(TableStudent);
+        if (TableStudent.getColumnModel().getColumnCount() > 0) {
+            TableStudent.getColumnModel().getColumn(0).setResizable(false);
+            TableStudent.getColumnModel().getColumn(1).setResizable(false);
+            TableStudent.getColumnModel().getColumn(2).setResizable(false);
+            TableStudent.getColumnModel().getColumn(3).setResizable(false);
+        }
+
+        javax.swing.GroupLayout PanelViewStudentLayout = new javax.swing.GroupLayout(PanelViewStudent);
+        PanelViewStudent.setLayout(PanelViewStudentLayout);
+        PanelViewStudentLayout.setHorizontalGroup(
+            PanelViewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelViewStudentLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(PanelViewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ButtonAddStudent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScrollPaneStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 992, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+        PanelViewStudentLayout.setVerticalGroup(
+            PanelViewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelViewStudentLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(ButtonAddStudent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(ScrollPaneStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        PanelAdminDashboard.add(PanelViewStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        PanelAdminProfile.setBackground(new java.awt.Color(255, 255, 255));
+        PanelAdminProfile.setMaximumSize(new java.awt.Dimension(1040, 600));
+        PanelAdminProfile.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelAdminProfile.setPreferredSize(new java.awt.Dimension(1040, 600));
+
+        javax.swing.GroupLayout PanelAdminProfileLayout = new javax.swing.GroupLayout(PanelAdminProfile);
+        PanelAdminProfile.setLayout(PanelAdminProfileLayout);
+        PanelAdminProfileLayout.setHorizontalGroup(
+            PanelAdminProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1040, Short.MAX_VALUE)
+        );
+        PanelAdminProfileLayout.setVerticalGroup(
+            PanelAdminProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+
+        PanelAdminDashboard.add(PanelAdminProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
 
         getContentPane().add(PanelAdminDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
@@ -593,6 +813,46 @@ public class menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_LabelDropDownToggleAdminMouseClicked
 
+    private void ButtonAddTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAddTeacherMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonAddTeacherMouseClicked
+
+    private void ButtonAddStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAddStudentMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonAddStudentMouseClicked
+
+    private void AdminMenu_ViewAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminMouseClicked
+        // TODO add your handling code here:
+        PanelViewAdmin.setVisible(true);
+        PanelViewTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAdminProfile.setVisible(false);
+    }//GEN-LAST:event_AdminMenu_ViewAdminMouseClicked
+
+    private void AdminMenu_ViewTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewTeacherMouseClicked
+        // TODO add your handling code here:
+        PanelViewAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(true);
+        PanelViewStudent.setVisible(false);
+        PanelAdminProfile.setVisible(false);
+    }//GEN-LAST:event_AdminMenu_ViewTeacherMouseClicked
+
+    private void AdminMenu_ViewStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewStudentMouseClicked
+        // TODO add your handling code here:
+        PanelViewAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelViewStudent.setVisible(true);
+        PanelAdminProfile.setVisible(false);
+    }//GEN-LAST:event_AdminMenu_ViewStudentMouseClicked
+
+    private void AdminMenu_ViewAdminProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminProfileMouseClicked
+        // TODO add your handling code here:
+        PanelViewAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAdminProfile.setVisible(true);
+    }//GEN-LAST:event_AdminMenu_ViewAdminProfileMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -638,10 +898,17 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JPanel AdminlHeader;
     private javax.swing.JPanel AdminlMenu;
     private javax.swing.JButton ButtonAddAdmin;
+    private javax.swing.JButton ButtonAddStudent;
+    private javax.swing.JButton ButtonAddTeacher;
     private javax.swing.JLabel LabelDropDownToggleAdmin;
     private javax.swing.JLabel LabelProfileAdmin;
     private javax.swing.JLabel LabelSignOutAdmin;
+    private javax.swing.JLabel LabelViewAdmin;
+    private javax.swing.JLabel LabelViewAdminProfile;
+    private javax.swing.JLabel LabelViewStudent;
+    private javax.swing.JLabel LabelViewTeacher;
     private javax.swing.JPanel PanelAdminDashboard;
+    private javax.swing.JPanel PanelAdminProfile;
     private javax.swing.JPanel PanelSignIn;
     private javax.swing.JButton PanelSignIn_ButtonSignIn;
     private javax.swing.JButton PanelSignIn_ButtonSignUp;
@@ -658,13 +925,15 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel PanelSignUp_LabelPicture;
     private javax.swing.JPasswordField PanelSignUp_PasswordField;
     private javax.swing.JTextField PanelSignUp_TextFieldID;
+    private javax.swing.JPanel PanelViewAdmin;
+    private javax.swing.JPanel PanelViewStudent;
+    private javax.swing.JPanel PanelViewTeacher;
     private javax.swing.JScrollPane ScrollPaneAdmin;
+    private javax.swing.JScrollPane ScrollPaneStudent;
+    private javax.swing.JScrollPane ScrollPaneTeacher;
     private javax.swing.JTable TableAdmin;
+    private javax.swing.JTable TableStudent;
+    private javax.swing.JTable TableTeacher;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel pageViewAdmin;
     // End of variables declaration//GEN-END:variables
 }
