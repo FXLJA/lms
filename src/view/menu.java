@@ -78,6 +78,8 @@ public class menu extends javax.swing.JFrame {
         PanelViewAdmin_ButtonAddAdmin = new javax.swing.JButton();
         ScrollPaneAdmin = new javax.swing.JScrollPane();
         TableAdmin = new javax.swing.JTable();
+        PanelViewAdmin_ButtonUpdateAdmin = new javax.swing.JButton();
+        PanelViewAdmin_ButtonDeleteAdmin = new javax.swing.JButton();
         PanelAddAdmin = new javax.swing.JPanel();
         ButtonAddNewAdmin = new javax.swing.JButton();
         PanelAddAdmin_LabelID = new javax.swing.JLabel();
@@ -587,6 +589,34 @@ public class menu extends javax.swing.JFrame {
             TableAdmin.getColumnModel().getColumn(3).setResizable(false);
         }
 
+        PanelViewAdmin_ButtonUpdateAdmin.setBackground(new java.awt.Color(34, 125, 194));
+        PanelViewAdmin_ButtonUpdateAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        PanelViewAdmin_ButtonUpdateAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        PanelViewAdmin_ButtonUpdateAdmin.setText("Update");
+        PanelViewAdmin_ButtonUpdateAdmin.setToolTipText("");
+        PanelViewAdmin_ButtonUpdateAdmin.setMaximumSize(new java.awt.Dimension(127, 36));
+        PanelViewAdmin_ButtonUpdateAdmin.setMinimumSize(new java.awt.Dimension(127, 36));
+        PanelViewAdmin_ButtonUpdateAdmin.setPreferredSize(new java.awt.Dimension(127, 36));
+        PanelViewAdmin_ButtonUpdateAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PanelViewAdmin_ButtonUpdateAdminMouseClicked(evt);
+            }
+        });
+
+        PanelViewAdmin_ButtonDeleteAdmin.setBackground(new java.awt.Color(34, 125, 194));
+        PanelViewAdmin_ButtonDeleteAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        PanelViewAdmin_ButtonDeleteAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        PanelViewAdmin_ButtonDeleteAdmin.setText("Delete");
+        PanelViewAdmin_ButtonDeleteAdmin.setToolTipText("");
+        PanelViewAdmin_ButtonDeleteAdmin.setMaximumSize(new java.awt.Dimension(127, 36));
+        PanelViewAdmin_ButtonDeleteAdmin.setMinimumSize(new java.awt.Dimension(127, 36));
+        PanelViewAdmin_ButtonDeleteAdmin.setPreferredSize(new java.awt.Dimension(127, 36));
+        PanelViewAdmin_ButtonDeleteAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PanelViewAdmin_ButtonDeleteAdminMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelViewAdminLayout = new javax.swing.GroupLayout(PanelViewAdmin);
         PanelViewAdmin.setLayout(PanelViewAdminLayout);
         PanelViewAdminLayout.setHorizontalGroup(
@@ -594,7 +624,12 @@ public class menu extends javax.swing.JFrame {
             .addGroup(PanelViewAdminLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(PanelViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PanelViewAdmin_ButtonAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(PanelViewAdminLayout.createSequentialGroup()
+                        .addComponent(PanelViewAdmin_ButtonAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(PanelViewAdmin_ButtonUpdateAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(PanelViewAdmin_ButtonDeleteAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(ScrollPaneAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 992, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -602,7 +637,10 @@ public class menu extends javax.swing.JFrame {
             PanelViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelViewAdminLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(PanelViewAdmin_ButtonAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PanelViewAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PanelViewAdmin_ButtonAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelViewAdmin_ButtonUpdateAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelViewAdmin_ButtonDeleteAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addComponent(ScrollPaneAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -730,7 +768,7 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateAdmin_ButtonUpdate.setBackground(new java.awt.Color(34, 125, 194));
         PanelUpdateAdmin_ButtonUpdate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         PanelUpdateAdmin_ButtonUpdate.setForeground(new java.awt.Color(255, 255, 255));
-        PanelUpdateAdmin_ButtonUpdate.setText("Add New");
+        PanelUpdateAdmin_ButtonUpdate.setText("Update");
         PanelUpdateAdmin_ButtonUpdate.setToolTipText("");
         PanelUpdateAdmin_ButtonUpdate.setMaximumSize(new java.awt.Dimension(127, 36));
         PanelUpdateAdmin_ButtonUpdate.setMinimumSize(new java.awt.Dimension(127, 36));
@@ -1191,6 +1229,21 @@ public class menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelUpdateAdmin_ContactActionPerformed
 
+    private void PanelViewAdmin_ButtonUpdateAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewAdmin_ButtonUpdateAdminMouseClicked
+        // TODO add your handling code here:
+        AdminDropDownUsername.setVisible(false);
+        PanelViewAdmin.setVisible(false);
+        PanelAddAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAdminProfile.setVisible(false);
+        PanelUpdateAdmin.setVisible(true);
+    }//GEN-LAST:event_PanelViewAdmin_ButtonUpdateAdminMouseClicked
+
+    private void PanelViewAdmin_ButtonDeleteAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewAdmin_ButtonDeleteAdminMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelViewAdmin_ButtonDeleteAdminMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1284,6 +1337,8 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JTextField PanelUpdateAdmin_TextFieldID;
     private javax.swing.JPanel PanelViewAdmin;
     private javax.swing.JButton PanelViewAdmin_ButtonAddAdmin;
+    private javax.swing.JButton PanelViewAdmin_ButtonDeleteAdmin;
+    private javax.swing.JButton PanelViewAdmin_ButtonUpdateAdmin;
     private javax.swing.JPanel PanelViewStudent;
     private javax.swing.JPanel PanelViewTeacher;
     private javax.swing.JScrollPane ScrollPaneAdmin;
