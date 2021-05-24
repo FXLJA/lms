@@ -188,6 +188,7 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PanelSignIn_ButtonSignInMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelSignIn_ButtonSignInActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="PanelSignIn_ButtonSignUp">
@@ -368,6 +369,9 @@
               <Dimension value="[280, 36]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PanelSignUp_ButtonSignUpActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="PanelSignUp_ButtonBack">
           <Properties>

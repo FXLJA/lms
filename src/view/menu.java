@@ -5,12 +5,25 @@
  */
 package view;
 
+import controllers.*;
+import daos.Koneksi;
+import javax.swing.JOptionPane;
+import models.*;
+        
 /**
  *
  * @author marti
  */
 public class menu extends javax.swing.JFrame {
-
+    
+    public UserController userController = new UserController();
+    public AdminController adminController = new AdminController();
+    public StudentController studentController = new StudentController();
+    public TeacherController teacherController = new TeacherController();
+    public SubjectController subjectCOntroller = new SubjectController();
+    
+    public User curr_user = null;
+    
     /**
      * Creates new form menu
      */
@@ -351,6 +364,11 @@ public class menu extends javax.swing.JFrame {
                 PanelSignIn_ButtonSignInMouseClicked(evt);
             }
         });
+        PanelSignIn_ButtonSignIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelSignIn_ButtonSignInActionPerformed(evt);
+            }
+        });
 
         PanelSignIn_ButtonSignUp.setBackground(new java.awt.Color(34, 125, 194));
         PanelSignIn_ButtonSignUp.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -446,6 +464,11 @@ public class menu extends javax.swing.JFrame {
         PanelSignUp_ButtonSignUp.setMaximumSize(new java.awt.Dimension(280, 36));
         PanelSignUp_ButtonSignUp.setMinimumSize(new java.awt.Dimension(280, 36));
         PanelSignUp_ButtonSignUp.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelSignUp_ButtonSignUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelSignUp_ButtonSignUpActionPerformed(evt);
+            }
+        });
 
         PanelSignUp_ButtonBack.setBackground(new java.awt.Color(255, 255, 255));
         PanelSignUp_ButtonBack.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -3353,39 +3376,6 @@ public class menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelSignUp_TextFieldIDActionPerformed
 
-    private void PanelSignIn_ButtonSignUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSignIn_ButtonSignUpMouseClicked
-        //Panel Hanlder
-        PanelSignIn.setVisible(false);
-        PanelSignUp.setVisible(true);
-        
-        PanelAdminDashboard.setVisible(false);
-        AdminDropDownUsername.setVisible(false);
-        PanelViewAdmin.setVisible(false);
-        PanelAddAdmin.setVisible(false);
-        PanelUpdateAdmin.setVisible(false);
-        PanelViewTeacher.setVisible(false);
-        PanelAddTeacher.setVisible(false);
-        PanelUpdateTeacher.setVisible(false);
-        PanelViewStudent.setVisible(false);
-        PanelAddStudent.setVisible(false);
-        PanelUpdateStudent.setVisible(false);
-        PanelAdminProfile.setVisible(false);
-        
-        TeacherDropDownUsername.setVisible(false);
-        PanelTeacherDashboard.setVisible(false);
-        PanelViewSubject.setVisible(false);
-        PanelAddSubject.setVisible(false);
-        PanelUpdateSubject.setVisible(false);
-        PanelTeacherProfile.setVisible(false);
-        PanelTeacherUpdateProfile.setVisible(false);
-        
-        StudentDropDownUsername.setVisible(false);
-        PanelStudentDashboard.setVisible(false);
-        PanelViewModule.setVisible(false);
-        PanelStudentProfile.setVisible(false);
-        PanelStudentUpdateProfile.setVisible(false);
-    }//GEN-LAST:event_PanelSignIn_ButtonSignUpMouseClicked
-
     private void PanelSignUp_ButtonBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSignUp_ButtonBackMouseClicked
         //Panel Hanlder
         PanelSignIn.setVisible(true);
@@ -4448,6 +4438,99 @@ public class menu extends javax.swing.JFrame {
     private void PanelStudenUpdatetProfile_ButtonUpdatePforileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_ButtonUpdatePforileMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelStudenUpdatetProfile_ButtonUpdatePforileMouseClicked
+
+    private void PanelSignIn_ButtonSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelSignIn_ButtonSignInActionPerformed
+        String username = PanelSignIn_TextFieldID.getText();
+        String password = PanelSignIn_PasswordField.getText();
+       
+        if (Koneksi.openConnection() == null) {
+            JOptionPane.showMessageDialog(this, "Gagal koneksi ke database!");
+            return;
+        }
+        
+        if (username.trim().length() == 0){
+            JOptionPane.showMessageDialog(this, "Kolom username harus diisi!");
+            return;
+        }
+        
+        if (password.trim().length() == 0) {
+            JOptionPane.showMessageDialog(this, "Kolom password harus diisi!");
+            return;
+        }
+        
+        User user = userController.getById(username);
+        if(user == null || user.getPassword() != password) {
+            JOptionPane.showMessageDialog(this, "Username atau password salah!");
+            return;
+        }
+        
+        curr_user = user;
+    }//GEN-LAST:event_PanelSignIn_ButtonSignInActionPerformed
+
+    private void PanelSignUp_ButtonSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelSignUp_ButtonSignUpActionPerformed
+        String username = PanelSignUp_TextFieldID.getText();
+        String password = PanelSignUp_PasswordField.getText();
+       
+        if (Koneksi.openConnection() == null) {
+            JOptionPane.showMessageDialog(this, "Gagal koneksi ke database!");
+            return;
+        }
+        
+        if (username.trim().length() == 0){
+            JOptionPane.showMessageDialog(this, "Kolom username harus diisi!");
+            return;
+        }
+        
+        if (password.trim().length() == 0) {
+            JOptionPane.showMessageDialog(this, "Kolom password harus diisi!");
+            return;
+        }
+        
+        User user = userController.getById(username);
+        if(user != null) {
+            JOptionPane.showMessageDialog(this, "Username sudah ada!");
+            return;
+        }
+        
+        userController.setDml(new User(username, password, "User"), OperasiCRUD.INSERT);
+        curr_user = user;
+        
+        PanelSignUp_ButtonBackMouseClicked(null);
+        PanelSignIn_TextFieldID.setText(username);
+        PanelSignIn_PasswordField.setText(password);
+    }//GEN-LAST:event_PanelSignUp_ButtonSignUpActionPerformed
+
+    private void PanelSignIn_ButtonSignUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSignIn_ButtonSignUpMouseClicked
+        PanelSignIn.setVisible(false);
+        PanelSignUp.setVisible(true);
+        
+        PanelAdminDashboard.setVisible(false);
+        AdminDropDownUsername.setVisible(false);
+        PanelViewAdmin.setVisible(false);
+        PanelAddAdmin.setVisible(false);
+        PanelUpdateAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelAddTeacher.setVisible(false);
+        PanelUpdateTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAddStudent.setVisible(false);
+        PanelUpdateStudent.setVisible(false);
+        PanelAdminProfile.setVisible(false);
+        
+        TeacherDropDownUsername.setVisible(false);
+        PanelTeacherDashboard.setVisible(false);
+        PanelViewSubject.setVisible(false);
+        PanelAddSubject.setVisible(false);
+        PanelUpdateSubject.setVisible(false);
+        PanelTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
+    }//GEN-LAST:event_PanelSignIn_ButtonSignUpMouseClicked
 
     /**
      * @param args the command line arguments
