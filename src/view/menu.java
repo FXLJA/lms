@@ -40,6 +40,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }
 
     /**
@@ -3372,6 +3378,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelSignIn_ButtonSignUpMouseClicked
 
     private void PanelSignUp_ButtonBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSignUp_ButtonBackMouseClicked
@@ -3399,6 +3411,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelSignUp_ButtonBackMouseClicked
 
     private void PanelSignIn_ButtonSignInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSignIn_ButtonSignInMouseClicked
@@ -3420,12 +3438,18 @@ public class menu extends javax.swing.JFrame {
         PanelAdminProfile.setVisible(false);
         
         TeacherDropDownUsername.setVisible(false);
-        PanelTeacherDashboard.setVisible(true);
-        PanelViewSubject.setVisible(true);
+        PanelTeacherDashboard.setVisible(false);
+        PanelViewSubject.setVisible(false);
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(true);
+        PanelViewModule.setVisible(true);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelSignIn_ButtonSignInMouseClicked
 
     private void PanelViewAdmin_ButtonAddAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewAdmin_ButtonAddAdminMouseClicked
@@ -3453,6 +3477,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewAdmin_ButtonAddAdminMouseClicked
 
     private void LabelDropDownToggleAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDropDownToggleAdminMouseClicked
@@ -3491,6 +3521,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_ButtonAddTeacherMouseClicked
 
     private void PanelViewStudent_ButtonAddStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewStudent_ButtonAddStudentMouseClicked
@@ -3518,6 +3554,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewStudent_ButtonAddStudentMouseClicked
 
     private void AdminMenu_ViewAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminMouseClicked
@@ -3545,6 +3587,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_AdminMenu_ViewAdminMouseClicked
 
     private void AdminMenu_ViewTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewTeacherMouseClicked
@@ -3572,6 +3620,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_AdminMenu_ViewTeacherMouseClicked
 
     private void AdminMenu_ViewStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewStudentMouseClicked
@@ -3599,6 +3653,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_AdminMenu_ViewStudentMouseClicked
 
     private void AdminMenu_ViewAdminProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminProfileMouseClicked
@@ -3626,6 +3686,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_AdminMenu_ViewAdminProfileMouseClicked
 
     private void LabelProfileAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileAdminMouseClicked
@@ -3653,6 +3719,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_LabelProfileAdminMouseClicked
 
     private void LabelSignOutAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutAdminMouseClicked
@@ -3683,6 +3755,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_LabelSignOutAdminMouseClicked
 
     private void ButtonAddNewAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAddNewAdminMouseClicked
@@ -3742,6 +3820,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewAdmin_ButtonUpdateAdminMouseClicked
 
     private void PanelViewAdmin_ButtonDeleteAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewAdmin_ButtonDeleteAdminMouseClicked
@@ -3805,6 +3889,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewTeacher_ButtonUpdateTeacherMouseClicked
 
     private void PanelViewTeacher_ButtonDeleteTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewTeacher_ButtonDeleteTeacherMouseClicked
@@ -3836,6 +3926,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewStudent_ButtonUpdateStudentMouseClicked
 
     private void PanelViewStudent_ButtonDeleteStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewStudent_ButtonDeleteStudentMouseClicked
@@ -3915,6 +4011,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelAdminProfile_ButtonUpdatePforilMouseClicked
 
     private void PanelAdminProfile_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAdminProfile_TextFieldIDActionPerformed
@@ -3965,6 +4067,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_TeacherMenu_ViewSubjectMouseClicked
 
     private void TeacherMenu_ViewTeacherProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TeacherMenu_ViewTeacherProfileMouseClicked
@@ -3992,6 +4100,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(true);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_TeacherMenu_ViewTeacherProfileMouseClicked
 
     private void LabelSignOutTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutTeacherMouseClicked
@@ -4027,6 +4141,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewSubject_ButtonAddSubjectMouseClicked
 
     private void PanelViewSubject_ButtonUpdateSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewSubject_ButtonUpdateSubjectMouseClicked
@@ -4054,6 +4174,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(true);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewSubject_ButtonUpdateSubjectMouseClicked
 
     private void PanelViewSubject_ButtonDeleteSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewSubject_ButtonDeleteSubjectMouseClicked
@@ -4101,6 +4227,12 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
         PanelTeacherUpdateProfile.setVisible(true);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(false);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelTeacherProfile_ButtonUpdatePforileMouseClicked
 
     private void PanelTeacherProfile_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelTeacherProfile_TextFieldIDActionPerformed
@@ -4160,7 +4292,14 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelUpdateTeacherProfile_ButtonSaveMouseClicked
 
     private void LabelDropDownToggleStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDropDownToggleStudentMouseClicked
-        // TODO add your handling code here:
+        if(StudentDropDownUsername.isVisible() == true)
+        {
+            StudentDropDownUsername.setVisible(false);
+        }
+        else
+        {
+            StudentDropDownUsername.setVisible(true);
+        }
     }//GEN-LAST:event_LabelDropDownToggleStudentMouseClicked
 
     private void LabelStudentDashboardMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelStudentDashboardMouseClicked
@@ -4168,11 +4307,69 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelStudentDashboardMouseClicked
 
     private void StudentMenu_ViewModuleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StudentMenu_ViewModuleMouseClicked
-        // TODO add your handling code here:
+        //Panel Handler
+        PanelSignIn.setVisible(false);
+        PanelSignUp.setVisible(false);
+        
+        PanelAdminDashboard.setVisible(false);
+        AdminDropDownUsername.setVisible(false);
+        PanelViewAdmin.setVisible(false);
+        PanelAddAdmin.setVisible(false);
+        PanelUpdateAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelAddTeacher.setVisible(false);
+        PanelUpdateTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAddStudent.setVisible(false);
+        PanelUpdateStudent.setVisible(false);
+        PanelAdminProfile.setVisible(false);
+        
+        TeacherDropDownUsername.setVisible(false);
+        PanelTeacherDashboard.setVisible(false);
+        PanelViewSubject.setVisible(false);
+        PanelAddSubject.setVisible(false);
+        PanelUpdateSubject.setVisible(false);
+        PanelTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(true);
+        PanelViewModule.setVisible(true);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_StudentMenu_ViewModuleMouseClicked
 
     private void StudentMenu_ViewStudentProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StudentMenu_ViewStudentProfileMouseClicked
-        // TODO add your handling code here:
+        //Panel Handler
+        PanelSignIn.setVisible(false);
+        PanelSignUp.setVisible(false);
+        
+        PanelAdminDashboard.setVisible(false);
+        AdminDropDownUsername.setVisible(false);
+        PanelViewAdmin.setVisible(false);
+        PanelAddAdmin.setVisible(false);
+        PanelUpdateAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelAddTeacher.setVisible(false);
+        PanelUpdateTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAddStudent.setVisible(false);
+        PanelUpdateStudent.setVisible(false);
+        PanelAdminProfile.setVisible(false);
+        
+        TeacherDropDownUsername.setVisible(false);
+        PanelTeacherDashboard.setVisible(false);
+        PanelViewSubject.setVisible(false);
+        PanelAddSubject.setVisible(false);
+        PanelUpdateSubject.setVisible(false);
+        PanelTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(true);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(true);
+        PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_StudentMenu_ViewStudentProfileMouseClicked
 
     private void LabelSignOutStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutStudentMouseClicked
@@ -4196,7 +4393,36 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelStudentProfile_ClassActionPerformed
 
     private void PanelTeacherProfile_ButtonUpdatePforile1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelTeacherProfile_ButtonUpdatePforile1MouseClicked
-        // TODO add your handling code here:
+        //Panel Handler
+        PanelSignIn.setVisible(false);
+        PanelSignUp.setVisible(false);
+        
+        PanelAdminDashboard.setVisible(false);
+        AdminDropDownUsername.setVisible(false);
+        PanelViewAdmin.setVisible(false);
+        PanelAddAdmin.setVisible(false);
+        PanelUpdateAdmin.setVisible(false);
+        PanelViewTeacher.setVisible(false);
+        PanelAddTeacher.setVisible(false);
+        PanelUpdateTeacher.setVisible(false);
+        PanelViewStudent.setVisible(false);
+        PanelAddStudent.setVisible(false);
+        PanelUpdateStudent.setVisible(false);
+        PanelAdminProfile.setVisible(false);
+        
+        TeacherDropDownUsername.setVisible(false);
+        PanelTeacherDashboard.setVisible(false);
+        PanelViewSubject.setVisible(false);
+        PanelAddSubject.setVisible(false);
+        PanelUpdateSubject.setVisible(false);
+        PanelTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
+        
+        StudentDropDownUsername.setVisible(false);
+        PanelStudentDashboard.setVisible(true);
+        PanelViewModule.setVisible(false);
+        PanelStudentProfile.setVisible(false);
+        PanelStudentUpdateProfile.setVisible(true);
     }//GEN-LAST:event_PanelTeacherProfile_ButtonUpdatePforile1MouseClicked
 
     private void PanelStudentProfile_MajorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudentProfile_MajorActionPerformed
