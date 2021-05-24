@@ -8,7 +8,12 @@ package view;
 import controllers.*;
 import daos.Koneksi;
 import java.awt.Color;
+import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 import models.*;
         
 /**
@@ -570,9 +575,6 @@ public class menu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LabelProfileAdminMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                LabelProfileAdminMouseEntered(evt);
-            }
         });
         AdminDropDownUsername.add(LabelProfileAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
@@ -762,6 +764,11 @@ public class menu extends javax.swing.JFrame {
         PanelViewAdmin.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelViewAdmin.setMinimumSize(new java.awt.Dimension(1040, 600));
         PanelViewAdmin.setPreferredSize(new java.awt.Dimension(1040, 600));
+        PanelViewAdmin.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelViewAdminComponentShown(evt);
+            }
+        });
 
         PanelViewAdmin_ButtonAddAdmin.setBackground(new java.awt.Color(34, 125, 194));
         PanelViewAdmin_ButtonAddAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -4121,7 +4128,7 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_TeacherMenu_ViewTeacherProfileMouseClicked
 
     private void LabelSignOutTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutTeacherMouseClicked
-        // TODO add your handling code here:
+        LabelSignOutAdminMouseClicked(null);
     }//GEN-LAST:event_LabelSignOutTeacherMouseClicked
 
     private void LabelProfileTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileTeacherMouseClicked
@@ -4385,7 +4392,7 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_StudentMenu_ViewStudentProfileMouseClicked
 
     private void LabelSignOutStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutStudentMouseClicked
-        // TODO add your handling code here:
+        LabelSignOutAdminMouseClicked(null);
     }//GEN-LAST:event_LabelSignOutStudentMouseClicked
 
     private void LabelProfileStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileStudentMouseClicked
@@ -4575,9 +4582,26 @@ public class menu extends javax.swing.JFrame {
         PanelStudentUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelSignIn_ButtonSignUpMouseClicked
 
-    private void LabelProfileAdminMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileAdminMouseEntered
-        LabelProfileAdmin.setBackground(Color.red);
-    }//GEN-LAST:event_LabelProfileAdminMouseEntered
+    private void PanelViewAdminComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelViewAdminComponentShown
+        TableModel dataModel = TableAdmin.getModel();
+        
+        List<Admin> list_admin = adminController.getAllAdmin();
+        
+        Object[][] data = new Object[list_admin.size()][3];
+        for(int row=0; row<data.length; row++) {
+            data[row] = new Object[3];
+            data[row][0] = list_admin.get(row).getAdmin_id();
+            data[row][1] = list_admin.get(row).getAdmin_name();
+            data[row][2] = list_admin.get(row).getAdmin_contact();
+        }
+        
+        Object[] header = new Object[dataModel.getColumnCount()];
+        for(int col=0; col<header.length; col++){
+            header[col] = dataModel.getColumnName(col);
+        }
+        
+        TableAdmin.setModel(new JTable(data, header).getModel());
+    }//GEN-LAST:event_PanelViewAdminComponentShown
 
     
     

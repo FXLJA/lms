@@ -6,7 +6,7 @@ public class Admin {
     private String admin_name;
     private String admin_contact;
     
-    public Admin(String admin_id, String admin_name, String admin_contact, String admin_password){
+    public Admin(String admin_id, String admin_name, String admin_contact){
         this.admin_id = admin_id;
         this.admin_name = admin_name;
         this.admin_contact = admin_contact;
