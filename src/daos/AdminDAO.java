@@ -10,21 +10,20 @@ import interfaces.AdminInterface;
 public class AdminDAO implements AdminInterface {
     @Override
     public boolean insert(Admin admin) {
-        String sql = "INSERT INTO admin VALUES(?, ?, ?, ?)";
+        String sql = "INSERT INTO admin VALUES(?, ?, ?)";
         try {
-            PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql);
-            statement.setString(1, admin.getAdmin_id());
-            statement.setString(2, admin.getAdmin_name());
-            statement.setString(3, admin.getAdmin_contact());
-            statement.setString(4, admin.getAdmin_password());
-            
-            int row = statement.executeUpdate();
-            statement.close();
+            int row;
+            try (PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql)) {
+                statement.setString(1, admin.getAdmin_id());
+                statement.setString(2, admin.getAdmin_name());
+                statement.setString(3, admin.getAdmin_contact());
+                row = statement.executeUpdate();
+            }
             
             if (row > 0) {
                 return true;
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, e);
         }
         return false;
@@ -32,21 +31,20 @@ public class AdminDAO implements AdminInterface {
 
     @Override
     public boolean update(Admin admin) {
-        String sql = "UPDATE admin SET admin.admin_name = ?, admin.admin_contact = ?, admin.admin_password = ? WHERE admin.admin_id = ?";
+        String sql = "UPDATE admin SET admin.admin_name = ?, admin.admin_contact = ?, WHERE admin.admin_id = ?";
         try {
-            PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql);
-            statement.setString(1, admin.getAdmin_name());
-            statement.setString(2, admin.getAdmin_contact());
-            statement.setString(3, admin.getAdmin_password());
-            statement.setString(4, admin.getAdmin_id());
-
-            int row = statement.executeUpdate();
-            statement.close();
+            int row;
+            try (PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql)) {
+                statement.setString(1, admin.getAdmin_name());
+                statement.setString(2, admin.getAdmin_contact());
+                statement.setString(4, admin.getAdmin_id());
+                row = statement.executeUpdate();
+            }
             
             if (row > 0) {
                 return true;
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, e);
         }
         return false;
@@ -56,16 +54,16 @@ public class AdminDAO implements AdminInterface {
     public boolean delete(Admin admin) {
         String sql = "DELETE FROM admin WHERE admin.admin_id = ?";
         try {
-            PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql);
-            statement.setString(1, admin.getAdmin_id());
-
-            int row = statement.executeUpdate();
-            statement.close();
+            int row;
+            try (PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql)) {
+                statement.setString(1, admin.getAdmin_id());
+                row = statement.executeUpdate();
+            }
             
             if (row > 0) {
                 return true;
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, e);
         }
         return false;
@@ -73,18 +71,18 @@ public class AdminDAO implements AdminInterface {
 
     @Override
     public List<Admin> getAllAdmin() {
-        List<Admin> adminList = new ArrayList<Admin>();
+        List<Admin> adminList = new ArrayList<>();
         String sql = "SELECT * FROM admin";
         try {
-            PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql);
-            ResultSet rs = statement.executeQuery();
-
-            while (rs.next()) {
-                Admin admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
-                adminList.add(admin);
+            try (PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql)) {
+                ResultSet rs = statement.executeQuery();
+                
+                while (rs.next()) {
+                    Admin admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
+                    adminList.add(admin);
+                }
             }
-            statement.close();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, e);
         }
         return adminList;
@@ -102,7 +100,7 @@ public class AdminDAO implements AdminInterface {
             if (rs.next()) {
                 admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, e);
         }
         return admin;

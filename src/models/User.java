@@ -3,10 +3,12 @@ import java.sql.*;
 
 public class User {
     private String id;
+    private String password;
     private String role;
     
-    public User(String id, String role){
+    public User(String id, String password, String role){
         this.id = id;
+        this.password = password;
         this.role = role;
     }
     
@@ -16,6 +18,14 @@ public class User {
     
     public void setId(String id){
         this.id = id;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
     public String getRole(){

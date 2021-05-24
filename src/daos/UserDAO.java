@@ -10,19 +10,20 @@ import interfaces.UserInterface;
 public class UserDAO implements UserInterface {
     @Override
     public boolean insert(User user) {
-        String sql = "INSERT INTO user VALUES(?, ?)";
+        String sql = "INSERT INTO user VALUES(?, ?, ?)";
         try {
-            PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql);
-            statement.setString(1, user.getId());
-            statement.setString(2, user.getRole());
-            
-            int row = statement.executeUpdate();
-            statement.close();
+            int row;
+            try (PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql)) {
+                statement.setString(1, user.getId());
+                statement.setString(2, user.getPassword());
+                statement.setString(3, user.getRole());
+                row = statement.executeUpdate();
+            }
             
             if (row > 0) {
                 return true;
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, e);
         }
         return false;
@@ -30,19 +31,20 @@ public class UserDAO implements UserInterface {
 
     @Override
     public boolean update(User user) {
-        String sql = "UPDATE user SET user.role = ? WHERE user.id = ?";
+        String sql = "UPDATE user SET user.password = ?, user.role = ? WHERE user.id = ?";
         try {
-            PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql);
-            statement.setString(1, user.getRole());
-            statement.setString(2, user.getId());
-
-            int row = statement.executeUpdate();
-            statement.close();
+            int row;
+            try (PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql)) {
+                statement.setString(1, user.getPassword());
+                statement.setString(2, user.getRole());
+                statement.setString(3, user.getId());
+                row = statement.executeUpdate();
+            }
             
             if (row > 0) {
                 return true;
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, e);
         }
         return false;
@@ -52,16 +54,16 @@ public class UserDAO implements UserInterface {
     public boolean delete(User user) {
         String sql = "DELETE FROM user WHERE user.id = ?";
         try {
-            PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql);
-            statement.setString(1, user.getId());
-
-            int row = statement.executeUpdate();
-            statement.close();
+            int row;
+            try (PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql)) {
+                statement.setString(1, user.getId());
+                row = statement.executeUpdate();
+            }
             
             if (row > 0) {
                 return true;
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, e);
         }
         return false;
@@ -69,18 +71,18 @@ public class UserDAO implements UserInterface {
 
     @Override
     public List<User> getAllUser() {
-        List<User> userList = new ArrayList<User>();
+        List<User> userList = new ArrayList<>();
         String sql = "SELECT * FROM user";
         try {
-            PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql);
-            ResultSet rs = statement.executeQuery();
-
-            while (rs.next()) {
-                User user = new User(rs.getString(1), rs.getString(2));
-                userList.add(user);
+            try (PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql)) {
+                ResultSet rs = statement.executeQuery();
+                
+                while (rs.next()) {
+                    User user = new User(rs.getString(1), rs.getString(2), rs.getString(3));
+                    userList.add(user);
+                }
             }
-            statement.close();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, e);
         }
         return userList;
@@ -96,9 +98,9 @@ public class UserDAO implements UserInterface {
             ResultSet rs = statement.executeQuery();
 
             if (rs.next()) {
-                user = new User(rs.getString(1), rs.getString(2));
+                user = new User(rs.getString(1), rs.getString(2), rs.getString(3));
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, e);
         }
         return user;
