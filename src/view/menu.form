@@ -3426,6 +3426,9 @@
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[1040, 600]"/>
             </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1040, 600]"/>
+            </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -3469,6 +3472,7 @@
                       </Group>
                       <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
                       <Component id="ScrollPaneSubject" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3676,18 +3680,18 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="380" pref="380" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="PanelAddSubject_Major" min="-2" max="-2" attributes="0"/>
-                                  <Component id="PanelAddSubject_Minute" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="380" pref="380" max="-2" attributes="0"/>
-                              <Component id="PanelAddSubject_LabelMinute" min="-2" max="-2" attributes="0"/>
+                              <Component id="PanelAddSubject_Major" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="380" pref="380" max="-2" attributes="0"/>
                               <Component id="ButtonAddNewSubject" min="-2" pref="280" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="380" pref="380" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="PanelAddSubject_Minute" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
+                                  <Component id="PanelAddSubject_LabelMinute" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace pref="380" max="32767" attributes="0"/>
@@ -3710,14 +3714,14 @@
                       <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
                       <Component id="PanelAddSubject_LabelMajor" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="PanelAddSubject_Major" min="-2" max="-2" attributes="0"/>
-                          <Component id="PanelAddSubject_Minute" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="PanelAddSubject_Major" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
                       <Component id="PanelAddSubject_LabelMinute" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="82" pref="82" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="PanelAddSubject_Minute" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="ButtonAddNewSubject" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="130" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
