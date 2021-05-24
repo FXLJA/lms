@@ -39,7 +39,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }
 
     /**
@@ -196,8 +196,8 @@ public class menu extends javax.swing.JFrame {
         TeacherMenu_ViewTeacherProfile = new javax.swing.JPanel();
         LabelViewAdminProfile1 = new javax.swing.JLabel();
         TeacherDropDownUsername = new javax.swing.JPanel();
-        LabelSignOutAdmin1 = new javax.swing.JLabel();
-        LabelProfileAdmin1 = new javax.swing.JLabel();
+        LabelSignOutTeacher = new javax.swing.JLabel();
+        LabelProfileTeacher = new javax.swing.JLabel();
         PanelViewSubject = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         PanelViewSubject_ButtonAddSubject = new javax.swing.JButton();
@@ -238,7 +238,7 @@ public class menu extends javax.swing.JFrame {
         PanelTeacherProfile_LabelPassword = new javax.swing.JLabel();
         PanelTeacherProfile_PasswordField = new javax.swing.JPasswordField();
         PanelTeacherProfile_ButtonUpdatePforile = new javax.swing.JButton();
-        PanelUpdateTeacherProfile = new javax.swing.JPanel();
+        PanelTeacherUpdateProfile = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         PanelUpdateTeacherProfile_LabelID = new javax.swing.JLabel();
         PanelUpdateTeacherProfile_TextFieldID = new javax.swing.JTextField();
@@ -249,6 +249,49 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateTeacherProfile_LabelPassword = new javax.swing.JLabel();
         PanelUpdateTeacherProfile_PasswordField = new javax.swing.JPasswordField();
         PanelUpdateTeacherProfile_ButtonSave = new javax.swing.JButton();
+        PanelStudentDashboard = new javax.swing.JPanel();
+        StudentHeader = new javax.swing.JPanel();
+        LabelDropDownToggleStudent = new javax.swing.JLabel();
+        LabelStudentDashboard = new javax.swing.JLabel();
+        StudentMenu = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        StudentMenu_ViewModule = new javax.swing.JPanel();
+        LabelViewAdmin2 = new javax.swing.JLabel();
+        StudentMenu_ViewStudentProfile = new javax.swing.JPanel();
+        LabelViewAdminProfile2 = new javax.swing.JLabel();
+        StudentDropDownUsername = new javax.swing.JPanel();
+        LabelSignOutStudent = new javax.swing.JLabel();
+        LabelProfileStudent = new javax.swing.JLabel();
+        PanelViewModule = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        ScrollPaneModule = new javax.swing.JScrollPane();
+        TableModule = new javax.swing.JTable();
+        PanelStudentProfile = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        PanelStudentProfile_LabelID = new javax.swing.JLabel();
+        PanelStudentProfile_TextFieldID = new javax.swing.JTextField();
+        PanelStudentProfile_LabelName = new javax.swing.JLabel();
+        PanelStudentProfile_Name = new javax.swing.JTextField();
+        PanelStudentProfile_LabelClass = new javax.swing.JLabel();
+        PanelStudentProfile_Class = new javax.swing.JTextField();
+        PanelStudentProfile_LabelMajor = new javax.swing.JLabel();
+        PanelStudentProfile_Major = new javax.swing.JTextField();
+        PanelStudentProfile_LabelPassword = new javax.swing.JLabel();
+        PanelStudentProfile_PasswordField = new javax.swing.JPasswordField();
+        PanelTeacherProfile_ButtonUpdatePforile1 = new javax.swing.JButton();
+        PanelStudentUpdateProfile = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        PanelStudenUpdatetProfile_LabelID = new javax.swing.JLabel();
+        PanelStudenUpdatetProfile_TextFieldID = new javax.swing.JTextField();
+        PanelStudenUpdatetProfile_LabelName = new javax.swing.JLabel();
+        PanelStudenUpdatetProfile_Name = new javax.swing.JTextField();
+        PanelStudenUpdatetProfile_LabelClass = new javax.swing.JLabel();
+        PanelStudenUpdatetProfile_Class = new javax.swing.JTextField();
+        PanelStudenUpdatetProfile_LabelMajor = new javax.swing.JLabel();
+        PanelStudenUpdatetProfile_Major = new javax.swing.JTextField();
+        PanelStudenUpdatetProfile_LabelPassword = new javax.swing.JLabel();
+        PanelStudenUpdatetProfile_PasswordField = new javax.swing.JPasswordField();
+        PanelStudenUpdatetProfile_ButtonUpdatePforile = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -2099,23 +2142,23 @@ public class menu extends javax.swing.JFrame {
         TeacherDropDownUsername.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         TeacherDropDownUsername.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LabelSignOutAdmin1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        LabelSignOutAdmin1.setText("Sign Out");
-        LabelSignOutAdmin1.addMouseListener(new java.awt.event.MouseAdapter() {
+        LabelSignOutTeacher.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        LabelSignOutTeacher.setText("Sign Out");
+        LabelSignOutTeacher.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LabelSignOutAdmin1MouseClicked(evt);
+                LabelSignOutTeacherMouseClicked(evt);
             }
         });
-        TeacherDropDownUsername.add(LabelSignOutAdmin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+        TeacherDropDownUsername.add(LabelSignOutTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
-        LabelProfileAdmin1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        LabelProfileAdmin1.setText("Profile");
-        LabelProfileAdmin1.addMouseListener(new java.awt.event.MouseAdapter() {
+        LabelProfileTeacher.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        LabelProfileTeacher.setText("Profile");
+        LabelProfileTeacher.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LabelProfileAdmin1MouseClicked(evt);
+                LabelProfileTeacherMouseClicked(evt);
             }
         });
-        TeacherDropDownUsername.add(LabelProfileAdmin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+        TeacherDropDownUsername.add(LabelProfileTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         PanelTeacherDashboard.add(TeacherDropDownUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 150, 80));
 
@@ -2656,9 +2699,9 @@ public class menu extends javax.swing.JFrame {
 
         PanelTeacherDashboard.add(PanelTeacherProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
 
-        PanelUpdateTeacherProfile.setBackground(new java.awt.Color(255, 255, 255));
-        PanelUpdateTeacherProfile.setMaximumSize(new java.awt.Dimension(1040, 600));
-        PanelUpdateTeacherProfile.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelTeacherUpdateProfile.setBackground(new java.awt.Color(255, 255, 255));
+        PanelTeacherUpdateProfile.setMaximumSize(new java.awt.Dimension(1040, 600));
+        PanelTeacherUpdateProfile.setMinimumSize(new java.awt.Dimension(1040, 600));
 
         jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel23.setText("Update Profile");
@@ -2728,13 +2771,13 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout PanelUpdateTeacherProfileLayout = new javax.swing.GroupLayout(PanelUpdateTeacherProfile);
-        PanelUpdateTeacherProfile.setLayout(PanelUpdateTeacherProfileLayout);
-        PanelUpdateTeacherProfileLayout.setHorizontalGroup(
-            PanelUpdateTeacherProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelUpdateTeacherProfileLayout.createSequentialGroup()
+        javax.swing.GroupLayout PanelTeacherUpdateProfileLayout = new javax.swing.GroupLayout(PanelTeacherUpdateProfile);
+        PanelTeacherUpdateProfile.setLayout(PanelTeacherUpdateProfileLayout);
+        PanelTeacherUpdateProfileLayout.setHorizontalGroup(
+            PanelTeacherUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelTeacherUpdateProfileLayout.createSequentialGroup()
                 .addGap(380, 380, 380)
-                .addGroup(PanelUpdateTeacherProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(PanelTeacherUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(PanelUpdateTeacherProfile_LabelPassword)
                     .addComponent(PanelUpdateTeacherProfile_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PanelUpdateTeacherProfile_Class, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2745,14 +2788,14 @@ public class menu extends javax.swing.JFrame {
                     .addComponent(PanelUpdateTeacherProfile_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PanelUpdateTeacherProfile_ButtonSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(380, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelUpdateTeacherProfileLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelTeacherUpdateProfileLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel23)
                 .addGap(450, 450, 450))
         );
-        PanelUpdateTeacherProfileLayout.setVerticalGroup(
-            PanelUpdateTeacherProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelUpdateTeacherProfileLayout.createSequentialGroup()
+        PanelTeacherUpdateProfileLayout.setVerticalGroup(
+            PanelTeacherUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelTeacherUpdateProfileLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
@@ -2776,9 +2819,521 @@ public class menu extends javax.swing.JFrame {
                 .addContainerGap(130, Short.MAX_VALUE))
         );
 
-        PanelTeacherDashboard.add(PanelUpdateTeacherProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+        PanelTeacherDashboard.add(PanelTeacherUpdateProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
 
         getContentPane().add(PanelTeacherDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
+
+        PanelStudentDashboard.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudentDashboard.setMaximumSize(new java.awt.Dimension(1280, 720));
+        PanelStudentDashboard.setName("login page"); // NOI18N
+        PanelStudentDashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        StudentHeader.setBackground(new java.awt.Color(255, 255, 255));
+        StudentHeader.setMaximumSize(new java.awt.Dimension(1100, 60));
+        StudentHeader.setMinimumSize(new java.awt.Dimension(1100, 60));
+        StudentHeader.setPreferredSize(new java.awt.Dimension(1100, 60));
+        StudentHeader.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LabelDropDownToggleStudent.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        LabelDropDownToggleStudent.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        LabelDropDownToggleStudent.setText("Username");
+        LabelDropDownToggleStudent.setMaximumSize(new java.awt.Dimension(150, 30));
+        LabelDropDownToggleStudent.setMinimumSize(new java.awt.Dimension(150, 30));
+        LabelDropDownToggleStudent.setPreferredSize(new java.awt.Dimension(150, 30));
+        LabelDropDownToggleStudent.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelDropDownToggleStudentMouseClicked(evt);
+            }
+        });
+        StudentHeader.add(LabelDropDownToggleStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 20, -1, -1));
+
+        LabelStudentDashboard.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        LabelStudentDashboard.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        LabelStudentDashboard.setText("Student Dashboard");
+        LabelStudentDashboard.setMaximumSize(new java.awt.Dimension(150, 30));
+        LabelStudentDashboard.setMinimumSize(new java.awt.Dimension(150, 30));
+        LabelStudentDashboard.setPreferredSize(new java.awt.Dimension(150, 30));
+        LabelStudentDashboard.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelStudentDashboardMouseClicked(evt);
+            }
+        });
+        StudentHeader.add(LabelStudentDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 180, 30));
+
+        PanelStudentDashboard.add(StudentHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 1100, -1));
+
+        StudentMenu.setBackground(new java.awt.Color(34, 125, 194));
+        StudentMenu.setMaximumSize(new java.awt.Dimension(180, 720));
+        StudentMenu.setMinimumSize(new java.awt.Dimension(180, 720));
+        StudentMenu.setPreferredSize(new java.awt.Dimension(180, 720));
+        StudentMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo UBM.png"))); // NOI18N
+        StudentMenu.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 16, -1, -1));
+
+        StudentMenu_ViewModule.setBackground(new java.awt.Color(34, 125, 194));
+        StudentMenu_ViewModule.setToolTipText("Admin View");
+        StudentMenu_ViewModule.setMaximumSize(new java.awt.Dimension(180, 90));
+        StudentMenu_ViewModule.setMinimumSize(new java.awt.Dimension(180, 90));
+        StudentMenu_ViewModule.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                StudentMenu_ViewModuleMouseClicked(evt);
+            }
+        });
+
+        LabelViewAdmin2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelViewAdmin2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/listmodule.png"))); // NOI18N
+
+        javax.swing.GroupLayout StudentMenu_ViewModuleLayout = new javax.swing.GroupLayout(StudentMenu_ViewModule);
+        StudentMenu_ViewModule.setLayout(StudentMenu_ViewModuleLayout);
+        StudentMenu_ViewModuleLayout.setHorizontalGroup(
+            StudentMenu_ViewModuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StudentMenu_ViewModuleLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(LabelViewAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+        StudentMenu_ViewModuleLayout.setVerticalGroup(
+            StudentMenu_ViewModuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StudentMenu_ViewModuleLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LabelViewAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        StudentMenu.add(StudentMenu_ViewModule, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 82, -1, -1));
+
+        StudentMenu_ViewStudentProfile.setBackground(new java.awt.Color(34, 125, 194));
+        StudentMenu_ViewStudentProfile.setToolTipText("Profile");
+        StudentMenu_ViewStudentProfile.setMaximumSize(new java.awt.Dimension(180, 90));
+        StudentMenu_ViewStudentProfile.setMinimumSize(new java.awt.Dimension(180, 90));
+        StudentMenu_ViewStudentProfile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                StudentMenu_ViewStudentProfileMouseClicked(evt);
+            }
+        });
+
+        LabelViewAdminProfile2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelViewAdminProfile2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/settingmurid.png"))); // NOI18N
+
+        javax.swing.GroupLayout StudentMenu_ViewStudentProfileLayout = new javax.swing.GroupLayout(StudentMenu_ViewStudentProfile);
+        StudentMenu_ViewStudentProfile.setLayout(StudentMenu_ViewStudentProfileLayout);
+        StudentMenu_ViewStudentProfileLayout.setHorizontalGroup(
+            StudentMenu_ViewStudentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 180, Short.MAX_VALUE)
+            .addGroup(StudentMenu_ViewStudentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StudentMenu_ViewStudentProfileLayout.createSequentialGroup()
+                    .addContainerGap(58, Short.MAX_VALUE)
+                    .addComponent(LabelViewAdminProfile2)
+                    .addContainerGap(58, Short.MAX_VALUE)))
+        );
+        StudentMenu_ViewStudentProfileLayout.setVerticalGroup(
+            StudentMenu_ViewStudentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(StudentMenu_ViewStudentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(StudentMenu_ViewStudentProfileLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(LabelViewAdminProfile2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(13, Short.MAX_VALUE)))
+        );
+
+        StudentMenu.add(StudentMenu_ViewStudentProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
+
+        PanelStudentDashboard.add(StudentMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        StudentDropDownUsername.setBackground(new java.awt.Color(255, 255, 255));
+        StudentDropDownUsername.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        StudentDropDownUsername.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LabelSignOutStudent.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        LabelSignOutStudent.setText("Sign Out");
+        LabelSignOutStudent.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelSignOutStudentMouseClicked(evt);
+            }
+        });
+        StudentDropDownUsername.add(LabelSignOutStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+
+        LabelProfileStudent.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        LabelProfileStudent.setText("Profile");
+        LabelProfileStudent.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelProfileStudentMouseClicked(evt);
+            }
+        });
+        StudentDropDownUsername.add(LabelProfileStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+
+        PanelStudentDashboard.add(StudentDropDownUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 150, 80));
+
+        PanelViewModule.setBackground(new java.awt.Color(255, 255, 255));
+        PanelViewModule.setMaximumSize(new java.awt.Dimension(1040, 600));
+        PanelViewModule.setMinimumSize(new java.awt.Dimension(1040, 600));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel17.setText("Module");
+
+        ScrollPaneModule.setPreferredSize(new java.awt.Dimension(992, 500));
+
+        TableModule.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        TableModule.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Name", "Major", "Minute", "null"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TableModule.setMaximumSize(new java.awt.Dimension(992, 500));
+        TableModule.setMinimumSize(new java.awt.Dimension(992, 500));
+        TableModule.setPreferredSize(new java.awt.Dimension(992, 500));
+        ScrollPaneModule.setViewportView(TableModule);
+        if (TableModule.getColumnModel().getColumnCount() > 0) {
+            TableModule.getColumnModel().getColumn(0).setResizable(false);
+            TableModule.getColumnModel().getColumn(1).setResizable(false);
+            TableModule.getColumnModel().getColumn(2).setResizable(false);
+            TableModule.getColumnModel().getColumn(3).setResizable(false);
+            TableModule.getColumnModel().getColumn(4).setResizable(false);
+        }
+
+        javax.swing.GroupLayout PanelViewModuleLayout = new javax.swing.GroupLayout(PanelViewModule);
+        PanelViewModule.setLayout(PanelViewModuleLayout);
+        PanelViewModuleLayout.setHorizontalGroup(
+            PanelViewModuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelViewModuleLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(PanelViewModuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17)
+                    .addComponent(ScrollPaneModule, javax.swing.GroupLayout.PREFERRED_SIZE, 990, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+        PanelViewModuleLayout.setVerticalGroup(
+            PanelViewModuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelViewModuleLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel17)
+                .addGap(31, 31, 31)
+                .addComponent(ScrollPaneModule, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        PanelStudentDashboard.add(PanelViewModule, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        PanelStudentProfile.setBackground(new java.awt.Color(255, 255, 255));
+        PanelStudentProfile.setMaximumSize(new java.awt.Dimension(1040, 600));
+        PanelStudentProfile.setMinimumSize(new java.awt.Dimension(1040, 600));
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel24.setText("Profile");
+
+        PanelStudentProfile_LabelID.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudentProfile_LabelID.setText("ID");
+
+        PanelStudentProfile_TextFieldID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelStudentProfile_TextFieldID.setToolTipText("Username");
+        PanelStudentProfile_TextFieldID.setEnabled(false);
+        PanelStudentProfile_TextFieldID.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_TextFieldID.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_TextFieldID.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_TextFieldID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelStudentProfile_TextFieldIDActionPerformed(evt);
+            }
+        });
+
+        PanelStudentProfile_LabelName.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudentProfile_LabelName.setText("Name");
+
+        PanelStudentProfile_Name.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelStudentProfile_Name.setToolTipText("Username");
+        PanelStudentProfile_Name.setEnabled(false);
+        PanelStudentProfile_Name.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_Name.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_Name.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_Name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelStudentProfile_NameActionPerformed(evt);
+            }
+        });
+
+        PanelStudentProfile_LabelClass.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudentProfile_LabelClass.setText("Class");
+
+        PanelStudentProfile_Class.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelStudentProfile_Class.setToolTipText("Username");
+        PanelStudentProfile_Class.setEnabled(false);
+        PanelStudentProfile_Class.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_Class.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_Class.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_Class.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelStudentProfile_ClassActionPerformed(evt);
+            }
+        });
+
+        PanelStudentProfile_LabelMajor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudentProfile_LabelMajor.setText("Major");
+
+        PanelStudentProfile_Major.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelStudentProfile_Major.setToolTipText("Username");
+        PanelStudentProfile_Major.setEnabled(false);
+        PanelStudentProfile_Major.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_Major.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_Major.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_Major.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelStudentProfile_MajorActionPerformed(evt);
+            }
+        });
+
+        PanelStudentProfile_LabelPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudentProfile_LabelPassword.setText("Password");
+
+        PanelStudentProfile_PasswordField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        PanelStudentProfile_PasswordField.setToolTipText("Password");
+        PanelStudentProfile_PasswordField.setEnabled(false);
+        PanelStudentProfile_PasswordField.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_PasswordField.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelStudentProfile_PasswordField.setPreferredSize(new java.awt.Dimension(280, 36));
+
+        PanelTeacherProfile_ButtonUpdatePforile1.setBackground(new java.awt.Color(34, 125, 194));
+        PanelTeacherProfile_ButtonUpdatePforile1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        PanelTeacherProfile_ButtonUpdatePforile1.setForeground(new java.awt.Color(255, 255, 255));
+        PanelTeacherProfile_ButtonUpdatePforile1.setText("Update Profile");
+        PanelTeacherProfile_ButtonUpdatePforile1.setToolTipText("");
+        PanelTeacherProfile_ButtonUpdatePforile1.setMaximumSize(new java.awt.Dimension(127, 36));
+        PanelTeacherProfile_ButtonUpdatePforile1.setMinimumSize(new java.awt.Dimension(127, 36));
+        PanelTeacherProfile_ButtonUpdatePforile1.setPreferredSize(new java.awt.Dimension(127, 36));
+        PanelTeacherProfile_ButtonUpdatePforile1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PanelTeacherProfile_ButtonUpdatePforile1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelStudentProfileLayout = new javax.swing.GroupLayout(PanelStudentProfile);
+        PanelStudentProfile.setLayout(PanelStudentProfileLayout);
+        PanelStudentProfileLayout.setHorizontalGroup(
+            PanelStudentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelStudentProfileLayout.createSequentialGroup()
+                .addGroup(PanelStudentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelStudentProfileLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel24))
+                    .addGroup(PanelStudentProfileLayout.createSequentialGroup()
+                        .addGap(380, 380, 380)
+                        .addGroup(PanelStudentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelStudentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(PanelStudentProfile_Major, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PanelStudentProfile_LabelMajor))
+                            .addGroup(PanelStudentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(PanelStudentProfile_LabelPassword)
+                                .addComponent(PanelStudentProfile_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PanelStudentProfile_Class, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PanelStudentProfile_LabelClass)
+                                .addComponent(PanelStudentProfile_TextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PanelStudentProfile_LabelID)
+                                .addComponent(PanelStudentProfile_LabelName)
+                                .addComponent(PanelStudentProfile_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PanelTeacherProfile_ButtonUpdatePforile1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(380, Short.MAX_VALUE))
+        );
+        PanelStudentProfileLayout.setVerticalGroup(
+            PanelStudentProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelStudentProfileLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelStudentProfile_LabelID)
+                .addGap(6, 6, 6)
+                .addComponent(PanelStudentProfile_TextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelStudentProfile_LabelName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelStudentProfile_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelStudentProfile_LabelClass)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelStudentProfile_Class, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelStudentProfile_LabelMajor)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelStudentProfile_Major, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(PanelStudentProfile_LabelPassword)
+                .addGap(6, 6, 6)
+                .addComponent(PanelStudentProfile_PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(PanelTeacherProfile_ButtonUpdatePforile1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78))
+        );
+
+        PanelStudentDashboard.add(PanelStudentProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        PanelStudentUpdateProfile.setBackground(new java.awt.Color(255, 255, 255));
+        PanelStudentUpdateProfile.setMaximumSize(new java.awt.Dimension(1040, 600));
+        PanelStudentUpdateProfile.setMinimumSize(new java.awt.Dimension(1040, 600));
+
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel26.setText("Profile");
+
+        PanelStudenUpdatetProfile_LabelID.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudenUpdatetProfile_LabelID.setText("ID");
+
+        PanelStudenUpdatetProfile_TextFieldID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelStudenUpdatetProfile_TextFieldID.setToolTipText("Username");
+        PanelStudenUpdatetProfile_TextFieldID.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_TextFieldID.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_TextFieldID.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_TextFieldID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelStudenUpdatetProfile_TextFieldIDActionPerformed(evt);
+            }
+        });
+
+        PanelStudenUpdatetProfile_LabelName.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudenUpdatetProfile_LabelName.setText("Name");
+
+        PanelStudenUpdatetProfile_Name.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelStudenUpdatetProfile_Name.setToolTipText("Username");
+        PanelStudenUpdatetProfile_Name.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_Name.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_Name.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_Name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelStudenUpdatetProfile_NameActionPerformed(evt);
+            }
+        });
+
+        PanelStudenUpdatetProfile_LabelClass.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudenUpdatetProfile_LabelClass.setText("Class");
+
+        PanelStudenUpdatetProfile_Class.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelStudenUpdatetProfile_Class.setToolTipText("Username");
+        PanelStudenUpdatetProfile_Class.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_Class.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_Class.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_Class.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelStudenUpdatetProfile_ClassActionPerformed(evt);
+            }
+        });
+
+        PanelStudenUpdatetProfile_LabelMajor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudenUpdatetProfile_LabelMajor.setText("Major");
+
+        PanelStudenUpdatetProfile_Major.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        PanelStudenUpdatetProfile_Major.setToolTipText("Username");
+        PanelStudenUpdatetProfile_Major.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_Major.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_Major.setPreferredSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_Major.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PanelStudenUpdatetProfile_MajorActionPerformed(evt);
+            }
+        });
+
+        PanelStudenUpdatetProfile_LabelPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        PanelStudenUpdatetProfile_LabelPassword.setText("Password");
+
+        PanelStudenUpdatetProfile_PasswordField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        PanelStudenUpdatetProfile_PasswordField.setToolTipText("Password");
+        PanelStudenUpdatetProfile_PasswordField.setMaximumSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_PasswordField.setMinimumSize(new java.awt.Dimension(280, 36));
+        PanelStudenUpdatetProfile_PasswordField.setPreferredSize(new java.awt.Dimension(280, 36));
+
+        PanelStudenUpdatetProfile_ButtonUpdatePforile.setBackground(new java.awt.Color(34, 125, 194));
+        PanelStudenUpdatetProfile_ButtonUpdatePforile.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        PanelStudenUpdatetProfile_ButtonUpdatePforile.setForeground(new java.awt.Color(255, 255, 255));
+        PanelStudenUpdatetProfile_ButtonUpdatePforile.setText("Update Profile");
+        PanelStudenUpdatetProfile_ButtonUpdatePforile.setToolTipText("");
+        PanelStudenUpdatetProfile_ButtonUpdatePforile.setMaximumSize(new java.awt.Dimension(127, 36));
+        PanelStudenUpdatetProfile_ButtonUpdatePforile.setMinimumSize(new java.awt.Dimension(127, 36));
+        PanelStudenUpdatetProfile_ButtonUpdatePforile.setPreferredSize(new java.awt.Dimension(127, 36));
+        PanelStudenUpdatetProfile_ButtonUpdatePforile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PanelStudenUpdatetProfile_ButtonUpdatePforileMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelStudentUpdateProfileLayout = new javax.swing.GroupLayout(PanelStudentUpdateProfile);
+        PanelStudentUpdateProfile.setLayout(PanelStudentUpdateProfileLayout);
+        PanelStudentUpdateProfileLayout.setHorizontalGroup(
+            PanelStudentUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelStudentUpdateProfileLayout.createSequentialGroup()
+                .addGroup(PanelStudentUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelStudentUpdateProfileLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel26))
+                    .addGroup(PanelStudentUpdateProfileLayout.createSequentialGroup()
+                        .addGap(380, 380, 380)
+                        .addGroup(PanelStudentUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelStudentUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(PanelStudenUpdatetProfile_Major, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PanelStudenUpdatetProfile_LabelMajor))
+                            .addGroup(PanelStudentUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(PanelStudenUpdatetProfile_LabelPassword)
+                                .addComponent(PanelStudenUpdatetProfile_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PanelStudenUpdatetProfile_Class, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PanelStudenUpdatetProfile_LabelClass)
+                                .addComponent(PanelStudenUpdatetProfile_TextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PanelStudenUpdatetProfile_LabelID)
+                                .addComponent(PanelStudenUpdatetProfile_LabelName)
+                                .addComponent(PanelStudenUpdatetProfile_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(PanelStudenUpdatetProfile_ButtonUpdatePforile, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(380, Short.MAX_VALUE))
+        );
+        PanelStudentUpdateProfileLayout.setVerticalGroup(
+            PanelStudentUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelStudentUpdateProfileLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelStudenUpdatetProfile_LabelID)
+                .addGap(6, 6, 6)
+                .addComponent(PanelStudenUpdatetProfile_TextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelStudenUpdatetProfile_LabelName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelStudenUpdatetProfile_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelStudenUpdatetProfile_LabelClass)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelStudenUpdatetProfile_Class, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(PanelStudenUpdatetProfile_LabelMajor)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelStudenUpdatetProfile_Major, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(PanelStudenUpdatetProfile_LabelPassword)
+                .addGap(6, 6, 6)
+                .addComponent(PanelStudenUpdatetProfile_PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(PanelStudenUpdatetProfile_ButtonUpdatePforile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78))
+        );
+
+        PanelStudentDashboard.add(PanelStudentUpdateProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        getContentPane().add(PanelStudentDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
         pack();
         setLocationRelativeTo(null);
@@ -2816,7 +3371,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelSignIn_ButtonSignUpMouseClicked
 
     private void PanelSignUp_ButtonBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSignUp_ButtonBackMouseClicked
@@ -2843,7 +3398,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelSignUp_ButtonBackMouseClicked
 
     private void PanelSignIn_ButtonSignInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSignIn_ButtonSignInMouseClicked
@@ -2870,7 +3425,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelSignIn_ButtonSignInMouseClicked
 
     private void PanelViewAdmin_ButtonAddAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewAdmin_ButtonAddAdminMouseClicked
@@ -2897,7 +3452,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewAdmin_ButtonAddAdminMouseClicked
 
     private void LabelDropDownToggleAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDropDownToggleAdminMouseClicked
@@ -2935,7 +3490,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_ButtonAddTeacherMouseClicked
 
     private void PanelViewStudent_ButtonAddStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewStudent_ButtonAddStudentMouseClicked
@@ -2962,7 +3517,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewStudent_ButtonAddStudentMouseClicked
 
     private void AdminMenu_ViewAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminMouseClicked
@@ -2989,7 +3544,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_AdminMenu_ViewAdminMouseClicked
 
     private void AdminMenu_ViewTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewTeacherMouseClicked
@@ -3016,7 +3571,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_AdminMenu_ViewTeacherMouseClicked
 
     private void AdminMenu_ViewStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewStudentMouseClicked
@@ -3043,7 +3598,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_AdminMenu_ViewStudentMouseClicked
 
     private void AdminMenu_ViewAdminProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminProfileMouseClicked
@@ -3070,7 +3625,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_AdminMenu_ViewAdminProfileMouseClicked
 
     private void LabelProfileAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileAdminMouseClicked
@@ -3097,7 +3652,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_LabelProfileAdminMouseClicked
 
     private void LabelSignOutAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutAdminMouseClicked
@@ -3127,7 +3682,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_LabelSignOutAdminMouseClicked
 
     private void ButtonAddNewAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAddNewAdminMouseClicked
@@ -3186,7 +3741,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewAdmin_ButtonUpdateAdminMouseClicked
 
     private void PanelViewAdmin_ButtonDeleteAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewAdmin_ButtonDeleteAdminMouseClicked
@@ -3249,7 +3804,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewTeacher_ButtonUpdateTeacherMouseClicked
 
     private void PanelViewTeacher_ButtonDeleteTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewTeacher_ButtonDeleteTeacherMouseClicked
@@ -3280,7 +3835,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewStudent_ButtonUpdateStudentMouseClicked
 
     private void PanelViewStudent_ButtonDeleteStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewStudent_ButtonDeleteStudentMouseClicked
@@ -3359,7 +3914,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelAdminProfile_ButtonUpdatePforilMouseClicked
 
     private void PanelAdminProfile_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAdminProfile_TextFieldIDActionPerformed
@@ -3409,7 +3964,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_TeacherMenu_ViewSubjectMouseClicked
 
     private void TeacherMenu_ViewTeacherProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TeacherMenu_ViewTeacherProfileMouseClicked
@@ -3436,16 +3991,16 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(true);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_TeacherMenu_ViewTeacherProfileMouseClicked
 
-    private void LabelSignOutAdmin1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutAdmin1MouseClicked
+    private void LabelSignOutTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutTeacherMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_LabelSignOutAdmin1MouseClicked
+    }//GEN-LAST:event_LabelSignOutTeacherMouseClicked
 
-    private void LabelProfileAdmin1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileAdmin1MouseClicked
+    private void LabelProfileTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileTeacherMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_LabelProfileAdmin1MouseClicked
+    }//GEN-LAST:event_LabelProfileTeacherMouseClicked
 
     private void PanelViewSubject_ButtonAddSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewSubject_ButtonAddSubjectMouseClicked
         //Panel Handler
@@ -3471,7 +4026,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(true);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewSubject_ButtonAddSubjectMouseClicked
 
     private void PanelViewSubject_ButtonUpdateSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewSubject_ButtonUpdateSubjectMouseClicked
@@ -3498,7 +4053,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(true);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(false);
+        PanelTeacherUpdateProfile.setVisible(false);
     }//GEN-LAST:event_PanelViewSubject_ButtonUpdateSubjectMouseClicked
 
     private void PanelViewSubject_ButtonDeleteSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewSubject_ButtonDeleteSubjectMouseClicked
@@ -3545,7 +4100,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddSubject.setVisible(false);
         PanelUpdateSubject.setVisible(false);
         PanelTeacherProfile.setVisible(false);
-        PanelUpdateTeacherProfile.setVisible(true);
+        PanelTeacherUpdateProfile.setVisible(true);
     }//GEN-LAST:event_PanelTeacherProfile_ButtonUpdatePforileMouseClicked
 
     private void PanelTeacherProfile_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelTeacherProfile_TextFieldIDActionPerformed
@@ -3604,6 +4159,70 @@ public class menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelUpdateTeacherProfile_ButtonSaveMouseClicked
 
+    private void LabelDropDownToggleStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDropDownToggleStudentMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LabelDropDownToggleStudentMouseClicked
+
+    private void LabelStudentDashboardMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelStudentDashboardMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LabelStudentDashboardMouseClicked
+
+    private void StudentMenu_ViewModuleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StudentMenu_ViewModuleMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StudentMenu_ViewModuleMouseClicked
+
+    private void StudentMenu_ViewStudentProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StudentMenu_ViewStudentProfileMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StudentMenu_ViewStudentProfileMouseClicked
+
+    private void LabelSignOutStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutStudentMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LabelSignOutStudentMouseClicked
+
+    private void LabelProfileStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileStudentMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LabelProfileStudentMouseClicked
+
+    private void PanelStudentProfile_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudentProfile_TextFieldIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelStudentProfile_TextFieldIDActionPerformed
+
+    private void PanelStudentProfile_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudentProfile_NameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelStudentProfile_NameActionPerformed
+
+    private void PanelStudentProfile_ClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudentProfile_ClassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelStudentProfile_ClassActionPerformed
+
+    private void PanelTeacherProfile_ButtonUpdatePforile1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelTeacherProfile_ButtonUpdatePforile1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelTeacherProfile_ButtonUpdatePforile1MouseClicked
+
+    private void PanelStudentProfile_MajorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudentProfile_MajorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelStudentProfile_MajorActionPerformed
+
+    private void PanelStudenUpdatetProfile_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_TextFieldIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelStudenUpdatetProfile_TextFieldIDActionPerformed
+
+    private void PanelStudenUpdatetProfile_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_NameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelStudenUpdatetProfile_NameActionPerformed
+
+    private void PanelStudenUpdatetProfile_ClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_ClassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelStudenUpdatetProfile_ClassActionPerformed
+
+    private void PanelStudenUpdatetProfile_MajorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_MajorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelStudenUpdatetProfile_MajorActionPerformed
+
+    private void PanelStudenUpdatetProfile_ButtonUpdatePforileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_ButtonUpdatePforileMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelStudenUpdatetProfile_ButtonUpdatePforileMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -3653,16 +4272,22 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton ButtonAddTeacher;
     private javax.swing.JButton ButtonUpdateSubject;
     private javax.swing.JLabel LabelDropDownToggleAdmin;
+    private javax.swing.JLabel LabelDropDownToggleStudent;
     private javax.swing.JLabel LabelDropDownToggleTeacher;
     private javax.swing.JLabel LabelProfileAdmin;
-    private javax.swing.JLabel LabelProfileAdmin1;
+    private javax.swing.JLabel LabelProfileStudent;
+    private javax.swing.JLabel LabelProfileTeacher;
     private javax.swing.JLabel LabelSignOutAdmin;
-    private javax.swing.JLabel LabelSignOutAdmin1;
+    private javax.swing.JLabel LabelSignOutStudent;
+    private javax.swing.JLabel LabelSignOutTeacher;
+    private javax.swing.JLabel LabelStudentDashboard;
     private javax.swing.JLabel LabelTeacherDashboard;
     private javax.swing.JLabel LabelViewAdmin;
     private javax.swing.JLabel LabelViewAdmin1;
+    private javax.swing.JLabel LabelViewAdmin2;
     private javax.swing.JLabel LabelViewAdminProfile;
     private javax.swing.JLabel LabelViewAdminProfile1;
+    private javax.swing.JLabel LabelViewAdminProfile2;
     private javax.swing.JLabel LabelViewStudent;
     private javax.swing.JLabel LabelViewTeacher;
     private javax.swing.JPanel PanelAddAdmin;
@@ -3732,9 +4357,34 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel PanelSignUp_LabelPicture;
     private javax.swing.JPasswordField PanelSignUp_PasswordField;
     private javax.swing.JTextField PanelSignUp_TextFieldID;
+    private javax.swing.JButton PanelStudenUpdatetProfile_ButtonUpdatePforile;
+    private javax.swing.JTextField PanelStudenUpdatetProfile_Class;
+    private javax.swing.JLabel PanelStudenUpdatetProfile_LabelClass;
+    private javax.swing.JLabel PanelStudenUpdatetProfile_LabelID;
+    private javax.swing.JLabel PanelStudenUpdatetProfile_LabelMajor;
+    private javax.swing.JLabel PanelStudenUpdatetProfile_LabelName;
+    private javax.swing.JLabel PanelStudenUpdatetProfile_LabelPassword;
+    private javax.swing.JTextField PanelStudenUpdatetProfile_Major;
+    private javax.swing.JTextField PanelStudenUpdatetProfile_Name;
+    private javax.swing.JPasswordField PanelStudenUpdatetProfile_PasswordField;
+    private javax.swing.JTextField PanelStudenUpdatetProfile_TextFieldID;
+    private javax.swing.JPanel PanelStudentDashboard;
+    private javax.swing.JPanel PanelStudentProfile;
+    private javax.swing.JTextField PanelStudentProfile_Class;
+    private javax.swing.JLabel PanelStudentProfile_LabelClass;
+    private javax.swing.JLabel PanelStudentProfile_LabelID;
+    private javax.swing.JLabel PanelStudentProfile_LabelMajor;
+    private javax.swing.JLabel PanelStudentProfile_LabelName;
+    private javax.swing.JLabel PanelStudentProfile_LabelPassword;
+    private javax.swing.JTextField PanelStudentProfile_Major;
+    private javax.swing.JTextField PanelStudentProfile_Name;
+    private javax.swing.JPasswordField PanelStudentProfile_PasswordField;
+    private javax.swing.JTextField PanelStudentProfile_TextFieldID;
+    private javax.swing.JPanel PanelStudentUpdateProfile;
     private javax.swing.JPanel PanelTeacherDashboard;
     private javax.swing.JPanel PanelTeacherProfile;
     private javax.swing.JButton PanelTeacherProfile_ButtonUpdatePforile;
+    private javax.swing.JButton PanelTeacherProfile_ButtonUpdatePforile1;
     private javax.swing.JTextField PanelTeacherProfile_Contact;
     private javax.swing.JLabel PanelTeacherProfile_LabelContact;
     private javax.swing.JLabel PanelTeacherProfile_LabelID;
@@ -3743,6 +4393,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JTextField PanelTeacherProfile_Name;
     private javax.swing.JPasswordField PanelTeacherProfile_PasswordField;
     private javax.swing.JTextField PanelTeacherProfile_TextFieldID;
+    private javax.swing.JPanel PanelTeacherUpdateProfile;
     private javax.swing.JPanel PanelUpdateAdmin;
     private javax.swing.JButton PanelUpdateAdmin_ButtonUpdate;
     private javax.swing.JTextField PanelUpdateAdmin_Contact;
@@ -3775,7 +4426,6 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JTextField PanelUpdateSubject_Name;
     private javax.swing.JTextField PanelUpdateSubject_TextFieldID;
     private javax.swing.JPanel PanelUpdateTeacher;
-    private javax.swing.JPanel PanelUpdateTeacherProfile;
     private javax.swing.JButton PanelUpdateTeacherProfile_ButtonSave;
     private javax.swing.JTextField PanelUpdateTeacherProfile_Class;
     private javax.swing.JLabel PanelUpdateTeacherProfile_LabelClass;
@@ -3798,6 +4448,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton PanelViewAdmin_ButtonAddAdmin;
     private javax.swing.JButton PanelViewAdmin_ButtonDeleteAdmin;
     private javax.swing.JButton PanelViewAdmin_ButtonUpdateAdmin;
+    private javax.swing.JPanel PanelViewModule;
     private javax.swing.JPanel PanelViewStudent;
     private javax.swing.JButton PanelViewStudent_ButtonAddStudent;
     private javax.swing.JButton PanelViewStudent_ButtonDeleteStudent;
@@ -3810,10 +4461,17 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton PanelViewTeacher_ButtonDeleteTeacher;
     private javax.swing.JButton PanelViewTeacher_ButtonUpdateTeacher;
     private javax.swing.JScrollPane ScrollPaneAdmin;
+    private javax.swing.JScrollPane ScrollPaneModule;
     private javax.swing.JScrollPane ScrollPaneStudent;
     private javax.swing.JScrollPane ScrollPaneSubject;
     private javax.swing.JScrollPane ScrollPaneTeacher;
+    private javax.swing.JPanel StudentDropDownUsername;
+    private javax.swing.JPanel StudentHeader;
+    private javax.swing.JPanel StudentMenu;
+    private javax.swing.JPanel StudentMenu_ViewModule;
+    private javax.swing.JPanel StudentMenu_ViewStudentProfile;
     private javax.swing.JTable TableAdmin;
+    private javax.swing.JTable TableModule;
     private javax.swing.JTable TableStudent;
     private javax.swing.JTable TableSubject;
     private javax.swing.JTable TableTeacher;
@@ -3828,10 +4486,14 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
