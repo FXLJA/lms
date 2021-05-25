@@ -45,4 +45,9 @@ public class Subject {
     public void setSubject_minute(int subject_minute){
         this.subject_minute = subject_minute;
     }
+
+    @Override
+    public String toString() {
+        return this.subject_name;
+    }
 }

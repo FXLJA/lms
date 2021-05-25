@@ -9,6 +9,8 @@ import controllers.*;
 import daos.Koneksi;
 import java.awt.Color;
 import java.util.List;
+import javax.swing.ComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.event.TableModelListener;
@@ -157,7 +159,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddTeacher_LabelName = new javax.swing.JLabel();
         PanelAddTeacher_LabelClass = new javax.swing.JLabel();
         PanelAddTeacher_Name = new javax.swing.JTextField();
-        PanelAddTeacher_Class = new javax.swing.JTextField();
+        PanelAddTeacher_CmbKelas = new javax.swing.JComboBox<>();
         PanelUpdateTeacher = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         PanelUpdateTeacher_ButtonUpdate = new javax.swing.JButton();
@@ -892,6 +894,11 @@ public class menu extends javax.swing.JFrame {
         PanelAddAdmin.setBackground(new java.awt.Color(255, 255, 255));
         PanelAddAdmin.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelAddAdmin.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelAddAdmin.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                PanelAddAdminComponentHidden(evt);
+            }
+        });
 
         ButtonAddNewAdmin.setBackground(new java.awt.Color(34, 125, 194));
         ButtonAddNewAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1270,6 +1277,14 @@ public class menu extends javax.swing.JFrame {
         PanelAddTeacher.setBackground(new java.awt.Color(255, 255, 255));
         PanelAddTeacher.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelAddTeacher.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelAddTeacher.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                PanelAddTeacherComponentHidden(evt);
+            }
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelAddTeacherComponentShown(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setText("Add Teacher");
@@ -1277,7 +1292,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddTeacher_ButtonAddNewTeacher.setBackground(new java.awt.Color(34, 125, 194));
         PanelAddTeacher_ButtonAddNewTeacher.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         PanelAddTeacher_ButtonAddNewTeacher.setForeground(new java.awt.Color(255, 255, 255));
-        PanelAddTeacher_ButtonAddNewTeacher.setText("Update");
+        PanelAddTeacher_ButtonAddNewTeacher.setText("Add");
         PanelAddTeacher_ButtonAddNewTeacher.setToolTipText("");
         PanelAddTeacher_ButtonAddNewTeacher.setMaximumSize(new java.awt.Dimension(127, 36));
         PanelAddTeacher_ButtonAddNewTeacher.setMinimumSize(new java.awt.Dimension(127, 36));
@@ -1296,11 +1311,6 @@ public class menu extends javax.swing.JFrame {
         PanelAddTeacher_TextFieldID.setMaximumSize(new java.awt.Dimension(280, 36));
         PanelAddTeacher_TextFieldID.setMinimumSize(new java.awt.Dimension(280, 36));
         PanelAddTeacher_TextFieldID.setPreferredSize(new java.awt.Dimension(280, 36));
-        PanelAddTeacher_TextFieldID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PanelAddTeacher_TextFieldIDActionPerformed(evt);
-            }
-        });
 
         PanelAddTeacher_LabelPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         PanelAddTeacher_LabelPassword.setText("Password");
@@ -1328,17 +1338,6 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
-        PanelAddTeacher_Class.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        PanelAddTeacher_Class.setToolTipText("Username");
-        PanelAddTeacher_Class.setMaximumSize(new java.awt.Dimension(280, 36));
-        PanelAddTeacher_Class.setMinimumSize(new java.awt.Dimension(280, 36));
-        PanelAddTeacher_Class.setPreferredSize(new java.awt.Dimension(280, 36));
-        PanelAddTeacher_Class.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PanelAddTeacher_ClassActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout PanelAddTeacherLayout = new javax.swing.GroupLayout(PanelAddTeacher);
         PanelAddTeacher.setLayout(PanelAddTeacherLayout);
         PanelAddTeacherLayout.setHorizontalGroup(
@@ -1346,15 +1345,16 @@ public class menu extends javax.swing.JFrame {
             .addGroup(PanelAddTeacherLayout.createSequentialGroup()
                 .addGap(380, 380, 380)
                 .addGroup(PanelAddTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(PanelAddTeacher_LabelPassword)
-                    .addComponent(PanelAddTeacher_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelAddTeacher_Class, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelAddTeacher_LabelClass)
-                    .addComponent(PanelAddTeacher_TextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelAddTeacher_LabelID)
-                    .addComponent(PanelAddTeacher_LabelName)
-                    .addComponent(PanelAddTeacher_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelAddTeacher_ButtonAddNewTeacher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(PanelAddTeacher_CmbKelas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(PanelAddTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(PanelAddTeacher_LabelPassword)
+                        .addComponent(PanelAddTeacher_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(PanelAddTeacher_LabelClass)
+                        .addComponent(PanelAddTeacher_TextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(PanelAddTeacher_LabelID)
+                        .addComponent(PanelAddTeacher_LabelName)
+                        .addComponent(PanelAddTeacher_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(PanelAddTeacher_ButtonAddNewTeacher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(380, Short.MAX_VALUE))
             .addGroup(PanelAddTeacherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelAddTeacherLayout.createSequentialGroup()
@@ -1376,8 +1376,8 @@ public class menu extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addComponent(PanelAddTeacher_LabelClass)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PanelAddTeacher_Class, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addComponent(PanelAddTeacher_CmbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
                 .addComponent(PanelAddTeacher_LabelPassword)
                 .addGap(6, 6, 6)
                 .addComponent(PanelAddTeacher_PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3942,20 +3942,34 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelViewAdmin_ButtonDeleteAdminMouseClicked
 
     private void PanelAddTeacher_ButtonAddNewTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelAddTeacher_ButtonAddNewTeacherMouseClicked
-        // TODO add your handling code here:
+        String id = PanelAddTeacher_TextFieldID.getText().trim();
+        String nama = PanelAddTeacher_Name.getText().trim();
+        Subject kelas = (Subject) PanelAddTeacher_CmbKelas.getSelectedItem();
+        String password = PanelAddTeacher_PasswordField.getText().trim();
+        
+        if (id.length() + nama.length() + password.length() == 0) {
+            JOptionPane.showMessageDialog(this, "Data tidak boleh kosong!");
+            return;
+        }
+        
+        User user = userController.getById(id);
+        if (user != null) {
+            JOptionPane.showMessageDialog(this, "ID sudah ada!");
+            return;
+        }
+        
+        user = new User(id, password, "Teacher");
+        userController.setDml(user, OperasiCRUD.INSERT);
+        
+        Teacher teacher = new Teacher(id, nama, kelas.getSubject_id());
+        teacherController.setDml(teacher, OperasiCRUD.INSERT);
+        
+        AdminMenu_ViewTeacherMouseClicked(null);
     }//GEN-LAST:event_PanelAddTeacher_ButtonAddNewTeacherMouseClicked
-
-    private void PanelAddTeacher_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddTeacher_TextFieldIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PanelAddTeacher_TextFieldIDActionPerformed
 
     private void PanelAddTeacher_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddTeacher_NameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelAddTeacher_NameActionPerformed
-
-    private void PanelAddTeacher_ClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddTeacher_ClassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PanelAddTeacher_ClassActionPerformed
 
     private void PanelUpdateTeacher_ButtonUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelUpdateTeacher_ButtonUpdateMouseClicked
         // TODO add your handling code here:
@@ -3974,6 +3988,9 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelUpdateTeacher_ClassActionPerformed
 
     private void PanelViewTeacher_ButtonUpdateTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewTeacher_ButtonUpdateTeacherMouseClicked
+        
+        
+        
         //Panel Handler
         PanelSignIn.setVisible(false);
         PanelSignUp.setVisible(false);
@@ -4716,10 +4733,13 @@ public class menu extends javax.swing.JFrame {
         
         Object[][] data = new Object[list_teacher.size()][3];
         for(int row=0; row<data.length; row++) {
+            String subject_id = list_teacher.get(row).getTeacher_subject();
+            Subject subject = subjectCOntroller.getBySubject_id(subject_id);
+            
             data[row] = new Object[3];
             data[row][0] = list_teacher.get(row).getTeacher_id();
             data[row][1] = list_teacher.get(row).getTeacher_name();
-            data[row][2] = list_teacher.get(row).getTeacher_subject();
+            data[row][2] = subject.getSubject_name();
         }
         
         Object[] header = new Object[dataModel.getColumnCount()];
@@ -4729,6 +4749,25 @@ public class menu extends javax.swing.JFrame {
         
         TableTeacher.setModel(new JTable(data, header).getModel());
     }//GEN-LAST:event_PanelViewTeacherComponentShown
+
+    private void PanelAddTeacherComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelAddTeacherComponentShown
+        JComboBox subjectModel = new JComboBox(subjectCOntroller.getAllSubject().toArray());
+        
+        PanelAddTeacher_CmbKelas.setModel(subjectModel.getModel());
+    }//GEN-LAST:event_PanelAddTeacherComponentShown
+
+    private void PanelAddAdminComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelAddAdminComponentHidden
+        PanelAddAdmin_TextFieldID.setText("");
+        PanelAddAdmin_Name.setText("");
+        PanelAddAdmin_Contact.setText("");
+        PanelAddAdmin_PasswordField.setText("");
+    }//GEN-LAST:event_PanelAddAdminComponentHidden
+
+    private void PanelAddTeacherComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelAddTeacherComponentHidden
+        PanelAddTeacher_TextFieldID.setText("");
+        PanelAddTeacher_Name.setText("");
+        PanelAddTeacher_PasswordField.setText("");
+    }//GEN-LAST:event_PanelAddTeacherComponentHidden
 
     
     
@@ -4826,7 +4865,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JTextField PanelAddSubject_TextFieldID;
     private javax.swing.JPanel PanelAddTeacher;
     private javax.swing.JButton PanelAddTeacher_ButtonAddNewTeacher;
-    private javax.swing.JTextField PanelAddTeacher_Class;
+    private javax.swing.JComboBox<String> PanelAddTeacher_CmbKelas;
     private javax.swing.JLabel PanelAddTeacher_LabelClass;
     private javax.swing.JLabel PanelAddTeacher_LabelID;
     private javax.swing.JLabel PanelAddTeacher_LabelName;
