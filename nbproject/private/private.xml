@@ -6,6 +6,9 @@
             <file>file:/C:/Users/user/Documents/GitHub/lms/src/view/menu.java</file>
             <file>file:/C:/Users/user/Documents/GitHub/lms/src/daos/Koneksi.java</file>
             <file>file:/C:/Users/user/Documents/GitHub/lms/src/controllers/UserController.java</file>
+            <file>file:/C:/Users/user/Documents/GitHub/lms/src/models/Subject.java</file>
+            <file>file:/C:/Users/user/Documents/GitHub/lms/src/daos/SubjectDAO.java</file>
+            <file>file:/C:/Users/user/Documents/GitHub/lms/src/daos/StudentDAO.java</file>
         </group>
     </open-files>
 </project-private>
