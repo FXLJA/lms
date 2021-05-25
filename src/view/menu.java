@@ -1947,6 +1947,11 @@ public class menu extends javax.swing.JFrame {
         PanelAdminProfile.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelAdminProfile.setMinimumSize(new java.awt.Dimension(1040, 600));
         PanelAdminProfile.setPreferredSize(new java.awt.Dimension(1040, 600));
+        PanelAdminProfile.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelAdminProfileComponentShown(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel11.setText("Profile");
@@ -3783,7 +3788,30 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelSignOutAdminMouseClicked
 
     private void ButtonAddNewAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAddNewAdminMouseClicked
-        // TODO add your handling code here:
+        String username = PanelAddAdmin_TextFieldID.getText().trim();
+        String nama = PanelAddAdmin_Name.getText().trim();
+        String contact = PanelAddAdmin_Contact.getText().trim();
+        String password = PanelAddAdmin_PasswordField.getText().trim();
+        
+        if(username.length() + nama.length() + contact.length() + password.length() == 0){
+            JOptionPane.showMessageDialog(this, "Tolong, isi data from dengan benar!");
+            return;
+        }
+        
+        User user = new User(username, password, "Admin");
+        Admin admin = new Admin(username, nama, contact);
+        
+        if (userController.getById(username) != null){
+            JOptionPane.showMessageDialog(this, "ID sudah ada!");
+            return;
+        }
+        
+        userController.setDml(user, OperasiCRUD.INSERT);
+        adminController.setDml(admin, OperasiCRUD.INSERT);
+        
+        JOptionPane.showMessageDialog(this, "Data berhasil ditambah!");
+        
+        AdminMenu_ViewAdminMouseClicked(null);
     }//GEN-LAST:event_ButtonAddNewAdminMouseClicked
 
     private void PanelAddAdmin_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddAdmin_TextFieldIDActionPerformed
@@ -3799,7 +3827,25 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelAddAdmin_ContactActionPerformed
 
     private void PanelUpdateAdmin_ButtonUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelUpdateAdmin_ButtonUpdateMouseClicked
-        // TODO add your handling code here:
+        String username = PanelUpdateAdmin_TextFieldID.getText().trim();
+        String nama = PanelUpdateAdmin_Name.getText().trim();
+        String contact = PanelUpdateAdmin_Contact.getText().trim();
+        String password = PanelUpdateAdmin_PasswordField.getText().trim();
+        
+        if(username.length() + nama.length() + contact.length() + password.length() == 0){
+            JOptionPane.showMessageDialog(this, "Tolong, isi data from dengan benar!");
+            return;
+        }
+        
+        User user = new User(username, password, "Admin");
+        Admin admin = new Admin(username, nama, contact);
+        
+        userController.setDml(user, OperasiCRUD.UPDATE);
+        adminController.setDml(admin, OperasiCRUD.UPDATE);
+        
+        JOptionPane.showMessageDialog(this, "Data berhasil diupdate!");
+        
+        AdminMenu_ViewAdminMouseClicked(null);
     }//GEN-LAST:event_PanelUpdateAdmin_ButtonUpdateMouseClicked
 
     private void PanelUpdateAdmin_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelUpdateAdmin_TextFieldIDActionPerformed
@@ -3815,6 +3861,21 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelUpdateAdmin_ContactActionPerformed
 
     private void PanelViewAdmin_ButtonUpdateAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewAdmin_ButtonUpdateAdminMouseClicked
+        TableModel model = TableAdmin.getModel();
+        int selected_row = TableAdmin.getSelectedRow();
+        
+        if (selected_row == -1) {
+           JOptionPane.showMessageDialog(this, "Pilih data dari tabel terlebih dahulu!");
+           return;
+        }
+        
+        PanelUpdateAdmin_TextFieldID.setText((String) model.getValueAt(selected_row, 0));
+        PanelUpdateAdmin_Name.setText((String) model.getValueAt(selected_row, 1));
+        PanelUpdateAdmin_Contact.setText((String) model.getValueAt(selected_row, 2));
+        
+        User user = userController.getById((String) model.getValueAt(selected_row, 0));
+        PanelUpdateAdmin_PasswordField.setText(user.getPassword());
+        
         //Panel Handler
         PanelSignIn.setVisible(false);
         PanelSignUp.setVisible(false);
@@ -3848,7 +3909,31 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelViewAdmin_ButtonUpdateAdminMouseClicked
 
     private void PanelViewAdmin_ButtonDeleteAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewAdmin_ButtonDeleteAdminMouseClicked
-        // TODO add your handling code here:
+        TableModel model = TableAdmin.getModel();
+        int selected_row = TableAdmin.getSelectedRow();
+        
+        if (selected_row == -1) {
+           JOptionPane.showMessageDialog(this, "Pilih data dari tabel terlebih dahulu!");
+           return;
+        }
+        
+        if (curr_user.getId().equals((String) model.getValueAt(selected_row, 0))){
+            JOptionPane.showMessageDialog(this, "cannot delete self");
+            return;
+        }
+        
+        int result = JOptionPane.showConfirmDialog(this, "Delete " + model.getValueAt(selected_row, 1), "Apakah anda yakin?", JOptionPane.YES_NO_OPTION);
+        if (result != JOptionPane.YES_OPTION) {
+            return;
+        }
+        
+        User user = new User((String) model.getValueAt(selected_row, 0), null, null);
+        Admin admin = new Admin((String) model.getValueAt(selected_row, 0), null, null);
+        
+        adminController.setDml(admin, OperasiCRUD.DELETE);
+        userController.setDml(user, OperasiCRUD.DELETE);
+        
+        PanelViewAdminComponentShown(null);
     }//GEN-LAST:event_PanelViewAdmin_ButtonDeleteAdminMouseClicked
 
     private void PanelAddTeacher_ButtonAddNewTeacherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelAddTeacher_ButtonAddNewTeacherMouseClicked
@@ -4006,6 +4091,11 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelUpdateStudent_MajorActionPerformed
 
     private void PanelAdminProfile_ButtonUpdatePforilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelAdminProfile_ButtonUpdatePforilMouseClicked
+        PanelUpdateAdmin_TextFieldID.setText(PanelAdminProfile_TextFieldID.getText());
+        PanelUpdateAdmin_Name.setText(PanelAdminProfile_Name.getText());
+        PanelUpdateAdmin_Contact.setText(PanelAdminProfile_Contact.getText());
+        PanelUpdateAdmin_PasswordField.setText(PanelAdminProfile_PasswordField.getText());
+        
         //Panel Handler
         PanelSignIn.setVisible(false);
         PanelSignUp.setVisible(false);
@@ -4545,6 +4635,8 @@ public class menu extends javax.swing.JFrame {
         userController.setDml(new User(username, password, role), OperasiCRUD.INSERT);
         curr_user = user;
         
+        JOptionPane.showMessageDialog(this, "Signup berhasil!");
+        
         PanelSignUp_ButtonBackMouseClicked(null);
         PanelSignIn_TextFieldID.setText(username);
         PanelSignIn_PasswordField.setText(password);
@@ -4602,6 +4694,15 @@ public class menu extends javax.swing.JFrame {
         
         TableAdmin.setModel(new JTable(data, header).getModel());
     }//GEN-LAST:event_PanelViewAdminComponentShown
+
+    private void PanelAdminProfileComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelAdminProfileComponentShown
+        Admin admin = adminController.getByAdmin_id(curr_user.getId());
+        
+        PanelAdminProfile_TextFieldID.setText(admin.getAdmin_id());
+        PanelAdminProfile_Name.setText(admin.getAdmin_name());
+        PanelAdminProfile_Contact.setText(admin.getAdmin_contact());
+        PanelAdminProfile_PasswordField.setText(curr_user.getPassword());
+    }//GEN-LAST:event_PanelAdminProfileComponentShown
 
     
     
