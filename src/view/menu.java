@@ -1140,6 +1140,11 @@ public class menu extends javax.swing.JFrame {
         PanelViewTeacher.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelViewTeacher.setMinimumSize(new java.awt.Dimension(1040, 600));
         PanelViewTeacher.setPreferredSize(new java.awt.Dimension(1040, 600));
+        PanelViewTeacher.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelViewTeacherComponentShown(evt);
+            }
+        });
 
         ButtonAddTeacher.setBackground(new java.awt.Color(34, 125, 194));
         ButtonAddTeacher.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -4703,6 +4708,27 @@ public class menu extends javax.swing.JFrame {
         PanelAdminProfile_Contact.setText(admin.getAdmin_contact());
         PanelAdminProfile_PasswordField.setText(curr_user.getPassword());
     }//GEN-LAST:event_PanelAdminProfileComponentShown
+
+    private void PanelViewTeacherComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelViewTeacherComponentShown
+        TableModel dataModel = TableTeacher.getModel();
+        
+        List<Teacher> list_teacher = teacherController.getAllTeacher();
+        
+        Object[][] data = new Object[list_teacher.size()][3];
+        for(int row=0; row<data.length; row++) {
+            data[row] = new Object[3];
+            data[row][0] = list_teacher.get(row).getTeacher_id();
+            data[row][1] = list_teacher.get(row).getTeacher_name();
+            data[row][2] = list_teacher.get(row).getTeacher_subject();
+        }
+        
+        Object[] header = new Object[dataModel.getColumnCount()];
+        for(int col=0; col<header.length; col++){
+            header[col] = dataModel.getColumnName(col);
+        }
+        
+        TableTeacher.setModel(new JTable(data, header).getModel());
+    }//GEN-LAST:event_PanelViewTeacherComponentShown
 
     
     
