@@ -31,13 +31,13 @@ public class AdminDAO implements AdminInterface {
 
     @Override
     public boolean update(Admin admin) {
-        String sql = "UPDATE admin SET admin.admin_name = ?, admin.admin_contact = ?, WHERE admin.admin_id = ?";
+        String sql = "UPDATE admin SET admin.admin_name = ?, admin.admin_contact = ? WHERE admin.admin_id = ?";
         try {
             int row;
             try (PreparedStatement statement = Koneksi.openConnection().prepareStatement(sql)) {
                 statement.setString(1, admin.getAdmin_name());
                 statement.setString(2, admin.getAdmin_contact());
-                statement.setString(4, admin.getAdmin_id());
+                statement.setString(3, admin.getAdmin_id());
                 row = statement.executeUpdate();
             }
             
@@ -78,7 +78,7 @@ public class AdminDAO implements AdminInterface {
                 ResultSet rs = statement.executeQuery();
                 
                 while (rs.next()) {
-                    Admin admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
+                    Admin admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3));
                     adminList.add(admin);
                 }
             }
@@ -98,7 +98,7 @@ public class AdminDAO implements AdminInterface {
             ResultSet rs = statement.executeQuery();
 
             if (rs.next()) {
-                admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
+                admin = new Admin(rs.getString(1), rs.getString(2), rs.getString(3));
             }
         } catch (SQLException e) {
             Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, e);
