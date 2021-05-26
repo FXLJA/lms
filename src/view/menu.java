@@ -275,10 +275,10 @@ public class menu extends javax.swing.JFrame {
         PanelUpdateTeacherProfile_LabelName = new javax.swing.JLabel();
         PanelUpdateTeacherProfile_Name = new javax.swing.JTextField();
         PanelUpdateTeacherProfile_LabelClass = new javax.swing.JLabel();
-        PanelUpdateTeacherProfile_Class = new javax.swing.JTextField();
         PanelUpdateTeacherProfile_LabelPassword = new javax.swing.JLabel();
         PanelUpdateTeacherProfile_PasswordField = new javax.swing.JPasswordField();
         PanelUpdateTeacherProfile_ButtonSave = new javax.swing.JButton();
+        PanelUpdateTeacherProfile_cbxKelas = new javax.swing.JComboBox<>();
         PanelStudentDashboard = new javax.swing.JPanel();
         StudentHeader = new javax.swing.JPanel();
         LabelDropDownToggleStudent = new javax.swing.JLabel();
@@ -1511,6 +1511,11 @@ public class menu extends javax.swing.JFrame {
         PanelViewStudent.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelViewStudent.setMinimumSize(new java.awt.Dimension(1040, 600));
         PanelViewStudent.setPreferredSize(new java.awt.Dimension(1040, 600));
+        PanelViewStudent.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelViewStudentComponentShown(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setText("Student");
@@ -1526,11 +1531,6 @@ public class menu extends javax.swing.JFrame {
         PanelViewStudent_ButtonAddStudent.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelViewStudent_ButtonAddStudentMouseClicked(evt);
-            }
-        });
-        PanelViewStudent_ButtonAddStudent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PanelViewStudent_ButtonAddStudentActionPerformed(evt);
             }
         });
 
@@ -1641,6 +1641,11 @@ public class menu extends javax.swing.JFrame {
         PanelAddStudent.setBackground(new java.awt.Color(255, 255, 255));
         PanelAddStudent.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelAddStudent.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelAddStudent.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                PanelAddStudentComponentHidden(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel9.setText("Add Student");
@@ -1648,7 +1653,7 @@ public class menu extends javax.swing.JFrame {
         PanelAddStudent_ButtonAddNewStudent.setBackground(new java.awt.Color(34, 125, 194));
         PanelAddStudent_ButtonAddNewStudent.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         PanelAddStudent_ButtonAddNewStudent.setForeground(new java.awt.Color(255, 255, 255));
-        PanelAddStudent_ButtonAddNewStudent.setText("Update");
+        PanelAddStudent_ButtonAddNewStudent.setText("Add");
         PanelAddStudent_ButtonAddNewStudent.setToolTipText("");
         PanelAddStudent_ButtonAddNewStudent.setMaximumSize(new java.awt.Dimension(127, 36));
         PanelAddStudent_ButtonAddNewStudent.setMinimumSize(new java.awt.Dimension(127, 36));
@@ -1656,11 +1661,6 @@ public class menu extends javax.swing.JFrame {
         PanelAddStudent_ButtonAddNewStudent.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PanelAddStudent_ButtonAddNewStudentMouseClicked(evt);
-            }
-        });
-        PanelAddStudent_ButtonAddNewStudent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PanelAddStudent_ButtonAddNewStudentActionPerformed(evt);
             }
         });
 
@@ -2224,6 +2224,11 @@ public class menu extends javax.swing.JFrame {
         PanelViewSubject.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelViewSubject.setMinimumSize(new java.awt.Dimension(1040, 600));
         PanelViewSubject.setPreferredSize(new java.awt.Dimension(1040, 600));
+        PanelViewSubject.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelViewSubjectComponentShown(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel13.setText("Subject");
@@ -2633,6 +2638,11 @@ public class menu extends javax.swing.JFrame {
         PanelTeacherProfile.setBackground(new java.awt.Color(255, 255, 255));
         PanelTeacherProfile.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelTeacherProfile.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelTeacherProfile.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelTeacherProfileComponentShown(evt);
+            }
+        });
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel22.setText("Profile");
@@ -2760,6 +2770,11 @@ public class menu extends javax.swing.JFrame {
         PanelTeacherUpdateProfile.setBackground(new java.awt.Color(255, 255, 255));
         PanelTeacherUpdateProfile.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelTeacherUpdateProfile.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelTeacherUpdateProfile.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelTeacherUpdateProfileComponentShown(evt);
+            }
+        });
 
         jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel23.setText("Update Profile");
@@ -2769,14 +2784,10 @@ public class menu extends javax.swing.JFrame {
 
         PanelUpdateTeacherProfile_TextFieldID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         PanelUpdateTeacherProfile_TextFieldID.setToolTipText("Username");
+        PanelUpdateTeacherProfile_TextFieldID.setEnabled(false);
         PanelUpdateTeacherProfile_TextFieldID.setMaximumSize(new java.awt.Dimension(280, 36));
         PanelUpdateTeacherProfile_TextFieldID.setMinimumSize(new java.awt.Dimension(280, 36));
         PanelUpdateTeacherProfile_TextFieldID.setPreferredSize(new java.awt.Dimension(280, 36));
-        PanelUpdateTeacherProfile_TextFieldID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PanelUpdateTeacherProfile_TextFieldIDActionPerformed(evt);
-            }
-        });
 
         PanelUpdateTeacherProfile_LabelName.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         PanelUpdateTeacherProfile_LabelName.setText("Name");
@@ -2794,17 +2805,6 @@ public class menu extends javax.swing.JFrame {
 
         PanelUpdateTeacherProfile_LabelClass.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         PanelUpdateTeacherProfile_LabelClass.setText("Class");
-
-        PanelUpdateTeacherProfile_Class.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        PanelUpdateTeacherProfile_Class.setToolTipText("Username");
-        PanelUpdateTeacherProfile_Class.setMaximumSize(new java.awt.Dimension(280, 36));
-        PanelUpdateTeacherProfile_Class.setMinimumSize(new java.awt.Dimension(280, 36));
-        PanelUpdateTeacherProfile_Class.setPreferredSize(new java.awt.Dimension(280, 36));
-        PanelUpdateTeacherProfile_Class.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PanelUpdateTeacherProfile_ClassActionPerformed(evt);
-            }
-        });
 
         PanelUpdateTeacherProfile_LabelPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         PanelUpdateTeacherProfile_LabelPassword.setText("Password");
@@ -2829,27 +2829,30 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
+        PanelUpdateTeacherProfile_cbxKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout PanelTeacherUpdateProfileLayout = new javax.swing.GroupLayout(PanelTeacherUpdateProfile);
         PanelTeacherUpdateProfile.setLayout(PanelTeacherUpdateProfileLayout);
         PanelTeacherUpdateProfileLayout.setHorizontalGroup(
             PanelTeacherUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelTeacherUpdateProfileLayout.createSequentialGroup()
-                .addGap(380, 380, 380)
-                .addGroup(PanelTeacherUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(PanelUpdateTeacherProfile_LabelPassword)
-                    .addComponent(PanelUpdateTeacherProfile_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelUpdateTeacherProfile_Class, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelUpdateTeacherProfile_LabelClass)
-                    .addComponent(PanelUpdateTeacherProfile_TextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelUpdateTeacherProfile_LabelID)
-                    .addComponent(PanelUpdateTeacherProfile_LabelName)
-                    .addComponent(PanelUpdateTeacherProfile_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelUpdateTeacherProfile_ButtonSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(380, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelTeacherUpdateProfileLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel23)
                 .addGap(450, 450, 450))
+            .addGroup(PanelTeacherUpdateProfileLayout.createSequentialGroup()
+                .addGap(380, 380, 380)
+                .addGroup(PanelTeacherUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PanelUpdateTeacherProfile_cbxKelas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(PanelTeacherUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(PanelUpdateTeacherProfile_LabelPassword)
+                        .addComponent(PanelUpdateTeacherProfile_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(PanelUpdateTeacherProfile_LabelClass)
+                        .addComponent(PanelUpdateTeacherProfile_TextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(PanelUpdateTeacherProfile_LabelID)
+                        .addComponent(PanelUpdateTeacherProfile_LabelName)
+                        .addComponent(PanelUpdateTeacherProfile_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(PanelUpdateTeacherProfile_ButtonSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(380, Short.MAX_VALUE))
         );
         PanelTeacherUpdateProfileLayout.setVerticalGroup(
             PanelTeacherUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2866,9 +2869,9 @@ public class menu extends javax.swing.JFrame {
                 .addComponent(PanelUpdateTeacherProfile_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
                 .addComponent(PanelUpdateTeacherProfile_LabelClass)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PanelUpdateTeacherProfile_Class, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addGap(18, 18, 18)
+                .addComponent(PanelUpdateTeacherProfile_cbxKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(PanelUpdateTeacherProfile_LabelPassword)
                 .addGap(6, 6, 6)
                 .addComponent(PanelUpdateTeacherProfile_PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3788,7 +3791,7 @@ public class menu extends javax.swing.JFrame {
         String contact = PanelAddAdmin_Contact.getText().trim();
         String password = PanelAddAdmin_PasswordField.getText().trim();
         
-        if(username.length() + nama.length() + contact.length() + password.length() == 0){
+        if(username.length() * nama.length() * contact.length() * password.length() == 0){
             JOptionPane.showMessageDialog(this, "Tolong, isi data from dengan benar!");
             return;
         }
@@ -3937,7 +3940,7 @@ public class menu extends javax.swing.JFrame {
         Subject kelas = (Subject) PanelAddTeacher_CmbKelas.getSelectedItem();
         String password = PanelAddTeacher_PasswordField.getText().trim();
         
-        if (id.length() + nama.length() + password.length() == 0) {
+        if (id.length() * nama.length() * password.length() == 0) {
             JOptionPane.showMessageDialog(this, "Data tidak boleh kosong!");
             return;
         }
@@ -4068,6 +4071,22 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelViewTeacher_ButtonDeleteTeacherMouseClicked
 
     private void PanelViewStudent_ButtonUpdateStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewStudent_ButtonUpdateStudentMouseClicked
+        TableModel tb = TableStudent.getModel();
+        int row = TableStudent.getSelectedRow();
+        
+        if (row == -1) {
+            JOptionPane.showMessageDialog(this, "Pilih data terlebih dahulu!");
+            return;
+        }
+        
+        User user = userController.getById((String) tb.getValueAt(row, 0));
+        
+        PanelUpdateStudent_TextFieldID.setText((String) tb.getValueAt(row, 0));
+        PanelUpdateStudent_Name.setText((String) tb.getValueAt(row, 1));
+        PanelUpdateStudent_Class.setText((String) tb.getValueAt(row, 2));
+        PanelUpdateStudent_Major.setText((String) tb.getValueAt(row, 3));
+        PanelUpdateStudent_PasswordField.setText(user.getPassword());
+        
         //Panel Handler
         PanelSignIn.setVisible(false);
         PanelSignUp.setVisible(false);
@@ -4101,15 +4120,53 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelViewStudent_ButtonUpdateStudentMouseClicked
 
     private void PanelViewStudent_ButtonDeleteStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewStudent_ButtonDeleteStudentMouseClicked
-        // TODO add your handling code here:
+        TableModel tb = TableStudent.getModel();
+        int row = TableStudent.getSelectedRow();
+        
+        if (row == -1) {
+            JOptionPane.showMessageDialog(this, "Pilih data terlebih dahulu!");
+            return;
+        }
+        
+        String id = (String) tb.getValueAt(row, 0);
+        int result = JOptionPane.showConfirmDialog(this, "Apakah anda ingin hapus " + id);
+        if (result != JOptionPane.YES_OPTION) {
+            return;
+        }
+        
+        User user = new User(id, null, null);
+        Student s = new Student(id, null, null, null);
+        
+        studentController.setDml(s, OperasiCRUD.DELETE);
+        userController.setDml(user, OperasiCRUD.DELETE);
+        
+        PanelViewStudentComponentShown(null);
     }//GEN-LAST:event_PanelViewStudent_ButtonDeleteStudentMouseClicked
 
-    private void PanelViewStudent_ButtonAddStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelViewStudent_ButtonAddStudentActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PanelViewStudent_ButtonAddStudentActionPerformed
-
     private void PanelAddStudent_ButtonAddNewStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelAddStudent_ButtonAddNewStudentMouseClicked
-        // TODO add your handling code here:
+        String id = PanelAddStudent_TextFieldID.getText().trim();
+        String nama = PanelAddStudent_Name.getText().trim();
+        String kelas = PanelAddStudent_Class.getText().trim();
+        String major = PanelAddStudent_Major.getText().trim();
+        String password = PanelAddStudent_PasswordField.getText().trim();
+        
+        if (id.length() * nama.length() * kelas.length() * major.length() * password.length() == 0) {
+            JOptionPane.showMessageDialog(this, "Isi data dengan benar!");
+            return;
+        }
+        
+        User user = userController.getById(id);
+        if (user != null) {
+            JOptionPane.showMessageDialog(this, "Id sudah ada!");
+        }
+        
+        user = new User(id, password, "Student");
+        Student student = new Student(id, nama, kelas, major);
+        
+        userController.setDml(user, OperasiCRUD.INSERT);
+        studentController.setDml(student, OperasiCRUD.INSERT);
+        
+        AdminMenu_ViewStudentMouseClicked(null);
     }//GEN-LAST:event_PanelAddStudent_ButtonAddNewStudentMouseClicked
 
     private void PanelAddStudent_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddStudent_TextFieldIDActionPerformed
@@ -4125,7 +4182,24 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelAddStudent_ClassActionPerformed
 
     private void PanelUpdateStudent_ButtonUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelUpdateStudent_ButtonUpdateMouseClicked
-        // TODO add your handling code here:
+        String id = PanelUpdateStudent_TextFieldID.getText();
+        String nama = PanelUpdateStudent_Name.getText();
+        String kelas = PanelUpdateStudent_Class.getText();
+        String major = PanelUpdateStudent_Major.getText();
+        String password = PanelUpdateStudent_PasswordField.getText();
+        
+        if (id.length() * nama.length() * kelas.length() * major.length() * password.length() == 0) {
+            JOptionPane.showMessageDialog(this, "Masukan data dengan benar");
+            return;
+        }
+        
+        User u = new User(id, password, "Student");
+        Student s = new Student(id, nama, kelas, major);
+        
+        userController.setDml(u,OperasiCRUD.UPDATE);
+        studentController.setDml(s,OperasiCRUD.UPDATE);
+        
+        AdminMenu_ViewStudentMouseClicked(null);
     }//GEN-LAST:event_PanelUpdateStudent_ButtonUpdateMouseClicked
 
     private void PanelUpdateStudent_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelUpdateStudent_TextFieldIDActionPerformed
@@ -4143,10 +4217,6 @@ public class menu extends javax.swing.JFrame {
     private void PanelAddStudent_MajorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddStudent_MajorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelAddStudent_MajorActionPerformed
-
-    private void PanelAddStudent_ButtonAddNewStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddStudent_ButtonAddNewStudentActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PanelAddStudent_ButtonAddNewStudentActionPerformed
 
     private void PanelUpdateStudent_MajorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelUpdateStudent_MajorActionPerformed
         // TODO add your handling code here:
@@ -4446,20 +4516,23 @@ public class menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelUpdateSubject_MinuteActionPerformed
 
-    private void PanelUpdateTeacherProfile_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelUpdateTeacherProfile_TextFieldIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PanelUpdateTeacherProfile_TextFieldIDActionPerformed
-
     private void PanelUpdateTeacherProfile_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelUpdateTeacherProfile_NameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelUpdateTeacherProfile_NameActionPerformed
 
-    private void PanelUpdateTeacherProfile_ClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelUpdateTeacherProfile_ClassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PanelUpdateTeacherProfile_ClassActionPerformed
-
     private void PanelUpdateTeacherProfile_ButtonSaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelUpdateTeacherProfile_ButtonSaveMouseClicked
-        // TODO add your handling code here:
+        String id = PanelUpdateTeacherProfile_TextFieldID.getText();
+        String nama = PanelUpdateTeacherProfile_Name.getText();
+        Subject subject = (Subject) PanelUpdateTeacherProfile_cbxKelas.getSelectedItem();
+        String password = PanelUpdateTeacherProfile_PasswordField.getText();
+        
+        User u = new User(id, password, "Teacher");
+        Teacher t = new Teacher(id, nama, subject.getSubject_id());
+        
+        userController.setDml(u, OperasiCRUD.UPDATE);
+        teacherController.setDml(t, OperasiCRUD.UPDATE);
+        
+        TeacherMenu_ViewTeacherProfileMouseClicked(null);
     }//GEN-LAST:event_PanelUpdateTeacherProfile_ButtonSaveMouseClicked
 
     private void LabelDropDownToggleStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDropDownToggleStudentMouseClicked
@@ -4809,6 +4882,87 @@ public class menu extends javax.swing.JFrame {
         PanelAddTeacher_PasswordField.setText("");
     }//GEN-LAST:event_PanelAddTeacherComponentHidden
 
+    private void PanelViewStudentComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelViewStudentComponentShown
+        List<Student> list_student = studentController.getAllStudent();
+        
+        Object[][] dataModel = new Object[list_student.size()][4];
+        for (int row=0; row<dataModel.length; row++) {
+            dataModel[row][0] = list_student.get(row).getStudent_id();
+            dataModel[row][1] = list_student.get(row).getStudent_name();
+            dataModel[row][2] = list_student.get(row).getStudent_class();
+            dataModel[row][3] = list_student.get(row).getStudent_major();
+        }
+        
+        TableModel tb = TableStudent.getModel();
+        
+        Object[] header = new Object[tb.getColumnCount()];
+        for(int col=0; col<header.length; col++){
+            header[col] = tb.getColumnName(col);
+        }
+        
+        JTable jtable = new JTable(dataModel, header);
+        TableStudent.setModel(jtable.getModel());
+    }//GEN-LAST:event_PanelViewStudentComponentShown
+
+    private void PanelAddStudentComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelAddStudentComponentHidden
+        PanelAddStudent_TextFieldID.setText("");
+        PanelAddStudent_Name.setText("");
+        PanelAddStudent_Class.setText("");
+        PanelAddStudent_Major.setText("");
+        PanelAddStudent_PasswordField.setText("");
+    }//GEN-LAST:event_PanelAddStudentComponentHidden
+
+    private void PanelViewSubjectComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelViewSubjectComponentShown
+        List<Subject> list_subject = subjectCOntroller.getAllSubject();
+        
+        Object[][] dataModel = new Object[list_subject.size()][4];
+        for (int row=0; row<dataModel.length; row++) {
+            dataModel[row][0] = list_subject.get(row).getSubject_id();
+            dataModel[row][1] = list_subject.get(row).getSubject_name();
+            dataModel[row][2] = list_subject.get(row).getSubject_major();
+            dataModel[row][3] = list_subject.get(row).getSubject_minute();
+        }
+        
+        TableModel tb = TableSubject.getModel();
+        
+        Object[] header = new Object[tb.getColumnCount()];
+        for(int col=0; col<header.length; col++){
+            header[col] = tb.getColumnName(col);
+        }
+        
+        JTable jtable = new JTable(dataModel, header);
+        TableSubject.setModel(jtable.getModel());
+    }//GEN-LAST:event_PanelViewSubjectComponentShown
+
+    private void PanelTeacherProfileComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelTeacherProfileComponentShown
+        Teacher t = teacherController.getByTeacher_id(curr_user.getId());
+        User u = userController.getById(curr_user.getId());
+        
+        PanelTeacherProfile_TextFieldID.setText(t.getTeacher_id());
+        PanelTeacherProfile_Name.setText(t.getTeacher_name());
+        PanelTeacherProfile_Contact.setText(t.getTeacher_subject());
+        PanelTeacherProfile_PasswordField.setText(u.getPassword());
+    }//GEN-LAST:event_PanelTeacherProfileComponentShown
+
+    private void PanelTeacherUpdateProfileComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelTeacherUpdateProfileComponentShown
+        Teacher t = teacherController.getByTeacher_id(curr_user.getId());
+        User u = userController.getById(curr_user.getId());
+        
+        List<Subject> list_s = subjectCOntroller.getAllSubject();
+        JComboBox<Object> cbx_subject = new JComboBox<>(list_s.toArray());
+        PanelUpdateTeacherProfile_cbxKelas.setModel(cbx_subject.getModel());
+        
+        PanelUpdateTeacherProfile_TextFieldID.setText(t.getTeacher_id());
+        PanelUpdateTeacherProfile_Name.setText(t.getTeacher_name());
+        for (int i=0; i< list_s.size(); i++) {
+            if (list_s.get(i).getSubject_id().equals(t.getTeacher_subject())) {
+                PanelUpdateTeacherProfile_cbxKelas.setSelectedIndex(i);
+                break;
+            }
+        }
+        PanelUpdateTeacherProfile_PasswordField.setText(u.getPassword());
+    }//GEN-LAST:event_PanelTeacherUpdateProfileComponentShown
+
     
     
     /**
@@ -5013,7 +5167,6 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JTextField PanelUpdateSubject_TextFieldID;
     private javax.swing.JPanel PanelUpdateTeacher;
     private javax.swing.JButton PanelUpdateTeacherProfile_ButtonSave;
-    private javax.swing.JTextField PanelUpdateTeacherProfile_Class;
     private javax.swing.JLabel PanelUpdateTeacherProfile_LabelClass;
     private javax.swing.JLabel PanelUpdateTeacherProfile_LabelID;
     private javax.swing.JLabel PanelUpdateTeacherProfile_LabelName;
@@ -5021,6 +5174,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JTextField PanelUpdateTeacherProfile_Name;
     private javax.swing.JPasswordField PanelUpdateTeacherProfile_PasswordField;
     private javax.swing.JTextField PanelUpdateTeacherProfile_TextFieldID;
+    private javax.swing.JComboBox<Object> PanelUpdateTeacherProfile_cbxKelas;
     private javax.swing.JButton PanelUpdateTeacher_ButtonUpdate;
     private javax.swing.JComboBox<Object> PanelUpdateTeacher_CbKelas;
     private javax.swing.JLabel PanelUpdateTeacher_LabelClass;
