@@ -5,24 +5,24 @@
  */
 package view;
 
+import models.*;
 import controllers.*;
+
 import daos.Koneksi;
+
 import java.awt.Color;
-import java.util.ArrayList;
+
 import java.util.List;
-import javax.swing.ComboBoxModel;
+import java.util.ArrayList;
+
+import javax.swing.JTable;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.event.TableModelListener;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.ComboBoxModel;
 import javax.swing.table.TableModel;
-import models.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.event.TableModelListener;
         
-/**
- *
- * @author marti
- */
 public class menu extends javax.swing.JFrame {
     
     public UserController userController = new UserController();
@@ -32,10 +32,7 @@ public class menu extends javax.swing.JFrame {
     public SubjectController subjectCOntroller = new SubjectController();
     
     public User curr_user = null;
-    
-    /**
-     * Creates new form menu
-     */
+
     public menu() {
         initComponents();
         
@@ -3997,7 +3994,7 @@ public class menu extends javax.swing.JFrame {
         Subject kelas = (Subject) tm.getValueAt(row, 2);
         User user = userController.getById(id);
         
-        JComboBox<Object> subjectModel = new JComboBox<Object>(subjectCOntroller.getAllSubject().toArray());
+        JComboBox<Object> subjectModel = new JComboBox<>(subjectCOntroller.getAllSubject().toArray());
         PanelUpdateTeacher_CbKelas.setModel(subjectModel.getModel());
         
         PanelUpdateTeacher_TextFieldID.setText(id);
@@ -4458,6 +4455,7 @@ public class menu extends javax.swing.JFrame {
         TeacherMenu_ViewSubjectMouseClicked(null);
     }//GEN-LAST:event_PanelViewSubject_ButtonDeleteSubjectMouseClicked
 
+    @SuppressWarnings("null")
     private void ButtonAddNewSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAddNewSubjectMouseClicked
         String id = PanelAddSubject_TextFieldID.getText().trim();
         String nama = PanelAddSubject_Name.getText().trim();
@@ -4474,6 +4472,7 @@ public class menu extends javax.swing.JFrame {
             return;
         }
         
+        @SuppressWarnings("UnnecessaryUnboxing")
         Subject s = new Subject(id, nama, major, minute.intValue());
         subjectCOntroller.setDml(s, OperasiCRUD.INSERT);
         
@@ -4553,6 +4552,7 @@ public class menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelUpdateSubject_MajorActionPerformed
 
+    @SuppressWarnings("null")
     private void ButtonUpdateSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonUpdateSubjectMouseClicked
         String id = PanelUpdateSubject_TextFieldID.getText().trim();
         String name = PanelUpdateSubject_Name.getText().trim();
@@ -4564,6 +4564,7 @@ public class menu extends javax.swing.JFrame {
             return;
         }
         
+        @SuppressWarnings("UnnecessaryUnboxing")
         Subject s = new Subject(id, name, major, minute.intValue());
         subjectCOntroller.setDml(s, OperasiCRUD.UPDATE);
         
@@ -4785,15 +4786,9 @@ public class menu extends javax.swing.JFrame {
         curr_user = user;
         
         switch(user.getRole()) {
-            case "Student":
-                StudentMenu_ViewModuleMouseClicked(null);
-                break;
-            case "Teacher":
-                TeacherMenu_ViewSubjectMouseClicked(null);
-                break;
-            case "Admin":
-                AdminMenu_ViewAdminMouseClicked(null);
-                break;
+            case "Student" -> StudentMenu_ViewModuleMouseClicked(null);
+            case "Teacher" -> TeacherMenu_ViewSubjectMouseClicked(null);
+            case "Admin" -> AdminMenu_ViewAdminMouseClicked(null);
         }
     }//GEN-LAST:event_PanelSignIn_ButtonSignInActionPerformed
 
@@ -5030,18 +5025,17 @@ public class menu extends javax.swing.JFrame {
     private void PanelViewModuleComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelViewModuleComponentShown
         Student curr_student = studentController.getByStudent_id(curr_user.getId());
         
-        List<String[]> list_module = new ArrayList<String[]>();
-        for(Subject subject : subjectCOntroller.getAllSubject()) {
+        List<String[]> list_module = new ArrayList<>();
+        subjectCOntroller.getAllSubject().forEach(subject -> {
             String major = subject.getSubject_major();
             if (major.equals(curr_student.getStudent_major()) || major.equals("Umum")) {
                 String[] module = new String[5];
                 
                 String teacher = "";
-                for(Teacher t : teacherController.getAllTeacher()) {
-                    if (t.getTeacher_subject().equals(subject.getSubject_id())) {
-                        teacher += ", " + t.getTeacher_name();
-                    }
-                }
+                teacher = teacherController.getAllTeacher()
+                        .stream().filter
+                (t -> (t.getTeacher_subject().equals(subject.getSubject_id())))
+                .map(t -> ", " + t.getTeacher_name()).reduce(teacher, String::concat);
                 if(teacher.length() == 0) {
                     teacher = "DUMMY TEACHER";
                 } else {
@@ -5056,10 +5050,11 @@ public class menu extends javax.swing.JFrame {
                 
                 list_module.add(module);
             }
-        }
+        });
         
         Object[][] dataModel = new Object[list_module.size()][5];
         int row = 0;
+        @SuppressWarnings("UnusedAssignment")
         int col = 0;
         for(String[] s1 : list_module) {
             dataModel[row] = new Object[5];
