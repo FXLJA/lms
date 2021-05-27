@@ -3107,6 +3107,11 @@ public class menu extends javax.swing.JFrame {
         PanelStudentProfile.setBackground(new java.awt.Color(255, 255, 255));
         PanelStudentProfile.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelStudentProfile.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelStudentProfile.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelStudentProfileComponentShown(evt);
+            }
+        });
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel24.setText("Profile");
@@ -3257,6 +3262,11 @@ public class menu extends javax.swing.JFrame {
         PanelStudentUpdateProfile.setBackground(new java.awt.Color(255, 255, 255));
         PanelStudentUpdateProfile.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelStudentUpdateProfile.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelStudentUpdateProfile.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelStudentUpdateProfileComponentShown(evt);
+            }
+        });
 
         jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel26.setText("Profile");
@@ -3266,14 +3276,10 @@ public class menu extends javax.swing.JFrame {
 
         PanelStudenUpdatetProfile_TextFieldID.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         PanelStudenUpdatetProfile_TextFieldID.setToolTipText("Username");
+        PanelStudenUpdatetProfile_TextFieldID.setEnabled(false);
         PanelStudenUpdatetProfile_TextFieldID.setMaximumSize(new java.awt.Dimension(280, 36));
         PanelStudenUpdatetProfile_TextFieldID.setMinimumSize(new java.awt.Dimension(280, 36));
         PanelStudenUpdatetProfile_TextFieldID.setPreferredSize(new java.awt.Dimension(280, 36));
-        PanelStudenUpdatetProfile_TextFieldID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PanelStudenUpdatetProfile_TextFieldIDActionPerformed(evt);
-            }
-        });
 
         PanelStudenUpdatetProfile_LabelName.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         PanelStudenUpdatetProfile_LabelName.setText("Name");
@@ -3283,11 +3289,6 @@ public class menu extends javax.swing.JFrame {
         PanelStudenUpdatetProfile_Name.setMaximumSize(new java.awt.Dimension(280, 36));
         PanelStudenUpdatetProfile_Name.setMinimumSize(new java.awt.Dimension(280, 36));
         PanelStudenUpdatetProfile_Name.setPreferredSize(new java.awt.Dimension(280, 36));
-        PanelStudenUpdatetProfile_Name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PanelStudenUpdatetProfile_NameActionPerformed(evt);
-            }
-        });
 
         PanelStudenUpdatetProfile_LabelClass.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         PanelStudenUpdatetProfile_LabelClass.setText("Class");
@@ -3297,11 +3298,6 @@ public class menu extends javax.swing.JFrame {
         PanelStudenUpdatetProfile_Class.setMaximumSize(new java.awt.Dimension(280, 36));
         PanelStudenUpdatetProfile_Class.setMinimumSize(new java.awt.Dimension(280, 36));
         PanelStudenUpdatetProfile_Class.setPreferredSize(new java.awt.Dimension(280, 36));
-        PanelStudenUpdatetProfile_Class.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PanelStudenUpdatetProfile_ClassActionPerformed(evt);
-            }
-        });
 
         PanelStudenUpdatetProfile_LabelMajor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         PanelStudenUpdatetProfile_LabelMajor.setText("Major");
@@ -3311,11 +3307,6 @@ public class menu extends javax.swing.JFrame {
         PanelStudenUpdatetProfile_Major.setMaximumSize(new java.awt.Dimension(280, 36));
         PanelStudenUpdatetProfile_Major.setMinimumSize(new java.awt.Dimension(280, 36));
         PanelStudenUpdatetProfile_Major.setPreferredSize(new java.awt.Dimension(280, 36));
-        PanelStudenUpdatetProfile_Major.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PanelStudenUpdatetProfile_MajorActionPerformed(evt);
-            }
-        });
 
         PanelStudenUpdatetProfile_LabelPassword.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         PanelStudenUpdatetProfile_LabelPassword.setText("Password");
@@ -4744,24 +4735,26 @@ public class menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelStudentProfile_MajorActionPerformed
 
-    private void PanelStudenUpdatetProfile_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_TextFieldIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PanelStudenUpdatetProfile_TextFieldIDActionPerformed
-
-    private void PanelStudenUpdatetProfile_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_NameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PanelStudenUpdatetProfile_NameActionPerformed
-
-    private void PanelStudenUpdatetProfile_ClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_ClassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PanelStudenUpdatetProfile_ClassActionPerformed
-
-    private void PanelStudenUpdatetProfile_MajorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_MajorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PanelStudenUpdatetProfile_MajorActionPerformed
-
     private void PanelStudenUpdatetProfile_ButtonUpdatePforileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelStudenUpdatetProfile_ButtonUpdatePforileMouseClicked
-        // TODO add your handling code here:
+        String id = PanelStudenUpdatetProfile_Name.getText();
+        String nama = PanelStudenUpdatetProfile_Name.getText();
+        String kelas = PanelStudenUpdatetProfile_Class.getText();
+        String major = PanelStudenUpdatetProfile_Major.getText();
+        String password = PanelStudenUpdatetProfile_PasswordField.getText();
+        
+        if (id.length() * nama.length() * kelas.length() * major.length() * password.length() == 0) {
+            JOptionPane.showConfirmDialog(this, "Isi data dengan benar!");
+            return;
+        }
+        
+        User user = new User(id, password, "Student");
+        Student student = new Student(id, nama, kelas, major);
+        
+        curr_user = user;
+        userController.setDml(user, OperasiCRUD.UPDATE);
+        studentController.setDml(student, OperasiCRUD.UPDATE);
+        
+        StudentMenu_ViewStudentProfileMouseClicked(null);
     }//GEN-LAST:event_PanelStudenUpdatetProfile_ButtonUpdatePforileMouseClicked
 
     private void PanelSignIn_ButtonSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelSignIn_ButtonSignInActionPerformed
@@ -5088,6 +5081,26 @@ public class menu extends javax.swing.JFrame {
         JTable jtable = new JTable(dataModel, header);
         TableModule.setModel(jtable.getModel());
     }//GEN-LAST:event_PanelViewModuleComponentShown
+
+    private void PanelStudentProfileComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelStudentProfileComponentShown
+        Student s = studentController.getByStudent_id(curr_user.getId());
+        
+        PanelStudentProfile_TextFieldID.setText(s.getStudent_id());
+        PanelStudentProfile_Name.setText(s.getStudent_name());
+        PanelStudentProfile_Major.setText(s.getStudent_major());
+        PanelStudentProfile_Class.setText(s.getStudent_class());
+        PanelStudentProfile_PasswordField.setText(curr_user.getPassword());
+    }//GEN-LAST:event_PanelStudentProfileComponentShown
+
+    private void PanelStudentUpdateProfileComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelStudentUpdateProfileComponentShown
+        Student s = studentController.getByStudent_id(curr_user.getId());
+        
+        PanelStudenUpdatetProfile_TextFieldID.setText(s.getStudent_id());
+        PanelStudenUpdatetProfile_Name.setText(s.getStudent_name());
+        PanelStudenUpdatetProfile_Major.setText(s.getStudent_major());
+        PanelStudenUpdatetProfile_Class.setText(s.getStudent_class());
+        PanelStudenUpdatetProfile_PasswordField.setText(curr_user.getPassword());
+    }//GEN-LAST:event_PanelStudentUpdateProfileComponentShown
 
     
     
