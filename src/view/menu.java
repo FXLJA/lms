@@ -32,6 +32,10 @@ public class menu extends javax.swing.JFrame {
     public SubjectController subjectCOntroller = new SubjectController();
     
     public User curr_user = null;
+    
+    public Color defaultColor = new Color(34, 125, 194);
+    public Color platinum = new Color(229, 228, 226);
+    public Color white = new Color(255, 255, 255);
 
     public menu() {
         initComponents();
@@ -559,26 +563,40 @@ public class menu extends javax.swing.JFrame {
         AdminDropDownUsername.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LabelSignOutAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        LabelSignOutAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelSignOutAdmin.setText("Sign Out");
         LabelSignOutAdmin.setInheritsPopupMenu(false);
         LabelSignOutAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LabelSignOutAdminMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LabelSignOutAdminMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LabelSignOutAdminMouseExited(evt);
+            }
         });
-        AdminDropDownUsername.add(LabelSignOutAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+        AdminDropDownUsername.add(LabelSignOutAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 140, 40));
 
         LabelProfileAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        LabelProfileAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelProfileAdmin.setText("Profile");
         LabelProfileAdmin.setInheritsPopupMenu(false);
         LabelProfileAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LabelProfileAdminMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LabelProfileAdminMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LabelProfileAdminMouseExited(evt);
+            }
         });
-        AdminDropDownUsername.add(LabelProfileAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+        AdminDropDownUsername.add(LabelProfileAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 40));
 
-        PanelAdminDashboard.add(AdminDropDownUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, 150, 80));
+        PanelAdminDashboard.add(AdminDropDownUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 60, -1, 80));
 
         AdminlHeader.setBackground(new java.awt.Color(255, 255, 255));
         AdminlHeader.setMaximumSize(new java.awt.Dimension(1100, 60));
@@ -588,7 +606,7 @@ public class menu extends javax.swing.JFrame {
 
         LabelDropDownToggleAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         LabelDropDownToggleAdmin.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        LabelDropDownToggleAdmin.setText("Username");
+        LabelDropDownToggleAdmin.setText("Options");
         LabelDropDownToggleAdmin.setMaximumSize(new java.awt.Dimension(150, 30));
         LabelDropDownToggleAdmin.setMinimumSize(new java.awt.Dimension(150, 30));
         LabelDropDownToggleAdmin.setPreferredSize(new java.awt.Dimension(150, 30));
@@ -619,6 +637,12 @@ public class menu extends javax.swing.JFrame {
         AdminMenu_ViewAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AdminMenu_ViewAdminMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewAdminMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewAdminMouseExited(evt);
             }
         });
 
@@ -657,6 +681,12 @@ public class menu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AdminMenu_ViewTeacherMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewTeacherMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewTeacherMouseExited(evt);
+            }
         });
 
         LabelViewTeacher.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -692,6 +722,12 @@ public class menu extends javax.swing.JFrame {
         AdminMenu_ViewStudent.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AdminMenu_ViewStudentMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewStudentMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewStudentMouseExited(evt);
             }
         });
 
@@ -729,6 +765,12 @@ public class menu extends javax.swing.JFrame {
         AdminMenu_ViewAdminProfile.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AdminMenu_ViewAdminProfileMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewAdminProfileMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AdminMenu_ViewAdminProfileMouseExited(evt);
             }
         });
 
@@ -5096,6 +5138,54 @@ public class menu extends javax.swing.JFrame {
         PanelStudenUpdatetProfile_Class.setText(s.getStudent_class());
         PanelStudenUpdatetProfile_PasswordField.setText(curr_user.getPassword());
     }//GEN-LAST:event_PanelStudentUpdateProfileComponentShown
+
+    private void LabelProfileAdminMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileAdminMouseEntered
+        LabelProfileAdmin.setBackground(platinum);
+    }//GEN-LAST:event_LabelProfileAdminMouseEntered
+
+    private void LabelProfileAdminMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelProfileAdminMouseExited
+        LabelProfileAdmin.setBackground(white);
+    }//GEN-LAST:event_LabelProfileAdminMouseExited
+
+    private void LabelSignOutAdminMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutAdminMouseEntered
+        LabelSignOutAdmin.setBackground(platinum);
+    }//GEN-LAST:event_LabelSignOutAdminMouseEntered
+
+    private void LabelSignOutAdminMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelSignOutAdminMouseExited
+        LabelSignOutAdmin.setBackground(white);
+    }//GEN-LAST:event_LabelSignOutAdminMouseExited
+
+    private void AdminMenu_ViewAdminMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminMouseEntered
+        AdminMenu_ViewAdmin.setBackground(platinum);
+    }//GEN-LAST:event_AdminMenu_ViewAdminMouseEntered
+
+    private void AdminMenu_ViewAdminMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminMouseExited
+        AdminMenu_ViewAdmin.setBackground(defaultColor);
+    }//GEN-LAST:event_AdminMenu_ViewAdminMouseExited
+
+    private void AdminMenu_ViewTeacherMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewTeacherMouseEntered
+        AdminMenu_ViewTeacher.setBackground(platinum);
+    }//GEN-LAST:event_AdminMenu_ViewTeacherMouseEntered
+
+    private void AdminMenu_ViewTeacherMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewTeacherMouseExited
+        AdminMenu_ViewTeacher.setBackground(defaultColor);
+    }//GEN-LAST:event_AdminMenu_ViewTeacherMouseExited
+
+    private void AdminMenu_ViewStudentMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewStudentMouseEntered
+        AdminMenu_ViewStudent.setBackground(platinum);
+    }//GEN-LAST:event_AdminMenu_ViewStudentMouseEntered
+
+    private void AdminMenu_ViewStudentMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewStudentMouseExited
+        AdminMenu_ViewStudent.setBackground(defaultColor);
+    }//GEN-LAST:event_AdminMenu_ViewStudentMouseExited
+
+    private void AdminMenu_ViewAdminProfileMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminProfileMouseEntered
+        AdminMenu_ViewAdminProfile.setBackground(platinum);
+    }//GEN-LAST:event_AdminMenu_ViewAdminProfileMouseEntered
+
+    private void AdminMenu_ViewAdminProfileMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminProfileMouseExited
+        AdminMenu_ViewAdminProfile.setBackground(defaultColor);
+    }//GEN-LAST:event_AdminMenu_ViewAdminProfileMouseExited
 
     
     
