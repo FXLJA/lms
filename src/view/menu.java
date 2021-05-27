@@ -2170,6 +2170,12 @@ public class menu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TeacherMenu_ViewSubjectMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TeacherMenu_ViewSubjectMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                TeacherMenu_ViewSubjectMouseExited(evt);
+            }
         });
 
         LabelViewAdmin1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2205,6 +2211,12 @@ public class menu extends javax.swing.JFrame {
         TeacherMenu_ViewTeacherProfile.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TeacherMenu_ViewTeacherProfileMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TeacherMenu_ViewTeacherProfileMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                TeacherMenu_ViewTeacherProfileMouseExited(evt);
             }
         });
 
@@ -5186,6 +5198,22 @@ public class menu extends javax.swing.JFrame {
     private void AdminMenu_ViewAdminProfileMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminMenu_ViewAdminProfileMouseExited
         AdminMenu_ViewAdminProfile.setBackground(defaultColor);
     }//GEN-LAST:event_AdminMenu_ViewAdminProfileMouseExited
+
+    private void TeacherMenu_ViewSubjectMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TeacherMenu_ViewSubjectMouseEntered
+        TeacherMenu_ViewSubject.setBackground(platinum);
+    }//GEN-LAST:event_TeacherMenu_ViewSubjectMouseEntered
+
+    private void TeacherMenu_ViewSubjectMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TeacherMenu_ViewSubjectMouseExited
+        TeacherMenu_ViewSubject.setBackground(defaultColor);
+    }//GEN-LAST:event_TeacherMenu_ViewSubjectMouseExited
+
+    private void TeacherMenu_ViewTeacherProfileMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TeacherMenu_ViewTeacherProfileMouseEntered
+        TeacherMenu_ViewTeacherProfile.setBackground(platinum);
+    }//GEN-LAST:event_TeacherMenu_ViewTeacherProfileMouseEntered
+
+    private void TeacherMenu_ViewTeacherProfileMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TeacherMenu_ViewTeacherProfileMouseExited
+        TeacherMenu_ViewTeacherProfile.setBackground(defaultColor);
+    }//GEN-LAST:event_TeacherMenu_ViewTeacherProfileMouseExited
 
     
     
