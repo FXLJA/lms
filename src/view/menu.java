@@ -2992,6 +2992,12 @@ public class menu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 StudentMenu_ViewModuleMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                StudentMenu_ViewModuleMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                StudentMenu_ViewModuleMouseExited(evt);
+            }
         });
 
         LabelViewAdmin2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3024,6 +3030,12 @@ public class menu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 StudentMenu_ViewStudentProfileMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                StudentMenu_ViewStudentProfileMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                StudentMenu_ViewStudentProfileMouseExited(evt);
+            }
         });
 
         LabelViewAdminProfile2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3050,7 +3062,7 @@ public class menu extends javax.swing.JFrame {
                     .addContainerGap(13, Short.MAX_VALUE)))
         );
 
-        StudentMenu.add(StudentMenu_ViewStudentProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
+        StudentMenu.add(StudentMenu_ViewStudentProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, -1, -1));
 
         PanelStudentDashboard.add(StudentMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -5214,6 +5226,22 @@ public class menu extends javax.swing.JFrame {
     private void TeacherMenu_ViewTeacherProfileMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TeacherMenu_ViewTeacherProfileMouseExited
         TeacherMenu_ViewTeacherProfile.setBackground(defaultColor);
     }//GEN-LAST:event_TeacherMenu_ViewTeacherProfileMouseExited
+
+    private void StudentMenu_ViewModuleMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StudentMenu_ViewModuleMouseEntered
+        StudentMenu_ViewModule.setBackground(platinum);
+    }//GEN-LAST:event_StudentMenu_ViewModuleMouseEntered
+
+    private void StudentMenu_ViewModuleMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StudentMenu_ViewModuleMouseExited
+        StudentMenu_ViewModule.setBackground(defaultColor);
+    }//GEN-LAST:event_StudentMenu_ViewModuleMouseExited
+
+    private void StudentMenu_ViewStudentProfileMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StudentMenu_ViewStudentProfileMouseEntered
+        StudentMenu_ViewStudentProfile.setBackground(platinum);
+    }//GEN-LAST:event_StudentMenu_ViewStudentProfileMouseEntered
+
+    private void StudentMenu_ViewStudentProfileMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StudentMenu_ViewStudentProfileMouseExited
+        StudentMenu_ViewStudentProfile.setBackground(defaultColor);
+    }//GEN-LAST:event_StudentMenu_ViewStudentProfileMouseExited
 
     
     
