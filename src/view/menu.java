@@ -2126,7 +2126,7 @@ public class menu extends javax.swing.JFrame {
 
         LabelDropDownToggleTeacher.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         LabelDropDownToggleTeacher.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        LabelDropDownToggleTeacher.setText("Username");
+        LabelDropDownToggleTeacher.setText("Options");
         LabelDropDownToggleTeacher.setMaximumSize(new java.awt.Dimension(150, 30));
         LabelDropDownToggleTeacher.setMinimumSize(new java.awt.Dimension(150, 30));
         LabelDropDownToggleTeacher.setPreferredSize(new java.awt.Dimension(150, 30));
@@ -2948,7 +2948,7 @@ public class menu extends javax.swing.JFrame {
 
         LabelDropDownToggleStudent.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         LabelDropDownToggleStudent.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        LabelDropDownToggleStudent.setText("Username");
+        LabelDropDownToggleStudent.setText("Options");
         LabelDropDownToggleStudent.setMaximumSize(new java.awt.Dimension(150, 30));
         LabelDropDownToggleStudent.setMinimumSize(new java.awt.Dimension(150, 30));
         LabelDropDownToggleStudent.setPreferredSize(new java.awt.Dimension(150, 30));
