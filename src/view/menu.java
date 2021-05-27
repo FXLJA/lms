@@ -2843,15 +2843,14 @@ public class menu extends javax.swing.JFrame {
                 .addGap(380, 380, 380)
                 .addGroup(PanelTeacherUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(PanelUpdateTeacherProfile_cbxKelas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(PanelTeacherUpdateProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(PanelUpdateTeacherProfile_LabelPassword)
-                        .addComponent(PanelUpdateTeacherProfile_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(PanelUpdateTeacherProfile_LabelClass)
-                        .addComponent(PanelUpdateTeacherProfile_TextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(PanelUpdateTeacherProfile_LabelID)
-                        .addComponent(PanelUpdateTeacherProfile_LabelName)
-                        .addComponent(PanelUpdateTeacherProfile_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(PanelUpdateTeacherProfile_ButtonSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(PanelUpdateTeacherProfile_LabelPassword)
+                    .addComponent(PanelUpdateTeacherProfile_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelUpdateTeacherProfile_LabelClass)
+                    .addComponent(PanelUpdateTeacherProfile_TextFieldID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelUpdateTeacherProfile_LabelID)
+                    .addComponent(PanelUpdateTeacherProfile_LabelName)
+                    .addComponent(PanelUpdateTeacherProfile_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelUpdateTeacherProfile_ButtonSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(380, Short.MAX_VALUE))
         );
         PanelTeacherUpdateProfileLayout.setVerticalGroup(
@@ -4391,6 +4390,18 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelViewSubject_ButtonAddSubjectMouseClicked
 
     private void PanelViewSubject_ButtonUpdateSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewSubject_ButtonUpdateSubjectMouseClicked
+        int row = TableSubject.getSelectedRow();
+        
+        if (row == -1) {
+            JOptionPane.showMessageDialog(this, "Pilih data terlebih dahulu!");
+            return;
+        }
+        
+        PanelUpdateSubject_TextFieldID.setText((String) TableSubject.getValueAt(row, 0));
+        PanelUpdateSubject_Name.setText((String) TableSubject.getValueAt(row, 1));
+        PanelUpdateSubject_Major.setText((String) TableSubject.getValueAt(row, 2));
+        PanelUpdateSubject_Minute.setText((String) TableSubject.getValueAt(row, 3));
+        
         //Panel Handler
         PanelSignIn.setVisible(false);
         PanelSignUp.setVisible(false);
@@ -4424,11 +4435,52 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelViewSubject_ButtonUpdateSubjectMouseClicked
 
     private void PanelViewSubject_ButtonDeleteSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelViewSubject_ButtonDeleteSubjectMouseClicked
-        // TODO add your handling code here:
+        int row = TableSubject.getSelectedRow();
+        
+        if (row == -1) {
+            JOptionPane.showMessageDialog(this, "Pilih data terlebih dahulu!");
+            return;
+        }
+        String id = (String) TableSubject.getValueAt(row, 0);
+        
+        for (Teacher t : teacherController.getAllTeacher()) {
+            if (t.getTeacher_subject().equals(id)) {
+                JOptionPane.showMessageDialog(this, "Tidak bisa delete " +id+ ". Karena id tersebut sedang dipakai oleh pengajar lain!");
+                return;
+            }
+        }
+        
+        int result = JOptionPane.showConfirmDialog(this, "Apakah anda yaking mau hapus "+id, "Warning", JOptionPane.YES_NO_OPTION);
+        if (result != JOptionPane.YES_OPTION) {
+            return;
+        }
+        
+        Subject s = new Subject(id, null, null, 0);
+        subjectCOntroller.setDml(s, OperasiCRUD.DELETE);
+        
+        TeacherMenu_ViewSubjectMouseClicked(null);
     }//GEN-LAST:event_PanelViewSubject_ButtonDeleteSubjectMouseClicked
 
     private void ButtonAddNewSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAddNewSubjectMouseClicked
-        // TODO add your handling code here:
+        String id = PanelAddSubject_TextFieldID.getText().trim();
+        String nama = PanelAddSubject_Name.getText().trim();
+        String major = PanelAddSubject_Major.getText().trim();
+        Integer minute = Integer.parseInt(PanelAddSubject_Minute.getText().trim());
+        
+        if (id.length() * nama.length() * major.length() == 0 || minute == null) {
+            JOptionPane.showMessageDialog(this, "Isi data dengan benar!");
+            return;
+        }
+        
+        if (subjectCOntroller.getBySubject_id(id) != null) {
+            JOptionPane.showMessageDialog(this, "ID sudah ada!");
+            return;
+        }
+        
+        Subject s = new Subject(id, nama, major, minute.intValue());
+        subjectCOntroller.setDml(s, OperasiCRUD.INSERT);
+        
+        TeacherMenu_ViewSubjectMouseClicked(null);
     }//GEN-LAST:event_ButtonAddNewSubjectMouseClicked
 
     private void PanelAddSubject_TextFieldIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddSubject_TextFieldIDActionPerformed
@@ -4505,7 +4557,20 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelUpdateSubject_MajorActionPerformed
 
     private void ButtonUpdateSubjectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonUpdateSubjectMouseClicked
-        // TODO add your handling code here:
+        String id = PanelUpdateSubject_TextFieldID.getText().trim();
+        String name = PanelUpdateSubject_Name.getText().trim();
+        String major = PanelUpdateSubject_Major.getText().trim();
+        Integer minute = Integer.parseInt(PanelUpdateSubject_Minute.getText().trim());
+        
+        if (id.length() * name.length() * major.length() == 0 || minute == null) {
+            JOptionPane.showMessageDialog(this, "Tolong is data dengan benar");
+            return;
+        }
+        
+        Subject s = new Subject(id, name, major, minute.intValue());
+        subjectCOntroller.setDml(s, OperasiCRUD.UPDATE);
+        
+        TeacherMenu_ViewSubjectMouseClicked(null);
     }//GEN-LAST:event_ButtonUpdateSubjectMouseClicked
 
     private void PanelAddSubject_MinuteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PanelAddSubject_MinuteActionPerformed
@@ -4920,7 +4985,7 @@ public class menu extends javax.swing.JFrame {
             dataModel[row][0] = list_subject.get(row).getSubject_id();
             dataModel[row][1] = list_subject.get(row).getSubject_name();
             dataModel[row][2] = list_subject.get(row).getSubject_major();
-            dataModel[row][3] = list_subject.get(row).getSubject_minute();
+            dataModel[row][3] = ""+list_subject.get(row).getSubject_minute();
         }
         
         TableModel tb = TableSubject.getModel();

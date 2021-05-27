@@ -4415,16 +4415,14 @@
                       <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="PanelUpdateTeacherProfile_cbxKelas" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="PanelUpdateTeacherProfile_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="PanelUpdateTeacherProfile_PasswordField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="PanelUpdateTeacherProfile_LabelClass" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="PanelUpdateTeacherProfile_TextFieldID" alignment="0" max="32767" attributes="0"/>
-                              <Component id="PanelUpdateTeacherProfile_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="PanelUpdateTeacherProfile_LabelName" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="PanelUpdateTeacherProfile_Name" alignment="0" max="32767" attributes="0"/>
-                              <Component id="PanelUpdateTeacherProfile_ButtonSave" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="PanelUpdateTeacherProfile_LabelPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelUpdateTeacherProfile_PasswordField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelUpdateTeacherProfile_LabelClass" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelUpdateTeacherProfile_TextFieldID" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelUpdateTeacherProfile_LabelID" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelUpdateTeacherProfile_LabelName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PanelUpdateTeacherProfile_Name" alignment="0" max="32767" attributes="0"/>
+                          <Component id="PanelUpdateTeacherProfile_ButtonSave" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="380" max="32767" attributes="0"/>
                   </Group>
