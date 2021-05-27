@@ -8,6 +8,7 @@ package view;
 import controllers.*;
 import daos.Koneksi;
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ComboBoxModel;
 import javax.swing.JComboBox;
@@ -3029,6 +3030,11 @@ public class menu extends javax.swing.JFrame {
         PanelViewModule.setBackground(new java.awt.Color(255, 255, 255));
         PanelViewModule.setMaximumSize(new java.awt.Dimension(1040, 600));
         PanelViewModule.setMinimumSize(new java.awt.Dimension(1040, 600));
+        PanelViewModule.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelViewModuleComponentShown(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel17.setText("Module");
@@ -5027,6 +5033,61 @@ public class menu extends javax.swing.JFrame {
         }
         PanelUpdateTeacherProfile_PasswordField.setText(u.getPassword());
     }//GEN-LAST:event_PanelTeacherUpdateProfileComponentShown
+
+    private void PanelViewModuleComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelViewModuleComponentShown
+        Student curr_student = studentController.getByStudent_id(curr_user.getId());
+        
+        List<String[]> list_module = new ArrayList<String[]>();
+        for(Subject subject : subjectCOntroller.getAllSubject()) {
+            String major = subject.getSubject_major();
+            if (major.equals(curr_student.getStudent_major()) || major.equals("Umum")) {
+                String[] module = new String[5];
+                
+                String teacher = "";
+                for(Teacher t : teacherController.getAllTeacher()) {
+                    if (t.getTeacher_subject().equals(subject.getSubject_id())) {
+                        teacher += ", " + t.getTeacher_name();
+                    }
+                }
+                if(teacher.length() == 0) {
+                    teacher = "DUMMY TEACHER";
+                } else {
+                    teacher = teacher.substring(2);
+                }
+                
+                module[0] = subject.getSubject_id();
+                module[1] = subject.getSubject_name();
+                module[2] = subject.getSubject_major();
+                module[3] = ""+subject.getSubject_minute();
+                module[4] = teacher;
+                
+                list_module.add(module);
+            }
+        }
+        
+        Object[][] dataModel = new Object[list_module.size()][5];
+        int row = 0;
+        int col = 0;
+        for(String[] s1 : list_module) {
+            dataModel[row] = new Object[5];
+            col = 0;
+            for (String s2 : s1) {
+                dataModel[row][col] = s2;
+                col++;
+            }
+            row++;
+        }
+        
+        TableModel tb = TableModule.getModel();
+        
+        Object[] header = new Object[tb.getColumnCount()];
+        for(col=0; col<header.length; col++){
+            header[col] = tb.getColumnName(col);
+        }
+        
+        JTable jtable = new JTable(dataModel, header);
+        TableModule.setModel(jtable.getModel());
+    }//GEN-LAST:event_PanelViewModuleComponentShown
 
     
     
