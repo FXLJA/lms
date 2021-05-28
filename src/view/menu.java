@@ -511,7 +511,7 @@ public class menu extends javax.swing.JFrame {
             PanelSignUpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelSignUpLayout.createSequentialGroup()
                 .addComponent(PanelSignUp_LabelPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
                 .addGroup(PanelSignUpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(PanelSignUp_ButtonSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PanelSignUp_PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -521,7 +521,7 @@ public class menu extends javax.swing.JFrame {
                     .addComponent(PanelSignUp_ButtonBack, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PanelSignUp_rdbStudent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PanelSignUp_rdbTeacher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(246, 246, 246))
+                .addGap(261, 261, 261))
         );
         PanelSignUpLayout.setVerticalGroup(
             PanelSignUpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4887,12 +4887,15 @@ public class menu extends javax.swing.JFrame {
         
         if(PanelSignUp_rdbStudent.isSelected()) {
             role = "Student";
+            userController.setDml(new User(username, password, role), OperasiCRUD.INSERT);
+            studentController.setDml(new Student(username, null, null, null), OperasiCRUD.INSERT);
         }
         else if(PanelSignUp_rdbTeacher.isSelected()){
             role = "Teacher";
+            userController.setDml(new User(username, password, role), OperasiCRUD.INSERT);
+            teacherController.setDml(new Teacher(username, null, null), OperasiCRUD.INSERT);
         }
         
-        userController.setDml(new User(username, password, role), OperasiCRUD.INSERT);
         curr_user = user;
         
         JOptionPane.showMessageDialog(this, "Signup berhasil!");
